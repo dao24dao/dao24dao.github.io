@@ -1,0 +1,42 @@
+
+{{ define "main" }}
+    {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+    {{ $notHidden := where .Site.RegularPages "Params.hidden" "!=" true }}
+    {{ $filtered := ($pages | intersect $notHidden) }}
+
+    <!-- 新增：分离置顶文章和普通文章 -->
+    {{ $sticky := where $filtered "Params.sticky" "eq" true }}
+    <!-- {{ $nonSticky := where $filtered "Params.sticky" "ne" true }} -->
+    <!-- {{ $nonSticky := where $filtered "Params.sticky" "ne" true | union (where $filtered "Params.sticky" "eq" nil) }}  -->
+    {{ $nonSticky := $filtered | symdiff $sticky }}
+    
+    <!-- 修改：只对普通文章分页 -->
+    {{ $pag := .Paginate ($nonSticky) }}
+
+    <section class="article-list">
+        <!-- 新增：仅在首页第一页显示置顶 -->
+        <!-- {{ if eq $pag.PageNumber 1 }} -->
+            {{ range $sticky }}
+                {{ partial "article-list/default" . }}
+            {{ end }}
+            {{ range $nonSticky }}
+            {{ printf "Sticky Post: %s | Sticky Value: %#v" .Title .Params.sticky }}
+          {{ end }}
+        <!-- {{ range sort $sticky "Date" "desc" }} 
+            {{ partial "article-list/default" . }}
+        {{ end }} -->
+        <!-- {{ end }} -->
+
+        <!-- 原有循环保持不变 -->
+        {{ range $index, $element := $pag.Pages }}
+            {{ partial "article-list/default" . }}
+        {{ end }}
+    </section>
+
+    {{- partial "pagination.html" . -}}
+    {{- partial "footer/footer" . -}}
+{{ end }}
+
+{{ define "right-sidebar" }}
+    {{ partial "sidebar/right.html" (dict "Context" . "Scope" "homepage") }}
+{{ end }}
