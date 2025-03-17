@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Categories on 道创说</title>
+        <link>https://dao24dao.github.io/categories/</link>
+        <description>Recent content in Categories on 道创说</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>Dao24dao</copyright>
+        <lastBuildDate>Mon, 17 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://dao24dao.github.io/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>DeepSeek</title>
+        <link>https://dao24dao.github.io/categories/deepseek/</link>
+        <pubDate>Mon, 17 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://dao24dao.github.io/categories/deepseek/</guid>
+        <description>&lt;img src="https://dao24dao.github.io/categories/deepseek/bg.png" alt="Featured image of post DeepSeek" /&gt;</description>
+        </item>
+        <item>
+        <title>复利商业化</title>
+        <link>https://dao24dao.github.io/categories/business/</link>
+        <pubDate>Mon, 17 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://dao24dao.github.io/categories/business/</guid>
+        <description>&lt;img src="https://dao24dao.github.io/categories/business/bg.png" alt="Featured image of post 复利商业化" /&gt;</description>
+        </item>
+        <item>
+        <title>实战小项目</title>
+        <link>https://dao24dao.github.io/categories/projects/</link>
+        <pubDate>Mon, 17 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://dao24dao.github.io/categories/projects/</guid>
+        <description>&lt;img src="https://dao24dao.github.io/categories/projects/bg.png" alt="Featured image of post 实战小项目" /&gt;</description>
+        </item>
+        <item>
+        <title>认知成长</title>
+        <link>https://dao24dao.github.io/categories/cognize/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://dao24dao.github.io/categories/cognize/</guid>
+        <description>&lt;img src="https://dao24dao.github.io/categories/cognize/bg.png" alt="Featured image of post 认知成长" /&gt;</description>
+        </item>
+        
+    </channel>
+</rss>
