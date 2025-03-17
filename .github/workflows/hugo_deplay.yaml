@@ -29,6 +29,6 @@ jobs:
           with:
               PERSONAL_TOKEN: ${{ secrets.BLOG_ACTION_SECRET }} # 刚刚在上面创建的变量名
               EXTERNAL_REPOSITORY: dao24dao/dao24dao.github.io # 如果按照上面的步骤走，则是username/username.github.io第一个仓库名
-              PUBLISH_BRANCH: main
+              PUBLISH_BRANCH: gh-pages
               PUBLISH_DIR: ./public
               commit_message: auto deploy
