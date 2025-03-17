@@ -47,7 +47,7 @@ services:
         id:
 
 pagination:
-    pagerSize: 2
+    pagerSize: 5
 
 permalinks:
     post: /p/:slug/
@@ -59,6 +59,7 @@ params:
     featuredImageField: image
     rssFullContent: true
     favicon: /favicon.ico # e.g.: favicon placed in `static/favicon.ico` of your site folder, then set this field to `/favicon.ico` (`/` is necessary)
+    defaultTheme: dark
 
     footer:
         since: 2025
