@@ -3,8 +3,8 @@ title: 202503 /《闲鱼虚拟资料+网盘拉新》实战小项目开营了
 description: 2025003 / 深圳大冲的《大冲陪你玩赚副业》星球的实战小项目
 date: 2025-03-17
 slug: 2025xywplx
+keywords: ["闲鱼虚拟资料", "小红书虚拟资料", "网盘拉新", "DeepSeek", "副业避坑"]
 image: daochuangshuo_logo.png
-license: 道创说 原创文章
 categories:
     - Projects
     - DeepSeek

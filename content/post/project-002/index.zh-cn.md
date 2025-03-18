@@ -3,8 +3,8 @@ title: 202503 /《短视频剪辑入门》实战小项目开营了
 description: 2025002 / IDO老徐的《老徐陪你副业避坑》星球的《100 个实战小项目》
 date: 2025-03-17
 slug: 2025dspjjrm
+keywords: ["短视频", "短视频剪辑", "DeepSeek", "副业避坑", "IDO老徐"]
 image: daochuangshuo_logo.png
-license: 道创说 原创文章
 categories:
     - Projects
     - DeepSeek
