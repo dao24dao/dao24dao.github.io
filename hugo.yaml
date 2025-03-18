@@ -218,23 +218,23 @@ menu:
     main: []
 
     social:
+        - identifier: 付费星球
+          name: 加入付费知识星球
+          url: https://t.zsxq.com/zmotH
+          params:
+              icon: ffzsxq
+
         - identifier: 微信公众号
           name: 微信公众号：道创说
           url: https://mp.weixin.qq.com/s/nVUzTMiuYG-yjJ6nMt4YwA
           params:
               icon: wmp
 
-        - identifier: 知识星球
-          name: 道 DeepSeek 星球
-          url: https://t.zsxq.com/zmotH
+        - identifier: 免费星球
+          name: 加入免费知识星球
+          url: https://t.zsxq.com/QxWxg
           params:
               icon: zsxq
-        
-        # - identifier: Github
-        #   name: Github
-        #   url: https://t.zsxq.com/zmotH
-        #   params:
-        #       icon: zsxq
 
 related:
     includeNewer: true

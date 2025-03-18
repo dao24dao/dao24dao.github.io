@@ -4,6 +4,7 @@ description: 认识、了解、信任
 date: '2025-03-17'
 license: 道创说 原创文章
 lastmod: '2025-03-17'
+slug: me
 menu:
     main: 
         weight: -90
@@ -54,7 +55,7 @@ menu:
 
 ## 我的资源
 
-微信公众号：[#道创说](https://mp.weixin.qq.com/s/nVUzTMiuYG-yjJ6nMt4YwA)
+**微信公众号：** [#道创说](https://mp.weixin.qq.com/s/nVUzTMiuYG-yjJ6nMt4YwA)
 
 持续写作，输出 AI 相关的前沿信息、玩法、工具等信息差。
 
@@ -63,6 +64,11 @@ menu:
 ![](mp_qrcode.png)
 扫码关注，防失联！
 
+**免费星球：** [https://t.zsxq.com/QxWxg](https://t.zsxq.com/QxWxg)
+
+![](mfzsxq.png)
+
+---
 
 ## 顶流资源推荐
 ### **AI破局俱乐部**

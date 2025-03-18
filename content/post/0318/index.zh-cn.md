@@ -12,7 +12,7 @@ categories:
 tags:
     - AI破局
     - 副业避坑
-    - DeepSeek
+    - DeepSeek提效
 comments: true
 ---
 
@@ -96,3 +96,5 @@ why? tell me why? baby why?
 
 先体验，**优惠券过期 或 想加入的找我（微信：dao24dao），来拿重磅福利！**
 
+
+免费星球，点击加入： [https://t.zsxq.com/QxWxg](https://t.zsxq.com/QxWxg)
