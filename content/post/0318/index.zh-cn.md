@@ -1,10 +1,10 @@
 ---
 title: 第 3 期破局行动来了，AI 界的黄埔军校，我们是黄埔 5 期
 description: 第 3 期破局行动来了，AI 界的黄埔军校，我们是黄埔 5 期
-date: 2025-03-17
+date: 2025-03-18
 slug: 20250317
 keywords: ["AI破局", "破局行动", "副业避坑", "DeepSeek"]
-image: daochuangshuo_logo.png
+image: /images/daochuangshuo_logo.png
 categories:
     - AIClub
     - DeepSeek

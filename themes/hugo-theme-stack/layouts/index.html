@@ -2,9 +2,25 @@
     {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
     {{ $notHidden := where .Site.RegularPages "Params.hidden" "!=" true }}
     {{ $filtered := ($pages | intersect $notHidden) }}
-    {{ $pag := .Paginate ($filtered) }}
+
+    <!-- 开始修改 -->
+    {{ $sticky := where $filtered "Params.sticky" "eq" true }}
+    {{ $nonSticky := where $filtered "Params.sticky" "!=" true }}
+    <!-- {{ $nonSticky := where $filtered "Params.sticky" "ne" true | union (where $filtered "Params.sticky" "eq" nil) }}  -->
+    <!-- {{ $nonSticky := $filtered | intersect $sticky }} -->
+    
+    <!-- 修改：只对普通文章分页 -->
+    {{ $pag := .Paginate ($nonSticky) }}
+    <!-- 结束修改 -->
+
+
+    <!-- {{ $pag := .Paginate ($filtered) }} -->
 
     <section class="article-list">
+        {{ range $sticky }}
+            {{ partial "article-list/default" . }}
+        {{ end }}
+
         {{ range $index, $element := $pag.Pages }}
             {{ partial "article-list/default" . }}
         {{ end }}

@@ -3,8 +3,8 @@ title: 202503 /《DeepSeek 小红书爆款》实战小项目开营了
 description: 2025001 / IDO老徐的《老徐陪你副业避坑》星球的《100 个实战小项目》
 date: 2025-03-17
 slug: 2025xhsbk
-keywords: [" 小红书爆款", "DeepSeek", "副业避坑", "IDO老徐"]
-image: daochuangshuo_logo.png
+keywords: ["小红书爆款", "DeepSeek", "副业避坑", "IDO老徐"]
+image: /images/daochuangshuo_logo.png
 categories:
     - Projects
     - DeepSeek
@@ -13,6 +13,7 @@ tags:
     - DeepSeek提效
     - 副业避坑
     - 小红书爆款
+    - IDO老徐
 comments: true
 ---
 

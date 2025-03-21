@@ -1,0 +1,5 @@
+{{ define "main" }}
+  <article class="custom-page">
+    {{ .Content | safeHTML }} <!-- 直接渲染原始HTML -->
+  </article>
+{{ end }}

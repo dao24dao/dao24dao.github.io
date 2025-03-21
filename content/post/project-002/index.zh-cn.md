@@ -4,7 +4,7 @@ description: 2025002 / IDO老徐的《老徐陪你副业避坑》星球的《100
 date: 2025-03-17
 slug: 2025dspjjrm
 keywords: ["短视频", "短视频剪辑", "DeepSeek", "副业避坑", "IDO老徐"]
-image: daochuangshuo_logo.png
+image: /images/daochuangshuo_logo.png
 categories:
     - Projects
     - DeepSeek
@@ -13,7 +13,10 @@ tags:
     - DeepSeek提效
     - 副业避坑
     - 短视频剪辑
+    - IDO老徐
 comments: true
+# sticky: true
+# weight: 2
 ---
 
 

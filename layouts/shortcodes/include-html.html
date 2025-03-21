@@ -1,0 +1,7 @@
+{{ $htmlPath := .Get 0 }}
+{{ $fullPath := path.Join "static" $htmlPath }}
+{{ if fileExists $fullPath }}
+  {{ readFile $fullPath | safeHTML }}
+{{ else }}
+  <div class="error">HTML文件不存在：{{ $htmlPath }}</div>
+{{ end }}
