@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="<!DOCTYPE html> 颜色色值转换查询系统 颜色色值转换查询系统 转RGB格式 转十六进制 示例 英文名 中文名 十六进制 RGB Red 红色 #FF0000 255,0,0 Lime 亮绿色 #00FF00 0,255,0 Blue 蓝色 #0000FF 0,0,255 Yellow 黄色 #FFFF00 255,255,0 Magenta 洋红色 #FF00FF 255,0,255 Cyan 青色 #00FFFF 0,255,255 Purple 紫色 #800080 128,0,128 Orange 橙色 #FFA500 255,165,0 Brown 棕色 #A52A2A 165,42,42 Gray 灰色 #808080 128,128,128 Green 绿色 #008000 0,128,0 Maroon 褐红色 #800000 128,0,0 Navy 藏青色 #000080 0,0,128 Pink 粉红色 #FFC0CB 255,192,203 Gold 金色 #FFD700 255,215,0 Turquoise 绿松石色 #40E0D0 64,224,208 Violet 紫罗兰色 #EE82EE 238,130,238 Beige 米色 #F5F5DC 245,245,220 Salmon 鲑鱼色 #FA8072 250,128,114 Aquamarine 碧绿色 #7FFFD4 127,255,212 系统源码地址 + 使用 DeepSeek 的提示词，点这领取，免费 ">
+<meta name="keywords" content="编程, 开发, 代码, DeepSeek, 副业避坑, 软件, 游戏"><title>RGB和十六进制颜色转换查询系统</title>
+
+<link rel='canonical' href='https://dao24dao.github.io/p/color_conv/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="RGB和十六进制颜色转换查询系统">
+<meta property='og:description' content="<!DOCTYPE html> 颜色色值转换查询系统 颜色色值转换查询系统 转RGB格式 转十六进制 示例 英文名 中文名 十六进制 RGB Red 红色 #FF0000 255,0,0 Lime 亮绿色 #00FF00 0,255,0 Blue 蓝色 #0000FF 0,0,255 Yellow 黄色 #FFFF00 255,255,0 Magenta 洋红色 #FF00FF 255,0,255 Cyan 青色 #00FFFF 0,255,255 Purple 紫色 #800080 128,0,128 Orange 橙色 #FFA500 255,165,0 Brown 棕色 #A52A2A 165,42,42 Gray 灰色 #808080 128,128,128 Green 绿色 #008000 0,128,0 Maroon 褐红色 #800000 128,0,0 Navy 藏青色 #000080 0,0,128 Pink 粉红色 #FFC0CB 255,192,203 Gold 金色 #FFD700 255,215,0 Turquoise 绿松石色 #40E0D0 64,224,208 Violet 紫罗兰色 #EE82EE 238,130,238 Beige 米色 #F5F5DC 245,245,220 Salmon 鲑鱼色 #FA8072 250,128,114 Aquamarine 碧绿色 #7FFFD4 127,255,212 系统源码地址 + 使用 DeepSeek 的提示词，点这领取，免费 ">
+<meta property='og:url' content='https://dao24dao.github.io/p/color_conv/'>
+<meta property='og:site_name' content='道创说'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='DeepSeek提效' /><meta property='article:tag' content='副业避坑' /><meta property='article:tag' content='应用工具' /><meta property='article:tag' content='软件开发' /><meta property='article:tag' content='游戏开发' /><meta property='article:published_time' content='2025-03-20T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-03-20T00:00:00&#43;00:00'/><meta property='og:image' content='https://dao24dao.github.io/images/daochuangshuo_logo.png' />
+<meta name="twitter:title" content="RGB和十六进制颜色转换查询系统">
+<meta name="twitter:description" content="<!DOCTYPE html> 颜色色值转换查询系统 颜色色值转换查询系统 转RGB格式 转十六进制 示例 英文名 中文名 十六进制 RGB Red 红色 #FF0000 255,0,0 Lime 亮绿色 #00FF00 0,255,0 Blue 蓝色 #0000FF 0,0,255 Yellow 黄色 #FFFF00 255,255,0 Magenta 洋红色 #FF00FF 255,0,255 Cyan 青色 #00FFFF 0,255,255 Purple 紫色 #800080 128,0,128 Orange 橙色 #FFA500 255,165,0 Brown 棕色 #A52A2A 165,42,42 Gray 灰色 #808080 128,128,128 Green 绿色 #008000 0,128,0 Maroon 褐红色 #800000 128,0,0 Navy 藏青色 #000080 0,0,128 Pink 粉红色 #FFC0CB 255,192,203 Gold 金色 #FFD700 255,215,0 Turquoise 绿松石色 #40E0D0 64,224,208 Violet 紫罗兰色 #EE82EE 238,130,238 Beige 米色 #F5F5DC 245,245,220 Salmon 鲑鱼色 #FA8072 250,128,114 Aquamarine 碧绿色 #7FFFD4 127,255,212 系统源码地址 + 使用 DeepSeek 的提示词，点这领取，免费 "><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://dao24dao.github.io/images/daochuangshuo_logo.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_96f5fea0197e6fed.png" width="300"
+                            height="267" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">✊</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">道创说</a></h1>
+            <h2 class="site-description">一人企业复利商业化</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://t.zsxq.com/zmotH'
+                        target="_blank"
+                        title="加入付费知识星球"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1742295343432" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="13498" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M512 0c50.834286 0 99.986286 7.387429 146.358857 21.211429v76.946285A438.857143 438.857143 0 1 0 925.915429 365.714286L1002.788571 365.714286A512 512 0 1 1 512 0z m329.142857 73.142857a109.714286 109.714286 0 1 1 0 219.428572 109.714286 109.714286 0 0 1 0-219.428572z" fill="#A2ACC2" p-id="13499"></path></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://t.zsxq.com/QxWxg'
+                        target="_blank"
+                        title="加入免费知识星球"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1742048238230" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2445" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M512 0c50.834286 0 99.986286 7.387429 146.358857 21.211429v76.946285A438.857143 438.857143 0 1 0 925.915429 365.714286L1002.788571 365.714286A512 512 0 1 1 512 0z m329.142857 73.142857a109.714286 109.714286 0 1 1 0 219.428572 109.714286 109.714286 0 0 1 0-219.428572z" fill="#16B998" p-id="2446"></path></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://mp.weixin.qq.com/s/nVUzTMiuYG-yjJ6nMt4YwA'
+                        target="_blank"
+                        title="微信公众号：道创说"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1742048356707" class="icon" viewBox="0 0 1049 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="13604" xmlns:xlink="http://www.w3.org/1999/xlink" width="204.8828125" height="200"><path d="M685.200678 190.588123a428.344693 428.344693 0 0 1 160.534236 31.033638 355.813626 355.813626 0 1 0-589.370816 377.277813 429.283751 429.283751 0 0 1 428.83658-408.311451z" fill="#08BE61" p-id="13605"></path><path d="M693.607485 263.87938a354.829851 354.829851 0 0 0-127.130594 23.476455 429.283751 429.283751 0 0 1 201.942231 680.235878A355.813626 355.813626 0 0 0 693.607485 263.87938z" fill="#08BE61" p-id="13606"></path><path d="M515.052275 789.349522a453.60983 453.60983 0 0 1-74.409184-6.170954c-11.581718-1.341512-23.208153-3.04076-34.968739-5.142462-15.337951-2.727741-108.304713 93.011479-134.956079 72.978238-24.236645-18.199842 11.671152-102.58093 4.471706-129.903052a455.845683 455.845683 0 0 1-209.186395-310.828266A395.075202 395.075202 0 1 0 783.309902 702.106543a453.252094 453.252094 0 0 1-268.257627 87.242979z" fill="#08BE61" p-id="13607"></path></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/me/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>我是谁</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%8F%8B%E9%93%BE/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>友链</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+                    
+                        <li id="i18n-switch">  
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                            <select name="language" title="language" onchange="window.location.href = this.selectedOptions[0].value">
+                                
+                                    <option value="https://dao24dao.github.io/" selected>中文</option>
+                                
+                                    <option value="https://dao24dao.github.io/en/" >English</option>
+                                
+                                    <option value="https://dao24dao.github.io/ar/" >عربي</option>
+                                
+                            </select>
+                        </li>
+                    
+                
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+            <main class="main full-width">
+  <article class="custom-page">
+    
+
+
+  <!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <keywords content="5 分钟用 DeepSeek 生成颜色色值转换查询系统，你也可以去尝试制作，非常强大"></keywords>
+  <title>颜色色值转换查询系统</title>
+
+  <style>
+    /* 基础重置 */
+    body.legacy-html {
+      all: initial;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background-color: #e8f5e9;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+
+    /* 主容器 */
+    .legacy-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* 卡片组件 */
+    .legacy-card {
+      background-color: #c8e6c9;
+      border-radius: 8px;
+      padding: 2rem;
+      margin: 1rem 0;
+      width: 100%;
+      max-width: 800px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* 输入组件 */
+    .legacy-input-group {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .legacy-input {
+      flex: 1;
+      min-width: 200px;
+      padding: 0.5rem;
+      border: 2px solid #81c784;
+      border-radius: 4px;
+      background: white;
+    }
+
+    .legacy-btn {
+      background-color: #4caf50;
+      color: white;
+      padding: 0.5rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .legacy-btn:hover {
+      background-color: #45a049;
+    }
+
+    /* 数据表格 */
+    .legacy-data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1.5rem;
+      background: white;
+    }
+
+    .legacy-data-table th {
+      background-color: #a5d6a7;
+      color: #2e7d32;
+      padding: 12px;
+      text-align: left;
+    }
+
+    .legacy-data-table td {
+      padding: 10px;
+      border-bottom: 1px solid #c8e6c9;
+    }
+
+    .color-sample {
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      border: 1px solid #ddd;
+    }
+
+    /* 页脚样式 */
+    .legacy-footer {
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+      padding: 1rem;
+    }
+
+    .legacy-footer a {
+      color: #4caf50;
+      text-decoration: none;
+    }
+
+    .legacy-footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* 响应式设计 */
+    @media (max-width: 768px) {
+      body.legacy-html {
+        padding: 10px;
+      }
+
+      .legacy-input-group {
+        flex-direction: column;
+      }
+
+      .legacy-input {
+        width: 100%;
+      }
+
+      .legacy-btn {
+        width: 100%;
+      }
+
+      .legacy-data-table {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .legacy-data-table {
+        font-size: 12px;
+      }
+      
+      .color-sample {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body class="legacy-html">
+  <main class="legacy-container">
+    <h1>颜色色值转换查询系统</h1>
+
+    <!-- 转换器模块 -->
+    <div class="legacy-card">
+      <div class="legacy-input-group">
+        <input type="text" 
+               class="legacy-input"
+               id="hexInput" 
+               placeholder="#FFFFFF">
+        <button class="legacy-btn" onclick="convertHexToRgb()">转RGB格式</button>
+      </div>
+
+      <div class="legacy-input-group">
+        <input type="text" 
+               class="legacy-input"
+               id="rgbInput" 
+               placeholder="255,255,255">
+        <button class="legacy-btn" onclick="convertRgbToHex()">转十六进制</button>
+      </div>
+
+      <div class="legacy-input-group">
+        <input type="color" 
+               id="colorPicker" 
+               style="height: 40px; width: 60px;"
+               onchange="updateFromPicker(this.value)">
+      </div>
+
+      <div id="colorPreview" 
+           style="width:100px;height:100px;border:2px solid #81c784;margin:1rem auto;border-radius:8px">
+      </div>
+    </div>
+
+    <!-- 颜色对照表 -->
+    <div class="legacy-card">
+      <table class="legacy-data-table">
+        <tr>
+          <th>示例</th>
+          <th>英文名</th>
+          <th>中文名</th>
+          <th>十六进制</th>
+          <th>RGB</th>
+        </tr>
+        <tr>
+          <td><div class="color-sample" style="background: #FF0000"></div></td>
+          <td>Red</td>
+          <td>红色</td>
+          <td>#FF0000</td>
+          <td>255,0,0</td>
+        </tr>
+        <tr>
+          <td><div class="color-sample" style="background: #00FF00"></div></td>
+          <td>Lime</td>
+          <td>亮绿色</td>
+          <td>#00FF00</td>
+          <td>0,255,0</td>
+        </tr>
+        <tr>
+          <td><div class="color-sample" style="background: #0000FF"></div></td>
+          <td>Blue</td>
+          <td>蓝色</td>
+          <td>#0000FF</td>
+          <td>0,0,255</td>
+        </tr>
+        <tr>
+          <td><div class="color-sample" style="background: #FFFF00"></div></td>
+          <td>Yellow</td>
+          <td>黄色</td>
+          <td>#FFFF00</td>
+          <td>255,255,0</td>
+        </tr>
+        <tr>
+          <td><div class="color-sample" style="background: #FF00FF"></div></td>
+          <td>Magenta</td>
+          <td>洋红色</td>
+          <td>#FF00FF</td>
+          <td>255,0,255</td>
+        </tr>
+        <tr>
+          <td><div class="color-sample" style="background: #00FFFF"></div></td>
+          <td>Cyan</td>
+          <td>青色</td>
+          <td>#00FFFF</td>
+          <td>0,255,255</td>
+        </tr>
+        <tr>
+          <td><div class="color-sample" style="background: #800080"></div></td>
+          <td>Purple</td>
+          <td>紫色</td>
+          <td>#800080</td>
+          <td>128,0,128</td>
+        </tr>
+        <tr>
+          <td><div class="color-sample" style="background: #FFA500"></div></td>
+          <td>Orange</td>
+          <td>橙色</td>
+          <td>#FFA500</td>
+          <td>255,165,0</td>
+        </tr>
+        <tr>
+          <td><div class="color-sample" style="background: #A52A2A"></div></td>
+          <td>Brown</td>
+          <td>棕色</td>
+          <td>#A52A2A</td>
+          <td>165,42,42</td>
+        </tr>
+        <tr>
+          <td><div class="color-sample" style="background: #808080"></div></td>
+          <td>Gray</td>
+          <td>灰色</td>
+          <td>#808080</td>
+          <td>128,128,128</td>
+        </tr>
+        <tr>
+          <td><div class="color-sample" style="background: #008000"></div></td>
+          <td>Green</td>
+          <td>绿色</td>
+          <td>#008000</td>
+          <td>0,128,0</td>
+        </tr>
+        <tr>
+          <td><div class="color-sample" style="background: #800000"></div></td>
+          <td>Maroon</td>
+          <td>褐红色</td>
+          <td>#800000</td>
+          <td>128,0,0</td>
+        </tr>
+        <tr>
+          <td><div class="color-sample" style="background: #000080"></div></td>
+          <td>Navy</td>
+          <td>藏青色</td>
+          <td>#000080</td>
+          <td>0,0,128</td>
+        </tr>
+        <tr>
+          <td><div class="color-sample" style="background: #FFC0CB"></div></td>
+          <td>Pink</td>
+          <td>粉红色</td>
+          <td>#FFC0CB</td>
+          <td>255,192,203</td>
+        </tr>
+        <tr>
+          <td><div class="color-sample" style="background: #FFD700"></div></td>
+          <td>Gold</td>
+          <td>金色</td>
+          <td>#FFD700</td>
+          <td>255,215,0</td>
+        </tr>
+        <tr>
+          <td><div class="color-sample" style="background: #40E0D0"></div></td>
+          <td>Turquoise</td>
+          <td>绿松石色</td>
+          <td>#40E0D0</td>
+          <td>64,224,208</td>
+        </tr>
+        <tr>
+          <td><div class="color-sample" style="background: #EE82EE"></div></td>
+          <td>Violet</td>
+          <td>紫罗兰色</td>
+          <td>#EE82EE</td>
+          <td>238,130,238</td>
+        </tr>
+        <tr>
+          <td><div class="color-sample" style="background: #F5F5DC"></div></td>
+          <td>Beige</td>
+          <td>米色</td>
+          <td>#F5F5DC</td>
+          <td>245,245,220</td>
+        </tr>
+        <tr>
+          <td><div class="color-sample" style="background: #FA8072"></div></td>
+          <td>Salmon</td>
+          <td>鲑鱼色</td>
+          <td>#FA8072</td>
+          <td>250,128,114</td>
+        </tr>
+        <tr>
+          <td><div class="color-sample" style="background: #7FFFD4"></div></td>
+          <td>Aquamarine</td>
+          <td>碧绿色</td>
+          <td>#7FFFD4</td>
+          <td>127,255,212</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- 页脚 -->
+    <div class="legacy-card legacy-footer">
+      <p>
+        <a href="https://pan.quark.cn/s/6875f7cb475f" target="_blank">系统源码地址 + 使用 DeepSeek 的提示词，点这领取，免费</a>
+      </p>
+      <p>
+        <a href="https://mp.weixin.qq.com/s/nVUzTMiuYG-yjJ6nMt4YwA" target="_blank">由 @道创说 用 DeepSeek 1 分钟生成，你也可以去尝试制作</a>
+      </p>
+    </div>
+  </main>
+
+  <script>
+    // 颜色转换功能
+    function convertHexToRgb() {
+      const hex = document.getElementById('hexInput').value.trim();
+      const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+      if (result) {
+        const rgb = [
+          parseInt(result[1], 16),
+          parseInt(result[2], 16),
+          parseInt(result[3], 16)
+        ].join(',');
+        document.getElementById('rgbInput').value = rgb;
+        updateColorPreview(rgb);
+      }
+    }
+
+    function convertRgbToHex() {
+      const rgb = document.getElementById('rgbInput').value.match(/\d+/g);
+      if (rgb && rgb.length === 3) {
+        const hex = '#' + rgb.map(x => {
+          const parsed = parseInt(x);
+          return Math.max(0, Math.min(255, parsed))
+            .toString(16)
+            .padStart(2, '0');
+        }).join('').toUpperCase();
+        document.getElementById('hexInput').value = hex;
+        updateColorPreview(rgb.join(','));
+      }
+    }
+
+    function updateFromPicker(color) {
+      const rgb = color.match(/\w{2}/g)
+                    .map(x => parseInt(x, 16))
+                    .join(',');
+      document.getElementById('hexInput').value = color.toUpperCase();
+      document.getElementById('rgbInput').value = rgb;
+      updateColorPreview(rgb);
+    }
+
+    function updateColorPreview(rgb) {
+      const preview = document.getElementById('colorPreview');
+      preview.style.backgroundColor = `rgb(${rgb})`;
+      preview.style.borderColor = parseInt(rgb.split(',')[0]) > 200 ? '#333' : '#81c784';
+    }
+
+    // 初始化事件监听
+    document.addEventListener('DOMContentLoaded', () => {
+      document.getElementById('colorPicker').value = '#FFFFFF';
+      updateColorPreview('255,255,255');
+    });
+  </script>
+</body>
+</html>
+
+ 
+  </article>
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

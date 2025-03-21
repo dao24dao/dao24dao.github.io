@@ -7,13 +7,1922 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>IDO道 @道创说</copyright>
-        <lastBuildDate>Mon, 17 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://dao24dao.github.io/tags/deepseek%E6%8F%90%E6%95%88/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 20 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://dao24dao.github.io/tags/deepseek%E6%8F%90%E6%95%88/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>DeepSeek 应用工具开发汇总</title>
+        <link>https://dao24dao.github.io/p/tools/</link>
+        <pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://dao24dao.github.io/p/tools/</guid>
+        <description>&lt;img src="https://dao24dao.github.io/images/daochuangshuo_logo.png" alt="Featured image of post DeepSeek 应用工具开发汇总" /&gt;&lt;p&gt;大家好，我是 &lt;strong&gt;道&lt;/strong&gt;，也可以叫我「&lt;strong&gt;IDO道&lt;/strong&gt;」，AI破局和IDO老徐的资深会员，一人企业，玩赚复利商业化。&lt;/p&gt;
+&lt;p&gt;第一次听说我的，看这里：&lt;a class=&#34;link&#34; href=&#34;https://dao24dao.github.io/me/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;我是谁&lt;/a&gt;， 交个朋友&lt;/p&gt;
+&lt;h2 id=&#34;deepseek-如何学&#34;&gt;DeepSeek 如何学？
+&lt;/h2&gt;&lt;p&gt;DeepSeek 不用学，你学 DeepSeek 的底层逻辑，用了哪些算法？&lt;/p&gt;
+&lt;p&gt;有什么用？没意义。&lt;/p&gt;
+&lt;p&gt;关于在于&amp;quot;&lt;strong&gt;用&lt;/strong&gt;&amp;quot;, 用来解决实际碰到问题，碰到什么问题，就问它。&lt;/p&gt;
+&lt;h2 id=&#34;deepseek-怎么用&#34;&gt;DeepSeek 怎么用？
+&lt;/h2&gt;&lt;p&gt;打开 &lt;a class=&#34;link&#34; href=&#34;https://chat.deepseek.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;DeepSeek官网&lt;/a&gt;，或 手机上打开 &lt;strong&gt;DeepSeek APP&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;把你的问题输入进去，等待它回答。&lt;/p&gt;
+&lt;h2 id=&#34;deepseek-应用工具开发汇总持续更新&#34;&gt;DeepSeek 应用工具开发汇总(持续更新)
+&lt;/h2&gt;&lt;h3 id=&#34;1-初中生物理课堂点名积分系统&#34;&gt;1. 初中生物理课堂点名积分系统
+&lt;/h3&gt;&lt;p&gt;用DeepSeek 5 分钟完成, @创意来自：IDO老徐的DeepSeek星球.&lt;/p&gt;
+&lt;p&gt;体验地址：&lt;a class=&#34;link&#34; href=&#34;https://dao24dao.github.io/p/student_score/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;初中生物理课堂点名积分系统&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;页面下方有 生成步骤教程+源码，可以自己下载，按步骤试试，你也可以。&lt;/p&gt;
+&lt;h3 id=&#34;2-rgb和十六进制颜色转换查询系统&#34;&gt;2. RGB和十六进制颜色转换查询系统
+&lt;/h3&gt;&lt;p&gt;用DeepSeek 5 分钟完成, @创意来自：IDO老徐的DeepSeek星球.&lt;/p&gt;
+&lt;p&gt;体验地址：&lt;a class=&#34;link&#34; href=&#34;https://dao24dao.github.io/p/color_conv/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;RGB和十六进制颜色转换查询系统&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;页面下方有 生成步骤教程+源码，可以自己下载，按步骤试试，你也可以。&lt;/p&gt;
+&lt;h3 id=&#34;3-小学生课堂英语单词抽查系统&#34;&gt;3. 小学生课堂英语单词抽查系统
+&lt;/h3&gt;&lt;p&gt;用DeepSeek 5 分钟完成, @创意来自：IDO老徐的DeepSeek星球.&lt;/p&gt;
+&lt;p&gt;体验地址：&lt;a class=&#34;link&#34; href=&#34;https://dao24dao.github.io/p/eng_words/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;小学生课堂英语单词抽查系统&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;页面下方有 生成步骤教程+源码，可以自己下载，按步骤试试，你也可以。&lt;/p&gt;
+&lt;h3 id=&#34;4-pdf页面删除工具&#34;&gt;4. PDF页面删除工具
+&lt;/h3&gt;&lt;p&gt;用DeepSeek 5 分钟完成, @创意来自：IDO老徐的DeepSeek星球.&lt;/p&gt;
+&lt;p&gt;体验地址：&lt;a class=&#34;link&#34; href=&#34;https://dao24dao.github.io/p/pdf_process/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;PDF页面删除工具&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;页面下方有 生成步骤教程+源码，可以自己下载，按步骤试试，你也可以。&lt;/p&gt;
+&lt;h3 id=&#34;5-2048-游戏&#34;&gt;5. 2048 游戏
+&lt;/h3&gt;&lt;p&gt;用DeepSeek 5 分钟完成, @创意来自：IDO老徐的DeepSeek星球.&lt;/p&gt;
+&lt;p&gt;体验地址：&lt;a class=&#34;link&#34; href=&#34;https://dao24dao.github.io/p/game_2048/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;2048 游戏&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;页面下方有 生成步骤教程+源码，可以自己下载，按步骤试试，你也可以。&lt;/p&gt;
+&lt;h2 id=&#34;ido老徐的deepseek星球&#34;&gt;IDO老徐的DeepSeek星球
+&lt;/h2&gt;&lt;p&gt;IDO老徐的《用DeepSeek高效实战赚小钱》星球，被知识星球官网和央视报道，绝对高质量星球。&lt;/p&gt;
+&lt;p&gt;当前 68 元/年，我申请了一张 13元 优惠券，直接扫码加入。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;加入后，加微：dao24dao，有福利赠送！！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dao24dao.github.io/p/tools/ido_dkxq_yhq.jpeg&#34;
+	width=&#34;580&#34;
+	height=&#34;873&#34;
+	srcset=&#34;https://dao24dao.github.io/p/tools/ido_dkxq_yhq_hu_f9435d893c85b196.jpeg 480w, https://dao24dao.github.io/p/tools/ido_dkxq_yhq_hu_c5f9b6ce8b1eadd7.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;66&#34;
+		data-flex-basis=&#34;159px&#34;
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>PDF页面删除工具</title>
+        <link>https://dao24dao.github.io/p/pdf_process/</link>
+        <pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://dao24dao.github.io/p/pdf_process/</guid>
+        <description>&lt;img src="https://dao24dao.github.io/images/daochuangshuo_logo.png" alt="Featured image of post PDF页面删除工具" /&gt;
+
+
+  &lt;!DOCTYPE html&gt;
+&lt;html lang=&#34;zh-CN&#34;&gt;
+&lt;head&gt;
+    &lt;meta charset=&#34;UTF-8&#34;&gt;
+    &lt;title&gt;PDF页面删除工具&lt;/title&gt;
+    &lt;link href=&#34;https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;display=swap&#34; rel=&#34;stylesheet&#34;&gt;
+    &lt;style&gt;
+        :root {
+            --main-green: #e8f5e9;
+            --accent-green: #43a047;
+            --success-bg: #e8f5e9;
+            --error-bg: #ffebee;
+        }
+
+        body {
+            font-family: &#39;Open Sans&#39;, sans-serif;
+            background-color: var(--main-green);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+            position: relative;
+        }
+
+        input, button {
+            margin: 1rem 0;
+            padding: 0.8rem;
+            border: 2px solid var(--accent-green);
+            border-radius: 8px;
+            width: 80%;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        button {
+            background-color: var(--accent-green);
+            color: white;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        #downloadLinks {
+            margin-top: 1.5rem;
+        }
+
+        #downloadLinks a {
+            display: block;
+            margin: 0.5rem auto;
+            color: var(--accent-green);
+            text-decoration: none;
+            max-width: 80%;
+            word-break: break-all;
+        }
+
+        .status-tip {
+            padding: 12px 20px;
+            border-radius: 8px;
+            margin: 1rem auto;
+            width: 80%;
+            display: none;
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        .status-tip.fade-out {
+            animation: fadeOut 0.3s ease-in-out;
+        }
+
+        .success {
+            background: var(--success-bg);
+            color: #2e7d32;
+        }
+
+        .error {
+            background: var(--error-bg);
+            color: #c62828;
+        }
+
+        .loading::after {
+            content: &#34;.&#34;;
+            animation: loading 1s infinite;
+        }
+
+        @keyframes loading {
+            0%, 100% { content: &#34;.&#34;; }
+            33% { content: &#34;..&#34;; }
+            66% { content: &#34;...&#34;; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; top: 0; }
+            to { opacity: 1; top: 20px; }
+        }
+
+        @keyframes fadeOut {
+            from { opacity: 1; top: 20px; }
+            to { opacity: 0; top: 0; }
+        }
+
+         .footer {
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #004d40;
+        }
+        .footer a {
+            color: #00796b;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&#34;container&#34;&gt;
+        &lt;h1&gt;PDF页面处理工具&lt;/h1&gt;
+        &lt;input type=&#34;file&#34; id=&#34;pdfInput&#34; accept=&#34;application/pdf&#34;&gt;
+        &lt;input type=&#34;text&#34; id=&#34;pagesInput&#34; placeholder=&#34;输入要删除的页码 (例如: 1-3,5)&#34;&gt;
+        &lt;button id=&#34;processBtn&#34; onclick=&#34;processPDF()&#34;&gt;处理PDF&lt;/button&gt;
+        &lt;div id=&#34;downloadLinks&#34;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+     &lt;div class=&#34;footer&#34;&gt;
+        &lt;div&gt;&lt;a href=&#34;https://pan.quark.cn/s/768b2fc7e115&#34; target=&#34;_blank&#34;&gt;系统源码地址 + 使用 DeepSeek 的提示词，点这领取，免费&lt;/a&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;a href=&#34;https://mp.weixin.qq.com/s/nVUzTMiuYG-yjJ6nMt4YwA&#34; target=&#34;_blank&#34;&gt;由 @道创说 用DeepSeek 1分钟生成，你也可以去尝试制作&lt;/a&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div id=&#34;statusTip&#34; class=&#34;status-tip&#34;&gt;&lt;/div&gt;
+
+    &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js&#34;&gt;&lt;/script&gt;
+    &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js&#34;&gt;&lt;/script&gt;
+    &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js&#34;&gt;&lt;/script&gt;
+
+    &lt;script&gt;
+        let tipTimeout = null;
+
+        async function processPDF() {
+            const processBtn = document.getElementById(&#39;processBtn&#39;);
+            const statusTip = document.getElementById(&#39;statusTip&#39;);
+            
+            try {
+                // 重置状态
+                processBtn.disabled = true;
+                processBtn.innerHTML = &#39;处理中&lt;span class=&#34;loading&#34;&gt;&lt;/span&gt;&#39;;
+                clearTip();
+                document.getElementById(&#39;downloadLinks&#39;).innerHTML = &#39;&#39;;
+
+                const pdfFile = document.getElementById(&#39;pdfInput&#39;).files[0];
+                const pagesInput = document.getElementById(&#39;pagesInput&#39;).value.trim();
+                
+                if (!pdfFile) {
+                    showError(&#39;请先选择PDF文件&#39;);
+                    return;
+                }
+                
+                // 处理页码输入
+                const pagesToDelete = parsePagesInput(pagesInput) || [];
+                
+                const pdfData = await pdfFile.arrayBuffer();
+                const loadingTask = pdfjsLib.getDocument({ data: pdfData });
+                const pdf = await loadingTask.promise;
+                
+                const totalPages = pdf.numPages;
+                const validPages = pagesToDelete.filter(p =&gt; p &gt;= 1 &amp;&amp; p &lt;= totalPages);
+                const pagesToKeep = Array.from({ length: totalPages }, (_, i) =&gt; i + 1)
+                    .filter(p =&gt; !validPages.includes(p));
+                
+                if (pagesToKeep.length === 0) {
+                    showError(&#39;没有可保留的页面&#39;);
+                    return;
+                }
+                
+                let newPdf = null;
+                const zip = new JSZip();
+                
+                for (let i = 0; i &lt; pagesToKeep.length; i++) {
+                    const originalPageNumber = pagesToKeep[i];
+                    const page = await pdf.getPage(originalPageNumber);
+                    const viewport = page.getViewport({ scale: 1.5 });
+                    
+                    // 处理页面方向
+                    const isLandscape = viewport.width &gt; viewport.height;
+                    const pageWidth = isLandscape ? viewport.width : viewport.height;
+                    const pageHeight = isLandscape ? viewport.height : viewport.width;
+                    
+                    // 创建画布
+                    const canvas = document.createElement(&#39;canvas&#39;);
+                    const context = canvas.getContext(&#39;2d&#39;);
+                    canvas.width = pageWidth;
+                    canvas.height = pageHeight;
+                    
+                    // 渲染页面
+                    await page.render({
+                        canvasContext: context,
+                        viewport: page.getViewport({ scale: canvas.width / page.view[2] })
+                    }).promise;
+                    
+                    // 初始化PDF文档
+                    if (!newPdf) {
+                        newPdf = new jspdf.jsPDF({
+                            orientation: isLandscape ? &#39;landscape&#39; : &#39;portrait&#39;,
+                            unit: &#39;pt&#39;,
+                            format: [pageWidth, pageHeight]
+                        });
+                    } else {
+                        newPdf.addPage([pageWidth, pageHeight], isLandscape ? &#39;landscape&#39; : &#39;portrait&#39;);
+                    }
+                    
+                    // 添加图片到PDF
+                    newPdf.addImage(canvas, &#39;JPEG&#39;, 0, 0, pageWidth, pageHeight);
+                    
+                    // 添加连续页码（从1开始）
+                    newPdf.setFontSize(12);
+                    newPdf.setTextColor(40, 40, 40);
+                    newPdf.text(
+                        `第 ${i + 1} 页`,
+                        pageWidth - 60,
+                        pageHeight - 20
+                    );
+                    
+                    // 添加图片到ZIP（使用新页码命名）
+                    const imgData = canvas.toDataURL(&#39;image/jpeg&#39;, 0.9);
+                    zip.file(`page_${i + 1}.jpg`, imgData.split(&#39;,&#39;)[1], {base64: true});
+                }
+                
+                // 生成下载链接
+                const pdfBlob = newPdf.output(&#39;blob&#39;);
+                const zipBlob = await zip.generateAsync({ type: &#39;blob&#39; });
+                
+                createDownloadLink(pdfBlob, &#39;processed.pdf&#39;, &#39;下载处理后的PDF&#39;);
+                createDownloadLink(zipBlob, &#39;pages.zip&#39;, &#39;下载所有页面图片&#39;);
+                
+                showSuccess(&#39;处理成功！&#39;);
+
+            } catch (error) {
+                showError(&#39;处理失败，请重试&#39;);
+                console.error(error);
+            } finally {
+                processBtn.disabled = false;
+                processBtn.innerHTML = &#39;处理PDF&#39;;
+            }
+        }
+
+        function showSuccess(message) {
+            showTip(message, &#39;success&#39;);
+        }
+
+        function showError(message) {
+            showTip(message, &#39;error&#39;);
+        }
+
+        function showTip(message, type) {
+            const tip = document.getElementById(&#39;statusTip&#39;);
+            tip.className = `status-tip ${type}`;
+            tip.textContent = message;
+            tip.style.display = &#39;block&#39;;
+
+            // 清除之前的定时器
+            if (tipTimeout) clearTimeout(tipTimeout);
+
+            // 3秒后自动消失
+            tipTimeout = setTimeout(() =&gt; {
+                tip.classList.add(&#39;fade-out&#39;);
+                setTimeout(() =&gt; {
+                    tip.style.display = &#39;none&#39;;
+                    tip.classList.remove(&#39;fade-out&#39;);
+                }, 300); // 等待动画结束
+            }, 3000);
+        }
+
+        function clearTip() {
+            const tip = document.getElementById(&#39;statusTip&#39;);
+            tip.style.display = &#39;none&#39;;
+            tip.textContent = &#39;&#39;;
+            tip.className = &#39;status-tip&#39;;
+            if (tipTimeout) clearTimeout(tipTimeout);
+        }
+
+        function parsePagesInput(input) {
+            if (!input) return [];
+            const pages = new Set();
+            input.split(&#39;,&#39;).forEach(part =&gt; {
+                const trimmed = part.trim();
+                if (!trimmed) return;
+                
+                if (/-/.test(trimmed)) {
+                    let [start, end] = trimmed.split(&#39;-&#39;).map(Number).filter(n =&gt; !isNaN(n));
+                    if (start === undefined || end === undefined) return;
+                    start = Math.max(1, start);
+                    end = Math.max(1, end);
+                    if (start &gt; end) [start, end] = [end, start];
+                    for (let i = start; i &lt;= end; i++) pages.add(i);
+                } else {
+                    const num = Number(trimmed);
+                    if (!isNaN(num)) pages.add(Math.max(1, num));
+                }
+            });
+            return Array.from(pages).sort((a, b) =&gt; a - b);
+        }
+
+        function createDownloadLink(blob, filename, text) {
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement(&#39;a&#39;);
+            link.href = url;
+            link.download = filename;
+            link.textContent = text;
+            link.style.display = &#39;block&#39;;
+            link.style.margin = &#39;10px auto&#39;;
+            link.style.padding = &#39;8px 16px&#39;;
+            link.style.borderRadius = &#39;6px&#39;;
+            link.style.backgroundColor = &#39;#43a047&#39;;
+            link.style.color = &#39;white&#39;;
+            
+            setTimeout(() =&gt; URL.revokeObjectURL(url), 60000);
+            document.getElementById(&#39;downloadLinks&#39;).appendChild(link);
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+</description>
+        </item>
+        <item>
+        <title>RGB和十六进制颜色转换查询系统</title>
+        <link>https://dao24dao.github.io/p/color_conv/</link>
+        <pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://dao24dao.github.io/p/color_conv/</guid>
+        <description>&lt;img src="https://dao24dao.github.io/images/daochuangshuo_logo.png" alt="Featured image of post RGB和十六进制颜色转换查询系统" /&gt;
+
+
+  &lt;!DOCTYPE html&gt;
+&lt;html lang=&#34;zh-CN&#34;&gt;
+&lt;head&gt;
+  &lt;meta charset=&#34;UTF-8&#34;&gt;
+  &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt;
+  &lt;keywords content=&#34;5 分钟用 DeepSeek 生成颜色色值转换查询系统，你也可以去尝试制作，非常强大&#34;&gt;&lt;/keywords&gt;
+  &lt;title&gt;颜色色值转换查询系统&lt;/title&gt;
+
+  &lt;style&gt;
+    /* 基础重置 */
+    body.legacy-html {
+      all: initial;
+      font-family: &#39;Segoe UI&#39;, system-ui, sans-serif;
+      background-color: #e8f5e9;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+
+    /* 主容器 */
+    .legacy-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* 卡片组件 */
+    .legacy-card {
+      background-color: #c8e6c9;
+      border-radius: 8px;
+      padding: 2rem;
+      margin: 1rem 0;
+      width: 100%;
+      max-width: 800px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* 输入组件 */
+    .legacy-input-group {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .legacy-input {
+      flex: 1;
+      min-width: 200px;
+      padding: 0.5rem;
+      border: 2px solid #81c784;
+      border-radius: 4px;
+      background: white;
+    }
+
+    .legacy-btn {
+      background-color: #4caf50;
+      color: white;
+      padding: 0.5rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .legacy-btn:hover {
+      background-color: #45a049;
+    }
+
+    /* 数据表格 */
+    .legacy-data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1.5rem;
+      background: white;
+    }
+
+    .legacy-data-table th {
+      background-color: #a5d6a7;
+      color: #2e7d32;
+      padding: 12px;
+      text-align: left;
+    }
+
+    .legacy-data-table td {
+      padding: 10px;
+      border-bottom: 1px solid #c8e6c9;
+    }
+
+    .color-sample {
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      border: 1px solid #ddd;
+    }
+
+    /* 页脚样式 */
+    .legacy-footer {
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+      padding: 1rem;
+    }
+
+    .legacy-footer a {
+      color: #4caf50;
+      text-decoration: none;
+    }
+
+    .legacy-footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* 响应式设计 */
+    @media (max-width: 768px) {
+      body.legacy-html {
+        padding: 10px;
+      }
+
+      .legacy-input-group {
+        flex-direction: column;
+      }
+
+      .legacy-input {
+        width: 100%;
+      }
+
+      .legacy-btn {
+        width: 100%;
+      }
+
+      .legacy-data-table {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .legacy-data-table {
+        font-size: 12px;
+      }
+      
+      .color-sample {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body class=&#34;legacy-html&#34;&gt;
+  &lt;main class=&#34;legacy-container&#34;&gt;
+    &lt;h1&gt;颜色色值转换查询系统&lt;/h1&gt;
+
+    &lt;!-- 转换器模块 --&gt;
+    &lt;div class=&#34;legacy-card&#34;&gt;
+      &lt;div class=&#34;legacy-input-group&#34;&gt;
+        &lt;input type=&#34;text&#34; 
+               class=&#34;legacy-input&#34;
+               id=&#34;hexInput&#34; 
+               placeholder=&#34;#FFFFFF&#34;&gt;
+        &lt;button class=&#34;legacy-btn&#34; onclick=&#34;convertHexToRgb()&#34;&gt;转RGB格式&lt;/button&gt;
+      &lt;/div&gt;
+
+      &lt;div class=&#34;legacy-input-group&#34;&gt;
+        &lt;input type=&#34;text&#34; 
+               class=&#34;legacy-input&#34;
+               id=&#34;rgbInput&#34; 
+               placeholder=&#34;255,255,255&#34;&gt;
+        &lt;button class=&#34;legacy-btn&#34; onclick=&#34;convertRgbToHex()&#34;&gt;转十六进制&lt;/button&gt;
+      &lt;/div&gt;
+
+      &lt;div class=&#34;legacy-input-group&#34;&gt;
+        &lt;input type=&#34;color&#34; 
+               id=&#34;colorPicker&#34; 
+               style=&#34;height: 40px; width: 60px;&#34;
+               onchange=&#34;updateFromPicker(this.value)&#34;&gt;
+      &lt;/div&gt;
+
+      &lt;div id=&#34;colorPreview&#34; 
+           style=&#34;width:100px;height:100px;border:2px solid #81c784;margin:1rem auto;border-radius:8px&#34;&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- 颜色对照表 --&gt;
+    &lt;div class=&#34;legacy-card&#34;&gt;
+      &lt;table class=&#34;legacy-data-table&#34;&gt;
+        &lt;tr&gt;
+          &lt;th&gt;示例&lt;/th&gt;
+          &lt;th&gt;英文名&lt;/th&gt;
+          &lt;th&gt;中文名&lt;/th&gt;
+          &lt;th&gt;十六进制&lt;/th&gt;
+          &lt;th&gt;RGB&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;div class=&#34;color-sample&#34; style=&#34;background: #FF0000&#34;&gt;&lt;/div&gt;&lt;/td&gt;
+          &lt;td&gt;Red&lt;/td&gt;
+          &lt;td&gt;红色&lt;/td&gt;
+          &lt;td&gt;#FF0000&lt;/td&gt;
+          &lt;td&gt;255,0,0&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;div class=&#34;color-sample&#34; style=&#34;background: #00FF00&#34;&gt;&lt;/div&gt;&lt;/td&gt;
+          &lt;td&gt;Lime&lt;/td&gt;
+          &lt;td&gt;亮绿色&lt;/td&gt;
+          &lt;td&gt;#00FF00&lt;/td&gt;
+          &lt;td&gt;0,255,0&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;div class=&#34;color-sample&#34; style=&#34;background: #0000FF&#34;&gt;&lt;/div&gt;&lt;/td&gt;
+          &lt;td&gt;Blue&lt;/td&gt;
+          &lt;td&gt;蓝色&lt;/td&gt;
+          &lt;td&gt;#0000FF&lt;/td&gt;
+          &lt;td&gt;0,0,255&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;div class=&#34;color-sample&#34; style=&#34;background: #FFFF00&#34;&gt;&lt;/div&gt;&lt;/td&gt;
+          &lt;td&gt;Yellow&lt;/td&gt;
+          &lt;td&gt;黄色&lt;/td&gt;
+          &lt;td&gt;#FFFF00&lt;/td&gt;
+          &lt;td&gt;255,255,0&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;div class=&#34;color-sample&#34; style=&#34;background: #FF00FF&#34;&gt;&lt;/div&gt;&lt;/td&gt;
+          &lt;td&gt;Magenta&lt;/td&gt;
+          &lt;td&gt;洋红色&lt;/td&gt;
+          &lt;td&gt;#FF00FF&lt;/td&gt;
+          &lt;td&gt;255,0,255&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;div class=&#34;color-sample&#34; style=&#34;background: #00FFFF&#34;&gt;&lt;/div&gt;&lt;/td&gt;
+          &lt;td&gt;Cyan&lt;/td&gt;
+          &lt;td&gt;青色&lt;/td&gt;
+          &lt;td&gt;#00FFFF&lt;/td&gt;
+          &lt;td&gt;0,255,255&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;div class=&#34;color-sample&#34; style=&#34;background: #800080&#34;&gt;&lt;/div&gt;&lt;/td&gt;
+          &lt;td&gt;Purple&lt;/td&gt;
+          &lt;td&gt;紫色&lt;/td&gt;
+          &lt;td&gt;#800080&lt;/td&gt;
+          &lt;td&gt;128,0,128&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;div class=&#34;color-sample&#34; style=&#34;background: #FFA500&#34;&gt;&lt;/div&gt;&lt;/td&gt;
+          &lt;td&gt;Orange&lt;/td&gt;
+          &lt;td&gt;橙色&lt;/td&gt;
+          &lt;td&gt;#FFA500&lt;/td&gt;
+          &lt;td&gt;255,165,0&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;div class=&#34;color-sample&#34; style=&#34;background: #A52A2A&#34;&gt;&lt;/div&gt;&lt;/td&gt;
+          &lt;td&gt;Brown&lt;/td&gt;
+          &lt;td&gt;棕色&lt;/td&gt;
+          &lt;td&gt;#A52A2A&lt;/td&gt;
+          &lt;td&gt;165,42,42&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;div class=&#34;color-sample&#34; style=&#34;background: #808080&#34;&gt;&lt;/div&gt;&lt;/td&gt;
+          &lt;td&gt;Gray&lt;/td&gt;
+          &lt;td&gt;灰色&lt;/td&gt;
+          &lt;td&gt;#808080&lt;/td&gt;
+          &lt;td&gt;128,128,128&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;div class=&#34;color-sample&#34; style=&#34;background: #008000&#34;&gt;&lt;/div&gt;&lt;/td&gt;
+          &lt;td&gt;Green&lt;/td&gt;
+          &lt;td&gt;绿色&lt;/td&gt;
+          &lt;td&gt;#008000&lt;/td&gt;
+          &lt;td&gt;0,128,0&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;div class=&#34;color-sample&#34; style=&#34;background: #800000&#34;&gt;&lt;/div&gt;&lt;/td&gt;
+          &lt;td&gt;Maroon&lt;/td&gt;
+          &lt;td&gt;褐红色&lt;/td&gt;
+          &lt;td&gt;#800000&lt;/td&gt;
+          &lt;td&gt;128,0,0&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;div class=&#34;color-sample&#34; style=&#34;background: #000080&#34;&gt;&lt;/div&gt;&lt;/td&gt;
+          &lt;td&gt;Navy&lt;/td&gt;
+          &lt;td&gt;藏青色&lt;/td&gt;
+          &lt;td&gt;#000080&lt;/td&gt;
+          &lt;td&gt;0,0,128&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;div class=&#34;color-sample&#34; style=&#34;background: #FFC0CB&#34;&gt;&lt;/div&gt;&lt;/td&gt;
+          &lt;td&gt;Pink&lt;/td&gt;
+          &lt;td&gt;粉红色&lt;/td&gt;
+          &lt;td&gt;#FFC0CB&lt;/td&gt;
+          &lt;td&gt;255,192,203&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;div class=&#34;color-sample&#34; style=&#34;background: #FFD700&#34;&gt;&lt;/div&gt;&lt;/td&gt;
+          &lt;td&gt;Gold&lt;/td&gt;
+          &lt;td&gt;金色&lt;/td&gt;
+          &lt;td&gt;#FFD700&lt;/td&gt;
+          &lt;td&gt;255,215,0&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;div class=&#34;color-sample&#34; style=&#34;background: #40E0D0&#34;&gt;&lt;/div&gt;&lt;/td&gt;
+          &lt;td&gt;Turquoise&lt;/td&gt;
+          &lt;td&gt;绿松石色&lt;/td&gt;
+          &lt;td&gt;#40E0D0&lt;/td&gt;
+          &lt;td&gt;64,224,208&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;div class=&#34;color-sample&#34; style=&#34;background: #EE82EE&#34;&gt;&lt;/div&gt;&lt;/td&gt;
+          &lt;td&gt;Violet&lt;/td&gt;
+          &lt;td&gt;紫罗兰色&lt;/td&gt;
+          &lt;td&gt;#EE82EE&lt;/td&gt;
+          &lt;td&gt;238,130,238&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;div class=&#34;color-sample&#34; style=&#34;background: #F5F5DC&#34;&gt;&lt;/div&gt;&lt;/td&gt;
+          &lt;td&gt;Beige&lt;/td&gt;
+          &lt;td&gt;米色&lt;/td&gt;
+          &lt;td&gt;#F5F5DC&lt;/td&gt;
+          &lt;td&gt;245,245,220&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;div class=&#34;color-sample&#34; style=&#34;background: #FA8072&#34;&gt;&lt;/div&gt;&lt;/td&gt;
+          &lt;td&gt;Salmon&lt;/td&gt;
+          &lt;td&gt;鲑鱼色&lt;/td&gt;
+          &lt;td&gt;#FA8072&lt;/td&gt;
+          &lt;td&gt;250,128,114&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;td&gt;&lt;div class=&#34;color-sample&#34; style=&#34;background: #7FFFD4&#34;&gt;&lt;/div&gt;&lt;/td&gt;
+          &lt;td&gt;Aquamarine&lt;/td&gt;
+          &lt;td&gt;碧绿色&lt;/td&gt;
+          &lt;td&gt;#7FFFD4&lt;/td&gt;
+          &lt;td&gt;127,255,212&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+
+    &lt;!-- 页脚 --&gt;
+    &lt;div class=&#34;legacy-card legacy-footer&#34;&gt;
+      &lt;p&gt;
+        &lt;a href=&#34;https://pan.quark.cn/s/6875f7cb475f&#34; target=&#34;_blank&#34;&gt;系统源码地址 + 使用 DeepSeek 的提示词，点这领取，免费&lt;/a&gt;
+      &lt;/p&gt;
+      &lt;p&gt;
+        &lt;a href=&#34;https://mp.weixin.qq.com/s/nVUzTMiuYG-yjJ6nMt4YwA&#34; target=&#34;_blank&#34;&gt;由 @道创说 用 DeepSeek 1 分钟生成，你也可以去尝试制作&lt;/a&gt;
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/main&gt;
+
+  &lt;script&gt;
+    // 颜色转换功能
+    function convertHexToRgb() {
+      const hex = document.getElementById(&#39;hexInput&#39;).value.trim();
+      const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+      if (result) {
+        const rgb = [
+          parseInt(result[1], 16),
+          parseInt(result[2], 16),
+          parseInt(result[3], 16)
+        ].join(&#39;,&#39;);
+        document.getElementById(&#39;rgbInput&#39;).value = rgb;
+        updateColorPreview(rgb);
+      }
+    }
+
+    function convertRgbToHex() {
+      const rgb = document.getElementById(&#39;rgbInput&#39;).value.match(/\d+/g);
+      if (rgb &amp;&amp; rgb.length === 3) {
+        const hex = &#39;#&#39; + rgb.map(x =&gt; {
+          const parsed = parseInt(x);
+          return Math.max(0, Math.min(255, parsed))
+            .toString(16)
+            .padStart(2, &#39;0&#39;);
+        }).join(&#39;&#39;).toUpperCase();
+        document.getElementById(&#39;hexInput&#39;).value = hex;
+        updateColorPreview(rgb.join(&#39;,&#39;));
+      }
+    }
+
+    function updateFromPicker(color) {
+      const rgb = color.match(/\w{2}/g)
+                    .map(x =&gt; parseInt(x, 16))
+                    .join(&#39;,&#39;);
+      document.getElementById(&#39;hexInput&#39;).value = color.toUpperCase();
+      document.getElementById(&#39;rgbInput&#39;).value = rgb;
+      updateColorPreview(rgb);
+    }
+
+    function updateColorPreview(rgb) {
+      const preview = document.getElementById(&#39;colorPreview&#39;);
+      preview.style.backgroundColor = `rgb(${rgb})`;
+      preview.style.borderColor = parseInt(rgb.split(&#39;,&#39;)[0]) &gt; 200 ? &#39;#333&#39; : &#39;#81c784&#39;;
+    }
+
+    // 初始化事件监听
+    document.addEventListener(&#39;DOMContentLoaded&#39;, () =&gt; {
+      document.getElementById(&#39;colorPicker&#39;).value = &#39;#FFFFFF&#39;;
+      updateColorPreview(&#39;255,255,255&#39;);
+    });
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+</description>
+        </item>
+        <item>
+        <title>初中生物理课堂点名积分系统</title>
+        <link>https://dao24dao.github.io/p/student_score/</link>
+        <pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://dao24dao.github.io/p/student_score/</guid>
+        <description>&lt;img src="https://dao24dao.github.io/images/daochuangshuo_logo.png" alt="Featured image of post 初中生物理课堂点名积分系统" /&gt;
+
+
+  &lt;!DOCTYPE html&gt;
+&lt;html lang=&#34;zh-CN&#34;&gt;
+&lt;head&gt;
+    &lt;meta charset=&#34;UTF-8&#34;&gt;
+    &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt;
+    &lt;meta name=&#34;keywords&#34; content=&#34;5 分钟，用 DeepSeek 生成学生点名答题积分统计系统，初中生物理课堂点名积分系统，你也可以去尝试制作，非常强大&#34;&gt;
+    &lt;title&gt;初中生物理课堂点名积分系统&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            font-family: &#39;Segoe UI&#39;, Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e0f7fa; /* 生机盎然的绿色背景 */
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .name-roll {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px 0;
+            color: #27ae60;
+        }
+        .controls {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .controls button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .controls button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        .question {
+            font-size: 18px;
+            text-align: center;
+            margin: 20px 0;
+            color: #34495e;
+        }
+        .rankings {
+            margin-top: 30px;
+        }
+        .rankings table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .rankings th, .rankings td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .rankings th {
+            background-color: #27ae60;
+            color: white;
+        }
+        .rankings tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .rankings tr:hover {
+            background-color: #f1f1f1;
+        }
+        .rankings .negative {
+            background-color: #ffcccc;
+        }
+        .rankings .gold {
+            color: #ffd700;
+        }
+        .rankings .silver {
+            color: #c0c0c0;
+        }
+        .rankings .bronze {
+            color: #cd7f32;
+        }
+        .tips {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            z-index: 1000;
+            animation: fadeOut 3s forwards;
+        }
+        .tips.correct {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .tips.error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        @keyframes fadeOut {
+            0% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #555;
+        }
+        .footer a {
+            color: #27ae60;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&#34;container&#34;&gt;
+        &lt;h1&gt;初中生物理课堂点名积分系统&lt;/h1&gt;
+        &lt;div class=&#34;name-roll&#34; id=&#34;nameRoll&#34;&gt;点击开始点名&lt;/div&gt;
+        &lt;div class=&#34;controls&#34;&gt;
+            &lt;button id=&#34;startBtn&#34;&gt;开始点名&lt;/button&gt;
+            &lt;button id=&#34;stopBtn&#34; disabled&gt;暂停&lt;/button&gt;
+            &lt;button id=&#34;correctBtn&#34; disabled&gt;正确&lt;/button&gt;
+            &lt;button id=&#34;wrongBtn&#34; disabled&gt;错误&lt;/button&gt;
+            &lt;button id=&#34;resetBtn&#34;&gt;积分重置&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;question&#34; id=&#34;question&#34;&gt;&lt;/div&gt;
+        &lt;div class=&#34;rankings&#34;&gt;
+            &lt;h2&gt;积分排行榜&lt;/h2&gt;
+            &lt;table id=&#34;rankingsTable&#34;&gt;
+                &lt;thead&gt;
+                    &lt;tr&gt;
+                        &lt;th&gt;排名&lt;/th&gt;
+                        &lt;th&gt;姓名&lt;/th&gt;
+                        &lt;th&gt;积分&lt;/th&gt;
+                    &lt;/tr&gt;
+                &lt;/thead&gt;
+                &lt;tbody&gt;
+                    &lt;!-- 排行榜数据动态生成 --&gt;
+                &lt;/tbody&gt;
+            &lt;/table&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;!-- 底部内容 --&gt;
+    &lt;div class=&#34;footer&#34;&gt;
+        &lt;p&gt;
+            &lt;a href=&#34;https://pan.quark.cn/s/de810b048292&#34; target=&#34;_blank&#34;&gt;系统源码地址 + 使用 DeepSeek 的提示词，点这领取，免费&lt;/a&gt;
+        &lt;/p&gt;
+        &lt;p&gt;
+            &lt;a href=&#34;https://mp.weixin.qq.com/s/nVUzTMiuYG-yjJ6nMt4YwA&#34; target=&#34;_blank&#34;&gt;由 @道创说 用 DeepSeek 1 分钟生成，你也可以去尝试制作&lt;/a&gt;
+        &lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;script&gt;
+        // 学生姓名列表
+        const students = [
+            &#34;王梓轩&#34;, &#34;李思涵&#34;, &#34;张宇辰&#34;, &#34;刘欣怡&#34;, &#34;陈浩然&#34;, &#34;赵雅婷&#34;, &#34;黄俊杰&#34;, &#34;周雨桐&#34;, &#34;吴子豪&#34;, &#34;徐梦瑶&#34;,
+            &#34;孙宇航&#34;, &#34;胡佳琪&#34;, &#34;郭泽宇&#34;, &#34;林晓彤&#34;, &#34;何嘉豪&#34;, &#34;高诗涵&#34;, &#34;曹天佑&#34;, &#34;邓婉婷&#34;, &#34;彭子睿&#34;, &#34;袁静怡&#34;
+        ];
+
+        // 物理题目库（20道不重复题目）
+        const physicsQuestions = [
+            &#34;1. 什么是牛顿第一定律？&#34;,
+            &#34;2. 电流的单位是什么？&#34;,
+            &#34;3. 光的传播速度是多少？&#34;,
+            &#34;4. 什么是功的计算公式？&#34;,
+            &#34;5. 电阻的单位是什么？&#34;,
+            &#34;6. 什么是欧姆定律？&#34;,
+            &#34;7. 什么是动能定理？&#34;,
+            &#34;8. 什么是动量守恒定律？&#34;,
+            &#34;9. 什么是热力学第一定律？&#34;,
+            &#34;10. 什么是光的折射定律？&#34;,
+            &#34;11. 什么是电磁感应定律？&#34;,
+            &#34;12. 什么是电容的单位？&#34;,
+            &#34;13. 什么是电压的单位？&#34;,
+            &#34;14. 什么是功率的计算公式？&#34;,
+            &#34;15. 什么是焦耳定律？&#34;,
+            &#34;16. 什么是光的反射定律？&#34;,
+            &#34;17. 什么是重力加速度？&#34;,
+            &#34;18. 什么是浮力定律？&#34;,
+            &#34;19. 什么是杠杆原理？&#34;,
+            &#34;20. 什么是能量守恒定律？&#34;
+        ];
+
+        // 学生积分数据
+        let studentScores = {};
+        students.forEach(name =&gt; studentScores[name] = 0);
+
+        // 页面元素
+        const nameRoll = document.getElementById(&#34;nameRoll&#34;);
+        const startBtn = document.getElementById(&#34;startBtn&#34;);
+        const stopBtn = document.getElementById(&#34;stopBtn&#34;);
+        const correctBtn = document.getElementById(&#34;correctBtn&#34;);
+        const wrongBtn = document.getElementById(&#34;wrongBtn&#34;);
+        const resetBtn = document.getElementById(&#34;resetBtn&#34;);
+        const questionEl = document.getElementById(&#34;question&#34;);
+        const rankingsTable = document.getElementById(&#34;rankingsTable&#34;).getElementsByTagName(&#34;tbody&#34;)[0];
+
+        let rollingInterval;
+        let currentStudent = null;
+
+        // 从缓存加载积分数据
+        if (localStorage.getItem(&#34;studentScores&#34;)) {
+            studentScores = JSON.parse(localStorage.getItem(&#34;studentScores&#34;));
+        }
+
+        // 更新排行榜
+        function updateRankings() {
+    rankingsTable.innerHTML = &#34;&#34;; // 清空当前排行榜
+
+    // 排序规则：正分从高到低 &gt; 负分从低到高 &gt; 0 分
+    const sortedStudents = Object.keys(studentScores).sort((a, b) =&gt; {
+        if (studentScores[a] &gt; 0 &amp;&amp; studentScores[b] &gt; 0) {
+            return studentScores[b] - studentScores[a]; // 正分从高到低
+        } else if (studentScores[a] &lt; 0 &amp;&amp; studentScores[b] &lt; 0) {
+            return studentScores[a] - studentScores[b]; // 负分从低到高
+        } else if (studentScores[a] &gt; 0) {
+            return -1; // 正分排前面
+        } else if (studentScores[b] &gt; 0) {
+            return 1; // 正分排前面
+        } else if (studentScores[a] &lt; 0) {
+            return -1; // 负分排前面
+        } else if (studentScores[b] &lt; 0) {
+            return 1; // 负分排前面
+        } else {
+            return 0; // 0 分保持不变
+        }
+    });
+
+    // 动态生成排行榜
+    sortedStudents.forEach((name, index) =&gt; {
+        const row = document.createElement(&#34;tr&#34;);
+        if (studentScores[name] &lt; 0) {
+            row.classList.add(&#34;negative&#34;); // 负分同学红色背景
+        }
+        row.innerHTML = `
+            &lt;td&gt;${index + 1}&lt;/td&gt;
+            &lt;td&gt;${name} ${index === 0 ? &#34;&lt;span class=&#39;gold&#39;&gt;(金)&lt;/span&gt;&#34; : index === 1 ? &#34;&lt;span class=&#39;silver&#39;&gt;(银)&lt;/span&gt;&#34; : index === 2 ? &#34;&lt;span class=&#39;bronze&#39;&gt;(铜)&lt;/span&gt;&#34; : &#34;&#34;}&lt;/td&gt;
+            &lt;td&gt;${studentScores[name]}&lt;/td&gt;
+        `;
+        rankingsTable.appendChild(row);
+    });
+}
+
+        // 显示弹窗提示
+        function showTip(message, isCorrect) {
+            const tip = document.createElement(&#34;div&#34;);
+            tip.className = `tips ${isCorrect ? &#34;correct&#34; : &#34;error&#34;}`;
+            tip.textContent = message;
+            document.body.appendChild(tip);
+            setTimeout(() =&gt; tip.remove(), 3000);
+        }
+
+        // 开始点名
+        startBtn.addEventListener(&#34;click&#34;, () =&gt; {
+            startBtn.disabled = true;
+            stopBtn.disabled = false;
+            correctBtn.disabled = true;
+            wrongBtn.disabled = true;
+            rollingInterval = setInterval(() =&gt; {
+                currentStudent = students[Math.floor(Math.random() * students.length)];
+                nameRoll.textContent = currentStudent;
+            }, 100);
+        });
+
+        // 暂停点名
+        stopBtn.addEventListener(&#34;click&#34;, () =&gt; {
+            clearInterval(rollingInterval);
+            startBtn.disabled = false;
+            stopBtn.disabled = true;
+            correctBtn.disabled = false;
+            wrongBtn.disabled = false;
+            questionEl.textContent = physicsQuestions[Math.floor(Math.random() * physicsQuestions.length)];
+        });
+
+        // 回答正确
+        correctBtn.addEventListener(&#34;click&#34;, () =&gt; {
+            studentScores[currentStudent]++;
+            localStorage.setItem(&#34;studentScores&#34;, JSON.stringify(studentScores));
+            showTip(`恭喜 ${currentStudent} 同学，积分 +1！`, true);
+            updateRankings();
+            correctBtn.disabled = true;
+            wrongBtn.disabled = true;
+        });
+
+        // 回答错误
+        wrongBtn.addEventListener(&#34;click&#34;, () =&gt; {
+            studentScores[currentStudent]--;
+            localStorage.setItem(&#34;studentScores&#34;, JSON.stringify(studentScores));
+            showTip(`${currentStudent} 同学要加油学习哦，回答错了，积分 -1！`, false);
+            updateRankings();
+            correctBtn.disabled = true;
+            wrongBtn.disabled = true;
+        });
+
+        // 积分重置
+        resetBtn.addEventListener(&#34;click&#34;, () =&gt; {
+            if (confirm(&#34;确认重置所有学生的积分吗？&#34;)) {
+                students.forEach(name =&gt; studentScores[name] = 0);
+                localStorage.setItem(&#34;studentScores&#34;, JSON.stringify(studentScores));
+                updateRankings();
+            }
+        });
+
+        // 初始化排行榜
+        updateRankings();
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+</description>
+        </item>
+        <item>
+        <title>小学生课堂英语单词抽查系统</title>
+        <link>https://dao24dao.github.io/p/eng_words/</link>
+        <pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://dao24dao.github.io/p/eng_words/</guid>
+        <description>&lt;img src="https://dao24dao.github.io/images/daochuangshuo_logo.png" alt="Featured image of post 小学生课堂英语单词抽查系统" /&gt;
+
+
+  &lt;!DOCTYPE html&gt;
+&lt;html lang=&#34;zh-CN&#34;&gt;
+&lt;head&gt;
+    &lt;meta charset=&#34;UTF-8&#34;&gt;
+    &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt;
+    &lt;keywords content=&#34;1 分钟用 DeepSeek 生成小学生课堂英语单词抽查系统，你也可以去尝试制作，非常强大&#34;&gt;
+    &lt;title&gt;小学生课堂英语单词抽查系统&lt;/title&gt;
+    &lt;style&gt;
+        body {
+            background-color: #e0f7fa; /* 浅绿色背景 */
+            font-family: &#39;Segoe UI&#39;, Tahoma, Geneva, Verdana, sans-serif; /* 免费可商用字体 */
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #00796b;
+        }
+        .word-display {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .word-display div {
+            margin: 10px 0;
+            font-size: 1.2em;
+            color: #004d40;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #00796b;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:disabled {
+            background-color: #b2dfdb;
+            cursor: not-allowed;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            width: 80%;
+            max-width: 500px;
+        }
+        .modal-content {
+            text-align: left;
+        }
+        .modal-content div {
+            margin: 10px 0;
+        }
+        .close-modal {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #00796b;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .footer {
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #004d40;
+        }
+        .footer a {
+            color: #00796b;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;1 分钟用 DeepSeek 生成小学生课堂英语单词抽查系统&lt;/h1&gt;
+    &lt;div class=&#34;word-display&#34; id=&#34;wordDisplay&#34;&gt;
+        &lt;div&gt;点击“开始随机抽查”按钮&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;button id=&#34;startBtn&#34;&gt;开始随机抽查&lt;/button&gt;
+    &lt;button id=&#34;pauseBtn&#34; disabled&gt;暂停&lt;/button&gt;
+    &lt;button id=&#34;showWordsBtn&#34; disabled&gt;查看单词英文&lt;/button&gt;
+
+    &lt;div class=&#34;modal&#34; id=&#34;wordModal&#34;&gt;
+        &lt;div class=&#34;modal-content&#34; id=&#34;modalContent&#34;&gt;
+            &lt;!-- 中英文对照及读音将显示在这里 --&gt;
+        &lt;/div&gt;
+        &lt;button class=&#34;close-modal&#34; id=&#34;closeModal&#34;&gt;关闭弹窗&lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&#34;footer&#34;&gt;
+        &lt;div&gt;&lt;a href=&#34;https://pan.quark.cn/s/f984d1a1c029&#34; target=&#34;_blank&#34;&gt;系统源码地址 + 使用 DeepSeek 的提示词，点这领取，免费&lt;/a&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;a href=&#34;https://mp.weixin.qq.com/s/nVUzTMiuYG-yjJ6nMt4YwA&#34; target=&#34;_blank&#34;&gt;由 @道创说 用DeepSeek 1分钟生成，你也可以去尝试制作&lt;/a&gt;&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script&gt;
+        const words = [
+            { chinese: &#39;苹果&#39;, english: &#39;apple&#39;, pronunciation: &#39;/ˈæp.əl/&#39; },
+            { chinese: &#39;香蕉&#39;, english: &#39;banana&#39;, pronunciation: &#39;/bəˈnɑː.nə/&#39; },
+            { chinese: &#39;猫&#39;, english: &#39;cat&#39;, pronunciation: &#39;/kæt/&#39; },
+            { chinese: &#39;狗&#39;, english: &#39;dog&#39;, pronunciation: &#39;/dɒɡ/&#39; },
+            { chinese: &#39;书&#39;, english: &#39;book&#39;, pronunciation: &#39;/bʊk/&#39; },
+            { chinese: &#39;椅子&#39;, english: &#39;chair&#39;, pronunciation: &#39;/tʃeər/&#39; },
+            { chinese: &#39;桌子&#39;, english: &#39;table&#39;, pronunciation: &#39;/ˈteɪ.bəl/&#39; },
+            { chinese: &#39;学校&#39;, english: &#39;school&#39;, pronunciation: &#39;/skuːl/&#39; },
+            { chinese: &#39;老师&#39;, english: &#39;teacher&#39;, pronunciation: &#39;/ˈtiː.tʃər/&#39; },
+            { chinese: &#39;学生&#39;, english: &#39;student&#39;, pronunciation: &#39;/ˈstjuː.dənt/&#39; },
+            { chinese: &#39;铅笔&#39;, english: &#39;pencil&#39;, pronunciation: &#39;/ˈpen.səl/&#39; },
+            { chinese: &#39;橡皮&#39;, english: &#39;eraser&#39;, pronunciation: &#39;/ɪˈreɪ.zər/&#39; },
+            { chinese: &#39;电脑&#39;, english: &#39;computer&#39;, pronunciation: &#39;/kəmˈpjuː.tər/&#39; },
+            { chinese: &#39;手机&#39;, english: &#39;phone&#39;, pronunciation: &#39;/fəʊn/&#39; },
+            { chinese: &#39;汽车&#39;, english: &#39;car&#39;, pronunciation: &#39;/kɑːr/&#39; },
+            { chinese: &#39;自行车&#39;, english: &#39;bicycle&#39;, pronunciation: &#39;/ˈbaɪ.sɪ.kəl/&#39; },
+            { chinese: &#39;飞机&#39;, english: &#39;airplane&#39;, pronunciation: &#39;/ˈeə.pleɪn/&#39; },
+            { chinese: &#39;船&#39;, english: &#39;ship&#39;, pronunciation: &#39;/ʃɪp/&#39; },
+            { chinese: &#39;房子&#39;, english: &#39;house&#39;, pronunciation: &#39;/haʊs/&#39; },
+            { chinese: &#39;花园&#39;, english: &#39;garden&#39;, pronunciation: &#39;/ˈɡɑː.dən/&#39; },
+            { chinese: &#39;水&#39;, english: &#39;water&#39;, pronunciation: &#39;/ˈwɔː.tər/&#39; },
+            { chinese: &#39;牛奶&#39;, english: &#39;milk&#39;, pronunciation: &#39;/mɪlk/&#39; },
+            { chinese: &#39;面包&#39;, english: &#39;bread&#39;, pronunciation: &#39;/bred/&#39; },
+            { chinese: &#39;鸡蛋&#39;, english: &#39;egg&#39;, pronunciation: &#39;/eɡ/&#39; },
+            { chinese: &#39;米饭&#39;, english: &#39;rice&#39;, pronunciation: &#39;/raɪs/&#39; },
+            { chinese: &#39;鱼&#39;, english: &#39;fish&#39;, pronunciation: &#39;/fɪʃ/&#39; },
+            { chinese: &#39;肉&#39;, english: &#39;meat&#39;, pronunciation: &#39;/miːt/&#39; },
+            { chinese: &#39;蔬菜&#39;, english: &#39;vegetable&#39;, pronunciation: &#39;/ˈvedʒ.tə.bəl/&#39; },
+            { chinese: &#39;水果&#39;, english: &#39;fruit&#39;, pronunciation: &#39;/fruːt/&#39; },
+            { chinese: &#39;红色&#39;, english: &#39;red&#39;, pronunciation: &#39;/red/&#39; },
+            { chinese: &#39;蓝色&#39;, english: &#39;blue&#39;, pronunciation: &#39;/bluː/&#39; },
+            { chinese: &#39;绿色&#39;, english: &#39;green&#39;, pronunciation: &#39;/ɡriːn/&#39; },
+            { chinese: &#39;黄色&#39;, english: &#39;yellow&#39;, pronunciation: &#39;/ˈjel.əʊ/&#39; },
+            { chinese: &#39;黑色&#39;, english: &#39;black&#39;, pronunciation: &#39;/blæk/&#39; },
+            { chinese: &#39;白色&#39;, english: &#39;white&#39;, pronunciation: &#39;/waɪt/&#39; },
+            { chinese: &#39;大&#39;, english: &#39;big&#39;, pronunciation: &#39;/bɪɡ/&#39; },
+            { chinese: &#39;小&#39;, english: &#39;small&#39;, pronunciation: &#39;/smɔːl/&#39; },
+            { chinese: &#39;高&#39;, english: &#39;tall&#39;, pronunciation: &#39;/tɔːl/&#39; },
+            { chinese: &#39;矮&#39;, english: &#39;short&#39;, pronunciation: &#39;/ʃɔːt/&#39; },
+            { chinese: &#39;快乐&#39;, english: &#39;happy&#39;, pronunciation: &#39;/ˈhæp.i/&#39; },
+            { chinese: &#39;悲伤&#39;, english: &#39;sad&#39;, pronunciation: &#39;/sæd/&#39; },
+            { chinese: &#39;好&#39;, english: &#39;good&#39;, pronunciation: &#39;/ɡʊd/&#39; },
+            { chinese: &#39;坏&#39;, english: &#39;bad&#39;, pronunciation: &#39;/bæd/&#39; },
+            { chinese: &#39;快&#39;, english: &#39;fast&#39;, pronunciation: &#39;/fɑːst/&#39; },
+            { chinese: &#39;慢&#39;, english: &#39;slow&#39;, pronunciation: &#39;/sləʊ/&#39; },
+            { chinese: &#39;热&#39;, english: &#39;hot&#39;, pronunciation: &#39;/hɒt/&#39; },
+            { chinese: &#39;冷&#39;, english: &#39;cold&#39;, pronunciation: &#39;/kəʊld/&#39; },
+            { chinese: &#39;新&#39;, english: &#39;new&#39;, pronunciation: &#39;/njuː/&#39; },
+            { chinese: &#39;旧&#39;, english: &#39;old&#39;, pronunciation: &#39;/əʊld/&#39; }
+        ];
+
+        let interval;
+        let currentWords = [];
+        const wordDisplay = document.getElementById(&#39;wordDisplay&#39;);
+        const startBtn = document.getElementById(&#39;startBtn&#39;);
+        const pauseBtn = document.getElementById(&#39;pauseBtn&#39;);
+        const showWordsBtn = document.getElementById(&#39;showWordsBtn&#39;);
+        const wordModal = document.getElementById(&#39;wordModal&#39;);
+        const modalContent = document.getElementById(&#39;modalContent&#39;);
+        const closeModal = document.getElementById(&#39;closeModal&#39;);
+
+        startBtn.addEventListener(&#39;click&#39;, () =&gt; {
+            startBtn.disabled = true;
+            pauseBtn.disabled = false;
+            showWordsBtn.disabled = true;
+            interval = setInterval(() =&gt; {
+                currentWords = getRandomWords(6);
+                wordDisplay.innerHTML = currentWords.map(word =&gt; `&lt;div&gt;${word.chinese}&lt;/div&gt;`).join(&#39;&#39;);
+            }, 100);
+        });
+
+        pauseBtn.addEventListener(&#39;click&#39;, () =&gt; {
+            clearInterval(interval);
+            startBtn.disabled = false;
+            pauseBtn.disabled = true;
+            showWordsBtn.disabled = false;
+        });
+
+        showWordsBtn.addEventListener(&#39;click&#39;, () =&gt; {
+            modalContent.innerHTML = currentWords.map(word =&gt; `
+                &lt;div&gt;&lt;strong&gt;${word.chinese}&lt;/strong&gt;: ${word.english} (${word.pronunciation})&lt;/div&gt;
+            `).join(&#39;&#39;);
+            wordModal.style.display = &#39;block&#39;;
+        });
+
+        closeModal.addEventListener(&#39;click&#39;, () =&gt; {
+            wordModal.style.display = &#39;none&#39;;
+        });
+
+        function getRandomWords(count) {
+            const shuffled = words.sort(() =&gt; 0.5 - Math.random());
+            return shuffled.slice(0, count);
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+</description>
+        </item>
+        <item>
+        <title>用DeepSeek制作的2048小游戏</title>
+        <link>https://dao24dao.github.io/p/game_2048/</link>
+        <pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://dao24dao.github.io/p/game_2048/</guid>
+        <description>&lt;img src="https://dao24dao.github.io/images/daochuangshuo_logo.png" alt="Featured image of post 用DeepSeek制作的2048小游戏" /&gt;
+
+
+  &lt;!DOCTYPE html&gt;
+&lt;html lang=&#34;zh-CN&#34;&gt;
+&lt;head&gt;
+  &lt;!-- 元数据保持独立 --&gt;
+  &lt;meta charset=&#34;UTF-8&#34;&gt;
+  &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt;
+  &lt;keywords content=&#34;2048小游戏，用 DeepSeek 5 分钟生成的系统, DeepSeek写代码，DeepSeek编程，DeepSeek游戏开发&#34;&gt;
+  &lt;title&gt;2048小游戏&lt;/title&gt;
+  
+  &lt;!-- 私有样式表 (防止主题样式污染) --&gt;
+  &lt;style&gt;
+    /* 重置继承样式 */
+    body.legacy-html {
+      all: initial;
+      margin: 0;
+      padding: 0;
+      font-family: &#39;Roboto&#39;, sans-serif;
+      background: linear-gradient(to bottom, #e0f7fa, #80deea);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* 自定义容器 */
+    .legacy-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* 独立组件样式 */
+    .legacy-card {
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    #score {
+      font-size: 28px;
+      font-weight: bold;
+      color: #333;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 10px 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      display: inline-block;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    #board {
+      display: grid;
+      grid-template-columns: repeat(4, 100px);
+      grid-template-rows: repeat(4, 100px);
+      gap: 10px;
+      width: fit-content;
+      margin: auto;
+    }
+
+    .cell {
+      width: 100px;
+      height: 100px;
+      background-color: #b2dfdb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      font-weight: bold;
+      border-radius: 10px;
+    }
+
+    .button-container {
+      margin-top: 20px;
+    }
+
+    .button-container button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: white;
+      margin: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .button-container button:hover {
+      background-color: #0056b3;
+    }
+
+    .button-container button:disabled {
+      background-color: #cccccc;
+      cursor: not-allowed;
+    }
+
+    #help-tips, #game-over-tips {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      z-index: 1000;
+    }
+
+    #help-tips.hidden, #game-over-tips.hidden {
+      display: none;
+    }
+
+    #help-tips button, #game-over-tips button {
+      margin-top: 10px;
+      padding: 8px 16px;
+      font-size: 14px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      background-color: #007bff;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+
+    #help-tips button:hover, #game-over-tips button:hover {
+      background-color: #0056b3;
+    }
+
+    #footer {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    #footer a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    #footer a:hover {
+      text-decoration: underline;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body class=&#34;legacy-html&#34;&gt;
+
+  &lt;!-- 主内容区 --&gt;
+  &lt;main class=&#34;legacy-container&#34;&gt;
+    &lt;div class=&#34;legacy-card&#34;&gt;
+      &lt;h1&gt;2048小游戏&lt;/h1&gt;
+      
+      &lt;!-- 动态内容示例 --&gt;
+      &lt;div id=&#34;score&#34;&gt;分数: 0&lt;/div&gt;
+      &lt;div id=&#34;board&#34;&gt;&lt;/div&gt;
+      &lt;div class=&#34;button-container&#34;&gt;
+        &lt;button id=&#34;restart-btn&#34; disabled&gt;重新开始&lt;/button&gt;
+        &lt;button id=&#34;help-btn&#34;&gt;操作帮助&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div id=&#34;help-tips&#34; class=&#34;hidden&#34;&gt;
+        &lt;p&gt;PC端：使用上下左右键控制&lt;/p&gt;
+        &lt;p&gt;手机端：上下左右滑动控制&lt;/p&gt;
+        &lt;button id=&#34;close-help-btn&#34;&gt;确定&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div id=&#34;game-over-tips&#34; class=&#34;hidden&#34;&gt;
+        &lt;p&gt;游戏结束，请重新开始！&lt;/p&gt;
+        &lt;button id=&#34;close-game-over-btn&#34;&gt;确定&lt;/button&gt;
+      &lt;/div&gt;
+      &lt;div id=&#34;footer&#34;&gt;
+        &lt;p&gt;&lt;a href=&#34;https://pan.quark.cn/s/d02c4f2aa63f&#34;&gt;系统源码地址 + 使用 DeepSeek 的提示词，点这领取，免费&lt;/a&gt;&lt;/p&gt;
+        &lt;p&gt;&lt;a href=&#34;https://mp.weixin.qq.com/s/nVUzTMiuYG-yjJ6nMt4YwA&#34;&gt;由 @道创说 用 DeepSeek 1 分钟生成，你也可以去尝试制作&lt;/a&gt;&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/main&gt;
+
+  &lt;!-- 私有脚本 (与主题JS隔离) --&gt;
+  &lt;script&gt;
+    // 数据加载逻辑
+    document.addEventListener(&#39;DOMContentLoaded&#39;, () =&gt; {
+      const board = document.getElementById(&#39;board&#39;);
+      const scoreElement = document.getElementById(&#39;score&#39;);
+      const restartBtn = document.getElementById(&#39;restart-btn&#39;);
+      const helpBtn = document.getElementById(&#39;help-btn&#39;);
+      const helpTips = document.getElementById(&#39;help-tips&#39;);
+      const closeHelpBtn = document.getElementById(&#39;close-help-btn&#39;);
+      const gameOverTips = document.getElementById(&#39;game-over-tips&#39;);
+      const closeGameOverBtn = document.getElementById(&#39;close-game-over-btn&#39;);
+
+      let boardState = Array(4).fill().map(() =&gt; Array(4).fill(0));
+      let score = 0;
+
+      function init() {
+        boardState = Array(4).fill().map(() =&gt; Array(4).fill(0));
+        score = 0;
+        addRandomTile();
+        addRandomTile();
+        renderBoard();
+        restartBtn.disabled = true; // 初始化时禁用重新开始按钮
+      }
+
+      function addRandomTile() {
+        const emptyCells = [];
+        boardState.forEach((row, i) =&gt; {
+          row.forEach((cell, j) =&gt; {
+            if (cell === 0) emptyCells.push({ i, j });
+          });
+        });
+        if (emptyCells.length &gt; 0) {
+          const { i, j } = emptyCells[Math.floor(Math.random() * emptyCells.length)];
+          boardState[i][j] = Math.random() &lt; 0.9 ? 2 : 4;
+        }
+      }
+
+      function renderBoard() {
+        board.innerHTML = &#39;&#39;;
+        boardState.forEach((row, i) =&gt; {
+          row.forEach((cell, j) =&gt; {
+            const cellElement = document.createElement(&#39;div&#39;);
+            cellElement.classList.add(&#39;cell&#39;);
+            if (cell !== 0) {
+              cellElement.textContent = cell;
+              cellElement.style.backgroundColor = getColor(cell);
+            }
+            board.appendChild(cellElement);
+          });
+        });
+        scoreElement.textContent = `分数: ${score}`;
+      }
+
+      function getColor(value) {
+        const colors = {
+          2: &#39;#ef9a9a&#39;,
+          4: &#39;#f48fb1&#39;,
+          8: &#39;#ce93d8&#39;,
+          16: &#39;#b39ddb&#39;,
+          32: &#39;#9fa8da&#39;,
+          64: &#39;#90caf9&#39;,
+          128: &#39;#80deea&#39;,
+          256: &#39;#80cbc4&#39;,
+          512: &#39;#a5d6a7&#39;,
+          1024: &#39;#c5e1a5&#39;,
+          2048: &#39;#e6ee9c&#39;,
+        };
+        return colors[value] || &#39;#b2dfdb&#39;;
+      }
+
+      function move(direction) {
+        let moved = false;
+        if (direction === &#39;left&#39;) {
+          moved = moveLeft();
+        } else if (direction === &#39;right&#39;) {
+          moved = moveRight();
+        } else if (direction === &#39;up&#39;) {
+          moved = moveUp();
+        } else if (direction === &#39;down&#39;) {
+          moved = moveDown();
+        }
+        if (moved) {
+          addRandomTile();
+          renderBoard();
+          checkGameOver();
+        }
+      }
+
+      function moveLeft() {
+        let moved = false;
+        boardState.forEach(row =&gt; {
+          for (let i = 1; i &lt; row.length; i++) {
+            if (row[i] !== 0) {
+              let j = i;
+              while (j &gt; 0 &amp;&amp; row[j - 1] === 0) {
+                row[j - 1] = row[j];
+                row[j] = 0;
+                j--;
+                moved = true;
+              }
+              if (j &gt; 0 &amp;&amp; row[j - 1] === row[j]) {
+                row[j - 1] *= 2;
+                score += row[j - 1];
+                row[j] = 0;
+                moved = true;
+              }
+            }
+          }
+        });
+        return moved;
+      }
+
+      function moveRight() {
+        let moved = false;
+        boardState.forEach(row =&gt; {
+          for (let i = row.length - 2; i &gt;= 0; i--) {
+            if (row[i] !== 0) {
+              let j = i;
+              while (j &lt; row.length - 1 &amp;&amp; row[j + 1] === 0) {
+                row[j + 1] = row[j];
+                row[j] = 0;
+                j++;
+                moved = true;
+              }
+              if (j &lt; row.length - 1 &amp;&amp; row[j + 1] === row[j]) {
+                row[j + 1] *= 2;
+                score += row[j + 1];
+                row[j] = 0;
+                moved = true;
+              }
+            }
+          }
+        });
+        return moved;
+      }
+
+      function moveUp() {
+        let moved = false;
+        for (let j = 0; j &lt; boardState[0].length; j++) {
+          for (let i = 1; i &lt; boardState.length; i++) {
+            if (boardState[i][j] !== 0) {
+              let k = i;
+              while (k &gt; 0 &amp;&amp; boardState[k - 1][j] === 0) {
+                boardState[k - 1][j] = boardState[k][j];
+                boardState[k][j] = 0;
+                k--;
+                moved = true;
+              }
+              if (k &gt; 0 &amp;&amp; boardState[k - 1][j] === boardState[k][j]) {
+                boardState[k - 1][j] *= 2;
+                score += boardState[k - 1][j];
+                boardState[k][j] = 0;
+                moved = true;
+              }
+            }
+          }
+        }
+        return moved;
+      }
+
+      function moveDown() {
+        let moved = false;
+        for (let j = 0; j &lt; boardState[0].length; j++) {
+          for (let i = boardState.length - 2; i &gt;= 0; i--) {
+            if (boardState[i][j] !== 0) {
+              let k = i;
+              while (k &lt; boardState.length - 1 &amp;&amp; boardState[k + 1][j] === 0) {
+                boardState[k + 1][j] = boardState[k][j];
+                boardState[k][j] = 0;
+                k++;
+                moved = true;
+              }
+              if (k &lt; boardState.length - 1 &amp;&amp; boardState[k + 1][j] === boardState[k][j]) {
+                boardState[k + 1][j] *= 2;
+                score += boardState[k + 1][j];
+                boardState[k][j] = 0;
+                moved = true;
+              }
+            }
+          }
+        }
+        return moved;
+      }
+
+      function checkGameOver() {
+        if (!boardState.some(row =&gt; row.includes(0))) {
+          gameOverTips.classList.remove(&#39;hidden&#39;);
+          restartBtn.disabled = false; // 游戏结束时启用重新开始按钮
+        }
+      }
+
+      // 事件监听器
+      restartBtn.addEventListener(&#39;click&#39;, () =&gt; {
+        init();
+        gameOverTips.classList.add(&#39;hidden&#39;);
+      });
+
+      helpBtn.addEventListener(&#39;click&#39;, () =&gt; {
+        helpTips.classList.remove(&#39;hidden&#39;);
+      });
+
+      closeHelpBtn.addEventListener(&#39;click&#39;, () =&gt; {
+        helpTips.classList.add(&#39;hidden&#39;);
+      });
+
+      closeGameOverBtn.addEventListener(&#39;click&#39;, () =&gt; {
+        gameOverTips.classList.add(&#39;hidden&#39;);
+      });
+
+      // 键盘控制
+      document.addEventListener(&#39;keydown&#39;, (e) =&gt; {
+        if (e.key === &#39;ArrowUp&#39;) {
+          move(&#39;up&#39;);
+        } else if (e.key === &#39;ArrowDown&#39;) {
+          move(&#39;down&#39;);
+        } else if (e.key === &#39;ArrowLeft&#39;) {
+          move(&#39;left&#39;);
+        } else if (e.key === &#39;ArrowRight&#39;) {
+          move(&#39;right&#39;);
+        }
+      });
+
+      // 触摸控制
+      let touchStartX, touchStartY;
+
+      document.addEventListener(&#39;touchstart&#39;, (e) =&gt; {
+        touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
+      });
+
+      document.addEventListener(&#39;touchmove&#39;, (e) =&gt; {
+        e.preventDefault();
+        const touchEndX = e.touches[0].clientX;
+        const touchEndY = e.touches[0].clientY;
+        const dx = touchEndX - touchStartX;
+        const dy = touchEndY - touchStartY;
+        if (Math.abs(dx) &gt; Math.abs(dy)) {
+          if (dx &gt; 0) {
+            move(&#39;right&#39;);
+          } else {
+            move(&#39;left&#39;);
+          }
+        } else {
+          if (dy &gt; 0) {
+            move(&#39;down&#39;);
+          } else {
+            move(&#39;up&#39;);
+          }
+        }
+      });
+
+      // 初始化游戏
+      init();
+    });
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+</description>
+        </item>
+        <item>
+        <title>第 3 期破局行动来了，AI 界的黄埔军校，我们是黄埔 5 期</title>
+        <link>https://dao24dao.github.io/p/20250317/</link>
+        <pubDate>Tue, 18 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://dao24dao.github.io/p/20250317/</guid>
+        <description>&lt;img src="https://dao24dao.github.io/images/daochuangshuo_logo.png" alt="Featured image of post 第 3 期破局行动来了，AI 界的黄埔军校，我们是黄埔 5 期" /&gt;&lt;p&gt;第 3 期破局行动来了，AI界的黄埔军校，我们是黄埔 5 期&lt;/p&gt;
+&lt;p&gt;AI 破局和某财的互撕战斗几乎过去了，对于此事，我只想说：不要膜拜大佬，不要带有滤镜，看实际的交付和格局。&lt;/p&gt;
+&lt;p&gt;好了，这个话题不多说了，没有意义！！&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;今天，第 3 期的 AI 破局行动营正式开始了。&lt;/p&gt;
+&lt;p&gt;在 2025 年，在 DeepSeek 的加持下，在 Manus 的炸裂风潮下，这一期的行动营将具有特殊的意义。&lt;/p&gt;
+&lt;h2 id=&#34;我说几点想法&#34;&gt;我说几点想法：
+&lt;/h2&gt;&lt;h3 id=&#34;1-agi时代来了&#34;&gt;1、 AGI时代来了
+&lt;/h3&gt;&lt;p&gt;2025 年，一个 DeepSeek 在春节轰炸了整个世界，距离 OpenAI 的 ChatGPT 的发布差不多两年的时间。&lt;/p&gt;
+&lt;p&gt;之前很多的大佬都预测过，AGI 的时候还早，没有 5-10 年根本实现不了。&lt;/p&gt;
+&lt;p&gt;但是，DeepSeek 的出来，AGI 的时代，来了！！&lt;/p&gt;
+&lt;h3 id=&#34;2ai-时代与我有关&#34;&gt;2、AI 时代，与我有关
+&lt;/h3&gt;&lt;p&gt;不是与你无关，不是与我无关&lt;/p&gt;
+&lt;p&gt;而是，和每个人息息相关。&lt;/p&gt;
+&lt;p&gt;2025 年，如果你还不开始，不上车，那你可能会落后很多，包括你的工作、业务都会受到很大的挑战。&lt;/p&gt;
+&lt;h3 id=&#34;3不要焦虑&#34;&gt;3、不要焦虑
+&lt;/h3&gt;&lt;p&gt;在 AI 破局，有几十个行动营，不同的方向，每个方向都人拿到很多结果的人。&lt;/p&gt;
+&lt;p&gt;看了之后，会不会很焦虑？&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;记住：这些事和你无关。&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;如何选择&#34;&gt;如何选择？
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;关注自己当下最想要的是什么？&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;想赚钱？ 那就去报可以快速变现的项目；&lt;/p&gt;
+&lt;p&gt;想实现自己的梦？ 那就去报自己感兴趣的项目；&lt;/p&gt;
+&lt;p&gt;想有点副业收入？ 那就去做自己感兴趣且能赚小钱的事；&lt;/p&gt;
+&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;p&gt;剩下的就是：&lt;strong&gt;疯狂执行，专注执行，无他。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;end-结束&#34;&gt;END. 结束
+&lt;/h2&gt;&lt;p&gt;AGI 已来，能这么早加入 AI 破局，是幸运。&lt;/p&gt;
+&lt;p&gt;干就完了。&lt;/p&gt;
+&lt;p&gt;/ &lt;strong&gt;最后玩个梗&lt;/strong&gt; /&lt;/p&gt;
+&lt;p&gt;你来了破局，不干，不执行，你来干啥来了？&lt;/p&gt;
+&lt;p&gt;回答我。&lt;/p&gt;
+&lt;p&gt;look in my eyes?&lt;/p&gt;
+&lt;p&gt;why? tell me why? baby why?&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;都到这了，道 送你一张 AI 破局 3 天的免费体验券，扫码加运营人员统一安排体验。&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;&lt;div style=&#34;width:90%&#34;&gt;&lt;img src=&#34;https://dao24dao.github.io/p/20250317/poju_tyk.jpeg&#34;
+	width=&#34;1080&#34;
+	height=&#34;1800&#34;
+	srcset=&#34;https://dao24dao.github.io/p/20250317/poju_tyk_hu_3284a30b9766fb83.jpeg 480w, https://dao24dao.github.io/p/20250317/poju_tyk_hu_ae08897f7e3802c9.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;60&#34;
+		data-flex-basis=&#34;144px&#34;
+	
+&gt;&lt;/div&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;div style=&#34;width:100%&#34;&gt;&lt;img src=&#34;https://dao24dao.github.io/p/20250317/poju_xq.jpeg&#34;
+	width=&#34;1080&#34;
+	height=&#34;1764&#34;
+	srcset=&#34;https://dao24dao.github.io/p/20250317/poju_xq_hu_4350efba11121648.jpeg 480w, https://dao24dao.github.io/p/20250317/poju_xq_hu_cbdc1752f3a15492.jpeg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;61&#34;
+		data-flex-basis=&#34;146px&#34;
+	
+&gt;&lt;/div&gt;&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;先体验，&lt;strong&gt;优惠券过期 或 想加入的找我（微信：dao24dao），来拿重磅福利！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;免费星球，点击加入： &lt;a class=&#34;link&#34; href=&#34;https://t.zsxq.com/QxWxg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://t.zsxq.com/QxWxg&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>202503 /《DeepSeek 小红书爆款》实战小项目开营了</title>
         <link>https://dao24dao.github.io/p/2025xhsbk/</link>
         <pubDate>Mon, 17 Mar 2025 00:00:00 +0000</pubDate>
         
         <guid>https://dao24dao.github.io/p/2025xhsbk/</guid>
-        <description>&lt;img src="https://dao24dao.github.io/p/2025xhsbk/daochuangshuo_logo.png" alt="Featured image of post 202503 /《DeepSeek 小红书爆款》实战小项目开营了" /&gt;&lt;h2 id=&#34;项目介绍&#34;&gt;项目介绍
+        <description>&lt;img src="https://dao24dao.github.io/images/daochuangshuo_logo.png" alt="Featured image of post 202503 /《DeepSeek 小红书爆款》实战小项目开营了" /&gt;&lt;h2 id=&#34;项目介绍&#34;&gt;项目介绍
 &lt;/h2&gt;&lt;p&gt;&lt;strong&gt;DeepSeek小红书爆款&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;2025年3月14日-2025年4月3日，项目周期21天。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;项目结束前，可随时加入项目(中途加入不影响参与效果)&lt;/p&gt;
@@ -86,7 +1995,7 @@
         <pubDate>Mon, 17 Mar 2025 00:00:00 +0000</pubDate>
         
         <guid>https://dao24dao.github.io/p/2025dspjjrm/</guid>
-        <description>&lt;img src="https://dao24dao.github.io/p/2025dspjjrm/daochuangshuo_logo.png" alt="Featured image of post 202503 /《短视频剪辑入门》实战小项目开营了" /&gt;&lt;h2 id=&#34;项目介绍&#34;&gt;项目介绍
+        <description>&lt;img src="https://dao24dao.github.io/images/daochuangshuo_logo.png" alt="Featured image of post 202503 /《短视频剪辑入门》实战小项目开营了" /&gt;&lt;h2 id=&#34;项目介绍&#34;&gt;项目介绍
 &lt;/h2&gt;&lt;p&gt;&lt;strong&gt;短视频剪辑入门&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;2025年3月14日-2025年4月3日，项目周期21天。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;项目结束前，可随时加入项目(中途加入不影响参与效果)&lt;/p&gt;
@@ -159,7 +2068,7 @@
         <pubDate>Mon, 17 Mar 2025 00:00:00 +0000</pubDate>
         
         <guid>https://dao24dao.github.io/p/2025xywplx/</guid>
-        <description>&lt;img src="https://dao24dao.github.io/p/2025xywplx/daochuangshuo_logo.png" alt="Featured image of post 202503 /《闲鱼虚拟资料&#43;网盘拉新》实战小项目开营了" /&gt;&lt;h2 id=&#34;项目介绍&#34;&gt;项目介绍
+        <description>&lt;img src="https://dao24dao.github.io/images/daochuangshuo_logo.png" alt="Featured image of post 202503 /《闲鱼虚拟资料&#43;网盘拉新》实战小项目开营了" /&gt;&lt;h2 id=&#34;项目介绍&#34;&gt;项目介绍
 &lt;/h2&gt;&lt;p&gt;&lt;strong&gt;闲鱼虚拟资料+网盘拉新&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;2025年3月14日-2025年4月3日，项目周期21天。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;项目结束前，可随时加入项目(中途加入不影响参与效果)&lt;/p&gt;
@@ -219,85 +2128,6 @@
   &lt;tbody&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
-</description>
-        </item>
-        <item>
-        <title>第 3 期破局行动来了，AI 界的黄埔军校，我们是黄埔 5 期</title>
-        <link>https://dao24dao.github.io/p/20250317/</link>
-        <pubDate>Mon, 17 Mar 2025 00:00:00 +0000</pubDate>
-        
-        <guid>https://dao24dao.github.io/p/20250317/</guid>
-        <description>&lt;img src="https://dao24dao.github.io/p/20250317/daochuangshuo_logo.png" alt="Featured image of post 第 3 期破局行动来了，AI 界的黄埔军校，我们是黄埔 5 期" /&gt;&lt;p&gt;第 3 期破局行动来了，AI界的黄埔军校，我们是黄埔 5 期&lt;/p&gt;
-&lt;p&gt;AI 破局和某财的互撕战斗几乎过去了，对于此事，我只想说：不要膜拜大佬，不要带有滤镜，看实际的交付和格局。&lt;/p&gt;
-&lt;p&gt;好了，这个话题不多说了，没有意义！！&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;今天，第 3 期的 AI 破局行动营正式开始了。&lt;/p&gt;
-&lt;p&gt;在 2025 年，在 DeepSeek 的加持下，在 Manus 的炸裂风潮下，这一期的行动营将具有特殊的意义。&lt;/p&gt;
-&lt;h2 id=&#34;我说几点想法&#34;&gt;我说几点想法：
-&lt;/h2&gt;&lt;h3 id=&#34;1-agi时代来了&#34;&gt;1、 AGI时代来了
-&lt;/h3&gt;&lt;p&gt;2025 年，一个 DeepSeek 在春节轰炸了整个世界，距离 OpenAI 的 ChatGPT 的发布差不多两年的时间。&lt;/p&gt;
-&lt;p&gt;之前很多的大佬都预测过，AGI 的时候还早，没有 5-10 年根本实现不了。&lt;/p&gt;
-&lt;p&gt;但是，DeepSeek 的出来，AGI 的时代，来了！！&lt;/p&gt;
-&lt;h3 id=&#34;2ai-时代与我有关&#34;&gt;2、AI 时代，与我有关
-&lt;/h3&gt;&lt;p&gt;不是与你无关，不是与我无关&lt;/p&gt;
-&lt;p&gt;而是，和每个人息息相关。&lt;/p&gt;
-&lt;p&gt;2025 年，如果你还不开始，不上车，那你可能会落后很多，包括你的工作、业务都会受到很大的挑战。&lt;/p&gt;
-&lt;h3 id=&#34;3不要焦虑&#34;&gt;3、不要焦虑
-&lt;/h3&gt;&lt;p&gt;在 AI 破局，有几十个行动营，不同的方向，每个方向都人拿到很多结果的人。&lt;/p&gt;
-&lt;p&gt;看了之后，会不会很焦虑？&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;记住：这些事和你无关。&lt;/strong&gt;&lt;/p&gt;
-&lt;h3 id=&#34;如何选择&#34;&gt;如何选择？
-&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;关注自己当下最想要的是什么？&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;想赚钱？ 那就去报可以快速变现的项目；&lt;/p&gt;
-&lt;p&gt;想实现自己的梦？ 那就去报自己感兴趣的项目；&lt;/p&gt;
-&lt;p&gt;想有点副业收入？ 那就去做自己感兴趣且能赚小钱的事；&lt;/p&gt;
-&lt;p&gt;&amp;hellip;&amp;hellip;&lt;/p&gt;
-&lt;p&gt;剩下的就是：&lt;strong&gt;疯狂执行，专注执行，无他。&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&#34;end-结束&#34;&gt;END. 结束
-&lt;/h2&gt;&lt;p&gt;AGI 已来，能这么早加入 AI 破局，是幸运。&lt;/p&gt;
-&lt;p&gt;干就完了。&lt;/p&gt;
-&lt;p&gt;/ &lt;strong&gt;最后玩个梗&lt;/strong&gt; /&lt;/p&gt;
-&lt;p&gt;你来了破局，不干，不执行，你来干啥来了？&lt;/p&gt;
-&lt;p&gt;回答我。&lt;/p&gt;
-&lt;p&gt;look in my eyes?&lt;/p&gt;
-&lt;p&gt;why? tell me why? baby why?&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;都到这了，道 送你一张 AI 破局 3 天的免费体验券，扫码加运营人员统一安排体验。&lt;/p&gt;
-&lt;table&gt;
-  &lt;thead&gt;
-      &lt;tr&gt;
-          &lt;th&gt;&lt;div style=&#34;width:90%&#34;&gt;&lt;img src=&#34;https://dao24dao.github.io/p/20250317/poju_tyk.jpeg&#34;
-	width=&#34;1080&#34;
-	height=&#34;1800&#34;
-	srcset=&#34;https://dao24dao.github.io/p/20250317/poju_tyk_hu_3284a30b9766fb83.jpeg 480w, https://dao24dao.github.io/p/20250317/poju_tyk_hu_ae08897f7e3802c9.jpeg 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;60&#34;
-		data-flex-basis=&#34;144px&#34;
-	
-&gt;&lt;/div&gt;&lt;/th&gt;
-          &lt;th&gt;&lt;div style=&#34;width:100%&#34;&gt;&lt;img src=&#34;https://dao24dao.github.io/p/20250317/poju_xq.jpeg&#34;
-	width=&#34;1080&#34;
-	height=&#34;1764&#34;
-	srcset=&#34;https://dao24dao.github.io/p/20250317/poju_xq_hu_4350efba11121648.jpeg 480w, https://dao24dao.github.io/p/20250317/poju_xq_hu_cbdc1752f3a15492.jpeg 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;61&#34;
-		data-flex-basis=&#34;146px&#34;
-	
-&gt;&lt;/div&gt;&lt;/th&gt;
-      &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;先体验，&lt;strong&gt;优惠券过期 或 想加入的找我（微信：dao24dao），来拿重磅福利！&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;免费星球，点击加入： &lt;a class=&#34;link&#34; href=&#34;https://t.zsxq.com/QxWxg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://t.zsxq.com/QxWxg&lt;/a&gt;&lt;/p&gt;
 </description>
         </item>
         

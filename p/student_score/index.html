@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="<!DOCTYPE html> 初中生物理课堂点名积分系统 初中生物理课堂点名积分系统 点击开始点名 开始点名 暂停 正确 错误 积分重置 积分排行榜 排名 姓名 积分 系统源码地址 + 使用 DeepSeek 的提示词，点这领取，免费 ">
+<meta name="keywords" content="编程, 开发, 代码, DeepSeek, 副业避坑, 软件, 游戏"><title>初中生物理课堂点名积分系统</title>
+
+<link rel='canonical' href='https://dao24dao.github.io/p/student_score/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="初中生物理课堂点名积分系统">
+<meta property='og:description' content="<!DOCTYPE html> 初中生物理课堂点名积分系统 初中生物理课堂点名积分系统 点击开始点名 开始点名 暂停 正确 错误 积分重置 积分排行榜 排名 姓名 积分 系统源码地址 + 使用 DeepSeek 的提示词，点这领取，免费 ">
+<meta property='og:url' content='https://dao24dao.github.io/p/student_score/'>
+<meta property='og:site_name' content='道创说'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='DeepSeek提效' /><meta property='article:tag' content='副业避坑' /><meta property='article:tag' content='应用工具' /><meta property='article:tag' content='软件开发' /><meta property='article:tag' content='游戏开发' /><meta property='article:published_time' content='2025-03-20T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-03-20T00:00:00&#43;00:00'/><meta property='og:image' content='https://dao24dao.github.io/images/daochuangshuo_logo.png' />
+<meta name="twitter:title" content="初中生物理课堂点名积分系统">
+<meta name="twitter:description" content="<!DOCTYPE html> 初中生物理课堂点名积分系统 初中生物理课堂点名积分系统 点击开始点名 开始点名 暂停 正确 错误 积分重置 积分排行榜 排名 姓名 积分 系统源码地址 + 使用 DeepSeek 的提示词，点这领取，免费 "><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://dao24dao.github.io/images/daochuangshuo_logo.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_96f5fea0197e6fed.png" width="300"
+                            height="267" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">✊</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">道创说</a></h1>
+            <h2 class="site-description">一人企业复利商业化</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://t.zsxq.com/zmotH'
+                        target="_blank"
+                        title="加入付费知识星球"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1742295343432" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="13498" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M512 0c50.834286 0 99.986286 7.387429 146.358857 21.211429v76.946285A438.857143 438.857143 0 1 0 925.915429 365.714286L1002.788571 365.714286A512 512 0 1 1 512 0z m329.142857 73.142857a109.714286 109.714286 0 1 1 0 219.428572 109.714286 109.714286 0 0 1 0-219.428572z" fill="#A2ACC2" p-id="13499"></path></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://t.zsxq.com/QxWxg'
+                        target="_blank"
+                        title="加入免费知识星球"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1742048238230" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2445" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M512 0c50.834286 0 99.986286 7.387429 146.358857 21.211429v76.946285A438.857143 438.857143 0 1 0 925.915429 365.714286L1002.788571 365.714286A512 512 0 1 1 512 0z m329.142857 73.142857a109.714286 109.714286 0 1 1 0 219.428572 109.714286 109.714286 0 0 1 0-219.428572z" fill="#16B998" p-id="2446"></path></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://mp.weixin.qq.com/s/nVUzTMiuYG-yjJ6nMt4YwA'
+                        target="_blank"
+                        title="微信公众号：道创说"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1742048356707" class="icon" viewBox="0 0 1049 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="13604" xmlns:xlink="http://www.w3.org/1999/xlink" width="204.8828125" height="200"><path d="M685.200678 190.588123a428.344693 428.344693 0 0 1 160.534236 31.033638 355.813626 355.813626 0 1 0-589.370816 377.277813 429.283751 429.283751 0 0 1 428.83658-408.311451z" fill="#08BE61" p-id="13605"></path><path d="M693.607485 263.87938a354.829851 354.829851 0 0 0-127.130594 23.476455 429.283751 429.283751 0 0 1 201.942231 680.235878A355.813626 355.813626 0 0 0 693.607485 263.87938z" fill="#08BE61" p-id="13606"></path><path d="M515.052275 789.349522a453.60983 453.60983 0 0 1-74.409184-6.170954c-11.581718-1.341512-23.208153-3.04076-34.968739-5.142462-15.337951-2.727741-108.304713 93.011479-134.956079 72.978238-24.236645-18.199842 11.671152-102.58093 4.471706-129.903052a455.845683 455.845683 0 0 1-209.186395-310.828266A395.075202 395.075202 0 1 0 783.309902 702.106543a453.252094 453.252094 0 0 1-268.257627 87.242979z" fill="#08BE61" p-id="13607"></path></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/me/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>我是谁</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%8F%8B%E9%93%BE/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>友链</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+                    
+                        <li id="i18n-switch">  
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                            <select name="language" title="language" onchange="window.location.href = this.selectedOptions[0].value">
+                                
+                                    <option value="https://dao24dao.github.io/" selected>中文</option>
+                                
+                                    <option value="https://dao24dao.github.io/en/" >English</option>
+                                
+                                    <option value="https://dao24dao.github.io/ar/" >عربي</option>
+                                
+                            </select>
+                        </li>
+                    
+                
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+            <main class="main full-width">
+  <article class="custom-page">
+    
+
+
+  <!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="5 分钟，用 DeepSeek 生成学生点名答题积分统计系统，初中生物理课堂点名积分系统，你也可以去尝试制作，非常强大">
+    <title>初中生物理课堂点名积分系统</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e0f7fa; /* 生机盎然的绿色背景 */
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .name-roll {
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px 0;
+            color: #27ae60;
+        }
+        .controls {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .controls button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .controls button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        .question {
+            font-size: 18px;
+            text-align: center;
+            margin: 20px 0;
+            color: #34495e;
+        }
+        .rankings {
+            margin-top: 30px;
+        }
+        .rankings table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .rankings th, .rankings td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .rankings th {
+            background-color: #27ae60;
+            color: white;
+        }
+        .rankings tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .rankings tr:hover {
+            background-color: #f1f1f1;
+        }
+        .rankings .negative {
+            background-color: #ffcccc;
+        }
+        .rankings .gold {
+            color: #ffd700;
+        }
+        .rankings .silver {
+            color: #c0c0c0;
+        }
+        .rankings .bronze {
+            color: #cd7f32;
+        }
+        .tips {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            z-index: 1000;
+            animation: fadeOut 3s forwards;
+        }
+        .tips.correct {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .tips.error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        @keyframes fadeOut {
+            0% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            color: #555;
+        }
+        .footer a {
+            color: #27ae60;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>初中生物理课堂点名积分系统</h1>
+        <div class="name-roll" id="nameRoll">点击开始点名</div>
+        <div class="controls">
+            <button id="startBtn">开始点名</button>
+            <button id="stopBtn" disabled>暂停</button>
+            <button id="correctBtn" disabled>正确</button>
+            <button id="wrongBtn" disabled>错误</button>
+            <button id="resetBtn">积分重置</button>
+        </div>
+        <div class="question" id="question"></div>
+        <div class="rankings">
+            <h2>积分排行榜</h2>
+            <table id="rankingsTable">
+                <thead>
+                    <tr>
+                        <th>排名</th>
+                        <th>姓名</th>
+                        <th>积分</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 排行榜数据动态生成 -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- 底部内容 -->
+    <div class="footer">
+        <p>
+            <a href="https://pan.quark.cn/s/de810b048292" target="_blank">系统源码地址 + 使用 DeepSeek 的提示词，点这领取，免费</a>
+        </p>
+        <p>
+            <a href="https://mp.weixin.qq.com/s/nVUzTMiuYG-yjJ6nMt4YwA" target="_blank">由 @道创说 用 DeepSeek 1 分钟生成，你也可以去尝试制作</a>
+        </p>
+    </div>
+
+    <script>
+        // 学生姓名列表
+        const students = [
+            "王梓轩", "李思涵", "张宇辰", "刘欣怡", "陈浩然", "赵雅婷", "黄俊杰", "周雨桐", "吴子豪", "徐梦瑶",
+            "孙宇航", "胡佳琪", "郭泽宇", "林晓彤", "何嘉豪", "高诗涵", "曹天佑", "邓婉婷", "彭子睿", "袁静怡"
+        ];
+
+        // 物理题目库（20道不重复题目）
+        const physicsQuestions = [
+            "1. 什么是牛顿第一定律？",
+            "2. 电流的单位是什么？",
+            "3. 光的传播速度是多少？",
+            "4. 什么是功的计算公式？",
+            "5. 电阻的单位是什么？",
+            "6. 什么是欧姆定律？",
+            "7. 什么是动能定理？",
+            "8. 什么是动量守恒定律？",
+            "9. 什么是热力学第一定律？",
+            "10. 什么是光的折射定律？",
+            "11. 什么是电磁感应定律？",
+            "12. 什么是电容的单位？",
+            "13. 什么是电压的单位？",
+            "14. 什么是功率的计算公式？",
+            "15. 什么是焦耳定律？",
+            "16. 什么是光的反射定律？",
+            "17. 什么是重力加速度？",
+            "18. 什么是浮力定律？",
+            "19. 什么是杠杆原理？",
+            "20. 什么是能量守恒定律？"
+        ];
+
+        // 学生积分数据
+        let studentScores = {};
+        students.forEach(name => studentScores[name] = 0);
+
+        // 页面元素
+        const nameRoll = document.getElementById("nameRoll");
+        const startBtn = document.getElementById("startBtn");
+        const stopBtn = document.getElementById("stopBtn");
+        const correctBtn = document.getElementById("correctBtn");
+        const wrongBtn = document.getElementById("wrongBtn");
+        const resetBtn = document.getElementById("resetBtn");
+        const questionEl = document.getElementById("question");
+        const rankingsTable = document.getElementById("rankingsTable").getElementsByTagName("tbody")[0];
+
+        let rollingInterval;
+        let currentStudent = null;
+
+        // 从缓存加载积分数据
+        if (localStorage.getItem("studentScores")) {
+            studentScores = JSON.parse(localStorage.getItem("studentScores"));
+        }
+
+        // 更新排行榜
+        function updateRankings() {
+    rankingsTable.innerHTML = ""; // 清空当前排行榜
+
+    // 排序规则：正分从高到低 > 负分从低到高 > 0 分
+    const sortedStudents = Object.keys(studentScores).sort((a, b) => {
+        if (studentScores[a] > 0 && studentScores[b] > 0) {
+            return studentScores[b] - studentScores[a]; // 正分从高到低
+        } else if (studentScores[a] < 0 && studentScores[b] < 0) {
+            return studentScores[a] - studentScores[b]; // 负分从低到高
+        } else if (studentScores[a] > 0) {
+            return -1; // 正分排前面
+        } else if (studentScores[b] > 0) {
+            return 1; // 正分排前面
+        } else if (studentScores[a] < 0) {
+            return -1; // 负分排前面
+        } else if (studentScores[b] < 0) {
+            return 1; // 负分排前面
+        } else {
+            return 0; // 0 分保持不变
+        }
+    });
+
+    // 动态生成排行榜
+    sortedStudents.forEach((name, index) => {
+        const row = document.createElement("tr");
+        if (studentScores[name] < 0) {
+            row.classList.add("negative"); // 负分同学红色背景
+        }
+        row.innerHTML = `
+            <td>${index + 1}</td>
+            <td>${name} ${index === 0 ? "<span class='gold'>(金)</span>" : index === 1 ? "<span class='silver'>(银)</span>" : index === 2 ? "<span class='bronze'>(铜)</span>" : ""}</td>
+            <td>${studentScores[name]}</td>
+        `;
+        rankingsTable.appendChild(row);
+    });
+}
+
+        // 显示弹窗提示
+        function showTip(message, isCorrect) {
+            const tip = document.createElement("div");
+            tip.className = `tips ${isCorrect ? "correct" : "error"}`;
+            tip.textContent = message;
+            document.body.appendChild(tip);
+            setTimeout(() => tip.remove(), 3000);
+        }
+
+        // 开始点名
+        startBtn.addEventListener("click", () => {
+            startBtn.disabled = true;
+            stopBtn.disabled = false;
+            correctBtn.disabled = true;
+            wrongBtn.disabled = true;
+            rollingInterval = setInterval(() => {
+                currentStudent = students[Math.floor(Math.random() * students.length)];
+                nameRoll.textContent = currentStudent;
+            }, 100);
+        });
+
+        // 暂停点名
+        stopBtn.addEventListener("click", () => {
+            clearInterval(rollingInterval);
+            startBtn.disabled = false;
+            stopBtn.disabled = true;
+            correctBtn.disabled = false;
+            wrongBtn.disabled = false;
+            questionEl.textContent = physicsQuestions[Math.floor(Math.random() * physicsQuestions.length)];
+        });
+
+        // 回答正确
+        correctBtn.addEventListener("click", () => {
+            studentScores[currentStudent]++;
+            localStorage.setItem("studentScores", JSON.stringify(studentScores));
+            showTip(`恭喜 ${currentStudent} 同学，积分 +1！`, true);
+            updateRankings();
+            correctBtn.disabled = true;
+            wrongBtn.disabled = true;
+        });
+
+        // 回答错误
+        wrongBtn.addEventListener("click", () => {
+            studentScores[currentStudent]--;
+            localStorage.setItem("studentScores", JSON.stringify(studentScores));
+            showTip(`${currentStudent} 同学要加油学习哦，回答错了，积分 -1！`, false);
+            updateRankings();
+            correctBtn.disabled = true;
+            wrongBtn.disabled = true;
+        });
+
+        // 积分重置
+        resetBtn.addEventListener("click", () => {
+            if (confirm("确认重置所有学生的积分吗？")) {
+                students.forEach(name => studentScores[name] = 0);
+                localStorage.setItem("studentScores", JSON.stringify(studentScores));
+                updateRankings();
+            }
+        });
+
+        // 初始化排行榜
+        updateRankings();
+    </script>
+</body>
+</html>
+
+ 
+  </article>
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

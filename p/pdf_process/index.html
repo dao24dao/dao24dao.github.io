@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="<!DOCTYPE html> PDF页面删除工具 PDF页面处理工具 处理PDF 系统源码地址 + 使用 DeepSeek 的提示词，点这领取，免费 由 @道创说 用DeepSeek 1分钟生成，你也可以去尝试制作 ">
+<meta name="keywords" content="编程, 开发, 代码, DeepSeek, 副业避坑, 软件, 游戏"><title>PDF页面删除工具</title>
+
+<link rel='canonical' href='https://dao24dao.github.io/p/pdf_process/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="PDF页面删除工具">
+<meta property='og:description' content="<!DOCTYPE html> PDF页面删除工具 PDF页面处理工具 处理PDF 系统源码地址 + 使用 DeepSeek 的提示词，点这领取，免费 由 @道创说 用DeepSeek 1分钟生成，你也可以去尝试制作 ">
+<meta property='og:url' content='https://dao24dao.github.io/p/pdf_process/'>
+<meta property='og:site_name' content='道创说'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='DeepSeek提效' /><meta property='article:tag' content='副业避坑' /><meta property='article:tag' content='应用工具' /><meta property='article:tag' content='软件开发' /><meta property='article:tag' content='游戏开发' /><meta property='article:published_time' content='2025-03-20T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-03-20T00:00:00&#43;00:00'/><meta property='og:image' content='https://dao24dao.github.io/images/daochuangshuo_logo.png' />
+<meta name="twitter:title" content="PDF页面删除工具">
+<meta name="twitter:description" content="<!DOCTYPE html> PDF页面删除工具 PDF页面处理工具 处理PDF 系统源码地址 + 使用 DeepSeek 的提示词，点这领取，免费 由 @道创说 用DeepSeek 1分钟生成，你也可以去尝试制作 "><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://dao24dao.github.io/images/daochuangshuo_logo.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_96f5fea0197e6fed.png" width="300"
+                            height="267" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">✊</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">道创说</a></h1>
+            <h2 class="site-description">一人企业复利商业化</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://t.zsxq.com/zmotH'
+                        target="_blank"
+                        title="加入付费知识星球"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1742295343432" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="13498" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M512 0c50.834286 0 99.986286 7.387429 146.358857 21.211429v76.946285A438.857143 438.857143 0 1 0 925.915429 365.714286L1002.788571 365.714286A512 512 0 1 1 512 0z m329.142857 73.142857a109.714286 109.714286 0 1 1 0 219.428572 109.714286 109.714286 0 0 1 0-219.428572z" fill="#A2ACC2" p-id="13499"></path></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://t.zsxq.com/QxWxg'
+                        target="_blank"
+                        title="加入免费知识星球"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1742048238230" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2445" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="200"><path d="M512 0c50.834286 0 99.986286 7.387429 146.358857 21.211429v76.946285A438.857143 438.857143 0 1 0 925.915429 365.714286L1002.788571 365.714286A512 512 0 1 1 512 0z m329.142857 73.142857a109.714286 109.714286 0 1 1 0 219.428572 109.714286 109.714286 0 0 1 0-219.428572z" fill="#16B998" p-id="2446"></path></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://mp.weixin.qq.com/s/nVUzTMiuYG-yjJ6nMt4YwA'
+                        target="_blank"
+                        title="微信公众号：道创说"
+                        rel="me"
+                    >
+                        
+                        
+                            <?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1742048356707" class="icon" viewBox="0 0 1049 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="13604" xmlns:xlink="http://www.w3.org/1999/xlink" width="204.8828125" height="200"><path d="M685.200678 190.588123a428.344693 428.344693 0 0 1 160.534236 31.033638 355.813626 355.813626 0 1 0-589.370816 377.277813 429.283751 429.283751 0 0 1 428.83658-408.311451z" fill="#08BE61" p-id="13605"></path><path d="M693.607485 263.87938a354.829851 354.829851 0 0 0-127.130594 23.476455 429.283751 429.283751 0 0 1 201.942231 680.235878A355.813626 355.813626 0 0 0 693.607485 263.87938z" fill="#08BE61" p-id="13606"></path><path d="M515.052275 789.349522a453.60983 453.60983 0 0 1-74.409184-6.170954c-11.581718-1.341512-23.208153-3.04076-34.968739-5.142462-15.337951-2.727741-108.304713 93.011479-134.956079 72.978238-24.236645-18.199842 11.671152-102.58093 4.471706-129.903052a455.845683 455.845683 0 0 1-209.186395-310.828266A395.075202 395.075202 0 1 0 783.309902 702.106543a453.252094 453.252094 0 0 1-268.257627 87.242979z" fill="#08BE61" p-id="13607"></path></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/me/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>我是谁</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%8F%8B%E9%93%BE/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>友链</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+                    
+                        <li id="i18n-switch">  
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-language" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M4 5h7" />
+  <path d="M9 3v2c0 4.418 -2.239 8 -5 8" />
+  <path d="M5 9c-.003 2.144 2.952 3.908 6.7 4" />
+  <path d="M12 20l4 -9l4 9" />
+  <path d="M19.1 18h-6.2" />
+</svg>
+
+
+
+                            <select name="language" title="language" onchange="window.location.href = this.selectedOptions[0].value">
+                                
+                                    <option value="https://dao24dao.github.io/" selected>中文</option>
+                                
+                                    <option value="https://dao24dao.github.io/en/" >English</option>
+                                
+                                    <option value="https://dao24dao.github.io/ar/" >عربي</option>
+                                
+                            </select>
+                        </li>
+                    
+                
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+            <main class="main full-width">
+  <article class="custom-page">
+    
+
+
+  <!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>PDF页面删除工具</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --main-green: #e8f5e9;
+            --accent-green: #43a047;
+            --success-bg: #e8f5e9;
+            --error-bg: #ffebee;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--main-green);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+            position: relative;
+        }
+
+        input, button {
+            margin: 1rem 0;
+            padding: 0.8rem;
+            border: 2px solid var(--accent-green);
+            border-radius: 8px;
+            width: 80%;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+
+        button {
+            background-color: var(--accent-green);
+            color: white;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        #downloadLinks {
+            margin-top: 1.5rem;
+        }
+
+        #downloadLinks a {
+            display: block;
+            margin: 0.5rem auto;
+            color: var(--accent-green);
+            text-decoration: none;
+            max-width: 80%;
+            word-break: break-all;
+        }
+
+        .status-tip {
+            padding: 12px 20px;
+            border-radius: 8px;
+            margin: 1rem auto;
+            width: 80%;
+            display: none;
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        .status-tip.fade-out {
+            animation: fadeOut 0.3s ease-in-out;
+        }
+
+        .success {
+            background: var(--success-bg);
+            color: #2e7d32;
+        }
+
+        .error {
+            background: var(--error-bg);
+            color: #c62828;
+        }
+
+        .loading::after {
+            content: ".";
+            animation: loading 1s infinite;
+        }
+
+        @keyframes loading {
+            0%, 100% { content: "."; }
+            33% { content: ".."; }
+            66% { content: "..."; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; top: 0; }
+            to { opacity: 1; top: 20px; }
+        }
+
+        @keyframes fadeOut {
+            from { opacity: 1; top: 20px; }
+            to { opacity: 0; top: 0; }
+        }
+
+         .footer {
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #004d40;
+        }
+        .footer a {
+            color: #00796b;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>PDF页面处理工具</h1>
+        <input type="file" id="pdfInput" accept="application/pdf">
+        <input type="text" id="pagesInput" placeholder="输入要删除的页码 (例如: 1-3,5)">
+        <button id="processBtn" onclick="processPDF()">处理PDF</button>
+        <div id="downloadLinks"></div>
+    </div>
+
+     <div class="footer">
+        <div><a href="https://pan.quark.cn/s/768b2fc7e115" target="_blank">系统源码地址 + 使用 DeepSeek 的提示词，点这领取，免费</a></div>
+        <div><a href="https://mp.weixin.qq.com/s/nVUzTMiuYG-yjJ6nMt4YwA" target="_blank">由 @道创说 用DeepSeek 1分钟生成，你也可以去尝试制作</a></div>
+    </div>
+
+    <div id="statusTip" class="status-tip"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+
+    <script>
+        let tipTimeout = null;
+
+        async function processPDF() {
+            const processBtn = document.getElementById('processBtn');
+            const statusTip = document.getElementById('statusTip');
+            
+            try {
+                // 重置状态
+                processBtn.disabled = true;
+                processBtn.innerHTML = '处理中<span class="loading"></span>';
+                clearTip();
+                document.getElementById('downloadLinks').innerHTML = '';
+
+                const pdfFile = document.getElementById('pdfInput').files[0];
+                const pagesInput = document.getElementById('pagesInput').value.trim();
+                
+                if (!pdfFile) {
+                    showError('请先选择PDF文件');
+                    return;
+                }
+                
+                // 处理页码输入
+                const pagesToDelete = parsePagesInput(pagesInput) || [];
+                
+                const pdfData = await pdfFile.arrayBuffer();
+                const loadingTask = pdfjsLib.getDocument({ data: pdfData });
+                const pdf = await loadingTask.promise;
+                
+                const totalPages = pdf.numPages;
+                const validPages = pagesToDelete.filter(p => p >= 1 && p <= totalPages);
+                const pagesToKeep = Array.from({ length: totalPages }, (_, i) => i + 1)
+                    .filter(p => !validPages.includes(p));
+                
+                if (pagesToKeep.length === 0) {
+                    showError('没有可保留的页面');
+                    return;
+                }
+                
+                let newPdf = null;
+                const zip = new JSZip();
+                
+                for (let i = 0; i < pagesToKeep.length; i++) {
+                    const originalPageNumber = pagesToKeep[i];
+                    const page = await pdf.getPage(originalPageNumber);
+                    const viewport = page.getViewport({ scale: 1.5 });
+                    
+                    // 处理页面方向
+                    const isLandscape = viewport.width > viewport.height;
+                    const pageWidth = isLandscape ? viewport.width : viewport.height;
+                    const pageHeight = isLandscape ? viewport.height : viewport.width;
+                    
+                    // 创建画布
+                    const canvas = document.createElement('canvas');
+                    const context = canvas.getContext('2d');
+                    canvas.width = pageWidth;
+                    canvas.height = pageHeight;
+                    
+                    // 渲染页面
+                    await page.render({
+                        canvasContext: context,
+                        viewport: page.getViewport({ scale: canvas.width / page.view[2] })
+                    }).promise;
+                    
+                    // 初始化PDF文档
+                    if (!newPdf) {
+                        newPdf = new jspdf.jsPDF({
+                            orientation: isLandscape ? 'landscape' : 'portrait',
+                            unit: 'pt',
+                            format: [pageWidth, pageHeight]
+                        });
+                    } else {
+                        newPdf.addPage([pageWidth, pageHeight], isLandscape ? 'landscape' : 'portrait');
+                    }
+                    
+                    // 添加图片到PDF
+                    newPdf.addImage(canvas, 'JPEG', 0, 0, pageWidth, pageHeight);
+                    
+                    // 添加连续页码（从1开始）
+                    newPdf.setFontSize(12);
+                    newPdf.setTextColor(40, 40, 40);
+                    newPdf.text(
+                        `第 ${i + 1} 页`,
+                        pageWidth - 60,
+                        pageHeight - 20
+                    );
+                    
+                    // 添加图片到ZIP（使用新页码命名）
+                    const imgData = canvas.toDataURL('image/jpeg', 0.9);
+                    zip.file(`page_${i + 1}.jpg`, imgData.split(',')[1], {base64: true});
+                }
+                
+                // 生成下载链接
+                const pdfBlob = newPdf.output('blob');
+                const zipBlob = await zip.generateAsync({ type: 'blob' });
+                
+                createDownloadLink(pdfBlob, 'processed.pdf', '下载处理后的PDF');
+                createDownloadLink(zipBlob, 'pages.zip', '下载所有页面图片');
+                
+                showSuccess('处理成功！');
+
+            } catch (error) {
+                showError('处理失败，请重试');
+                console.error(error);
+            } finally {
+                processBtn.disabled = false;
+                processBtn.innerHTML = '处理PDF';
+            }
+        }
+
+        function showSuccess(message) {
+            showTip(message, 'success');
+        }
+
+        function showError(message) {
+            showTip(message, 'error');
+        }
+
+        function showTip(message, type) {
+            const tip = document.getElementById('statusTip');
+            tip.className = `status-tip ${type}`;
+            tip.textContent = message;
+            tip.style.display = 'block';
+
+            // 清除之前的定时器
+            if (tipTimeout) clearTimeout(tipTimeout);
+
+            // 3秒后自动消失
+            tipTimeout = setTimeout(() => {
+                tip.classList.add('fade-out');
+                setTimeout(() => {
+                    tip.style.display = 'none';
+                    tip.classList.remove('fade-out');
+                }, 300); // 等待动画结束
+            }, 3000);
+        }
+
+        function clearTip() {
+            const tip = document.getElementById('statusTip');
+            tip.style.display = 'none';
+            tip.textContent = '';
+            tip.className = 'status-tip';
+            if (tipTimeout) clearTimeout(tipTimeout);
+        }
+
+        function parsePagesInput(input) {
+            if (!input) return [];
+            const pages = new Set();
+            input.split(',').forEach(part => {
+                const trimmed = part.trim();
+                if (!trimmed) return;
+                
+                if (/-/.test(trimmed)) {
+                    let [start, end] = trimmed.split('-').map(Number).filter(n => !isNaN(n));
+                    if (start === undefined || end === undefined) return;
+                    start = Math.max(1, start);
+                    end = Math.max(1, end);
+                    if (start > end) [start, end] = [end, start];
+                    for (let i = start; i <= end; i++) pages.add(i);
+                } else {
+                    const num = Number(trimmed);
+                    if (!isNaN(num)) pages.add(Math.max(1, num));
+                }
+            });
+            return Array.from(pages).sort((a, b) => a - b);
+        }
+
+        function createDownloadLink(blob, filename, text) {
+            const url = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = filename;
+            link.textContent = text;
+            link.style.display = 'block';
+            link.style.margin = '10px auto';
+            link.style.padding = '8px 16px';
+            link.style.borderRadius = '6px';
+            link.style.backgroundColor = '#43a047';
+            link.style.color = 'white';
+            
+            setTimeout(() => URL.revokeObjectURL(url), 60000);
+            document.getElementById('downloadLinks').appendChild(link);
+        }
+    </script>
+</body>
+</html>
+
+ 
+  </article>
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

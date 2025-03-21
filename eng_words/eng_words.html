@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <keywords content="1 分钟用 DeepSeek 生成小学生课堂英语单词抽查系统，你也可以去尝试制作，非常强大">
+    <title>小学生课堂英语单词抽查系统</title>
+    <style>
+        body {
+            background-color: #e0f7fa; /* 浅绿色背景 */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* 免费可商用字体 */
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #00796b;
+        }
+        .word-display {
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .word-display div {
+            margin: 10px 0;
+            font-size: 1.2em;
+            color: #004d40;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #fff;
+            background-color: #00796b;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:disabled {
+            background-color: #b2dfdb;
+            cursor: not-allowed;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            width: 80%;
+            max-width: 500px;
+        }
+        .modal-content {
+            text-align: left;
+        }
+        .modal-content div {
+            margin: 10px 0;
+        }
+        .close-modal {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #00796b;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .footer {
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #004d40;
+        }
+        .footer a {
+            color: #00796b;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>1 分钟用 DeepSeek 生成小学生课堂英语单词抽查系统</h1>
+    <div class="word-display" id="wordDisplay">
+        <div>点击“开始随机抽查”按钮</div>
+    </div>
+    <button id="startBtn">开始随机抽查</button>
+    <button id="pauseBtn" disabled>暂停</button>
+    <button id="showWordsBtn" disabled>查看单词英文</button>
+
+    <div class="modal" id="wordModal">
+        <div class="modal-content" id="modalContent">
+            <!-- 中英文对照及读音将显示在这里 -->
+        </div>
+        <button class="close-modal" id="closeModal">关闭弹窗</button>
+    </div>
+
+    <div class="footer">
+        <div><a href="https://pan.quark.cn/s/f984d1a1c029" target="_blank">系统源码地址 + 使用 DeepSeek 的提示词，点这领取，免费</a></div>
+        <div><a href="https://mp.weixin.qq.com/s/nVUzTMiuYG-yjJ6nMt4YwA" target="_blank">由 @道创说 用DeepSeek 1分钟生成，你也可以去尝试制作</a></div>
+    </div>
+
+    <script>
+        const words = [
+            { chinese: '苹果', english: 'apple', pronunciation: '/ˈæp.əl/' },
+            { chinese: '香蕉', english: 'banana', pronunciation: '/bəˈnɑː.nə/' },
+            { chinese: '猫', english: 'cat', pronunciation: '/kæt/' },
+            { chinese: '狗', english: 'dog', pronunciation: '/dɒɡ/' },
+            { chinese: '书', english: 'book', pronunciation: '/bʊk/' },
+            { chinese: '椅子', english: 'chair', pronunciation: '/tʃeər/' },
+            { chinese: '桌子', english: 'table', pronunciation: '/ˈteɪ.bəl/' },
+            { chinese: '学校', english: 'school', pronunciation: '/skuːl/' },
+            { chinese: '老师', english: 'teacher', pronunciation: '/ˈtiː.tʃər/' },
+            { chinese: '学生', english: 'student', pronunciation: '/ˈstjuː.dənt/' },
+            { chinese: '铅笔', english: 'pencil', pronunciation: '/ˈpen.səl/' },
+            { chinese: '橡皮', english: 'eraser', pronunciation: '/ɪˈreɪ.zər/' },
+            { chinese: '电脑', english: 'computer', pronunciation: '/kəmˈpjuː.tər/' },
+            { chinese: '手机', english: 'phone', pronunciation: '/fəʊn/' },
+            { chinese: '汽车', english: 'car', pronunciation: '/kɑːr/' },
+            { chinese: '自行车', english: 'bicycle', pronunciation: '/ˈbaɪ.sɪ.kəl/' },
+            { chinese: '飞机', english: 'airplane', pronunciation: '/ˈeə.pleɪn/' },
+            { chinese: '船', english: 'ship', pronunciation: '/ʃɪp/' },
+            { chinese: '房子', english: 'house', pronunciation: '/haʊs/' },
+            { chinese: '花园', english: 'garden', pronunciation: '/ˈɡɑː.dən/' },
+            { chinese: '水', english: 'water', pronunciation: '/ˈwɔː.tər/' },
+            { chinese: '牛奶', english: 'milk', pronunciation: '/mɪlk/' },
+            { chinese: '面包', english: 'bread', pronunciation: '/bred/' },
+            { chinese: '鸡蛋', english: 'egg', pronunciation: '/eɡ/' },
+            { chinese: '米饭', english: 'rice', pronunciation: '/raɪs/' },
+            { chinese: '鱼', english: 'fish', pronunciation: '/fɪʃ/' },
+            { chinese: '肉', english: 'meat', pronunciation: '/miːt/' },
+            { chinese: '蔬菜', english: 'vegetable', pronunciation: '/ˈvedʒ.tə.bəl/' },
+            { chinese: '水果', english: 'fruit', pronunciation: '/fruːt/' },
+            { chinese: '红色', english: 'red', pronunciation: '/red/' },
+            { chinese: '蓝色', english: 'blue', pronunciation: '/bluː/' },
+            { chinese: '绿色', english: 'green', pronunciation: '/ɡriːn/' },
+            { chinese: '黄色', english: 'yellow', pronunciation: '/ˈjel.əʊ/' },
+            { chinese: '黑色', english: 'black', pronunciation: '/blæk/' },
+            { chinese: '白色', english: 'white', pronunciation: '/waɪt/' },
+            { chinese: '大', english: 'big', pronunciation: '/bɪɡ/' },
+            { chinese: '小', english: 'small', pronunciation: '/smɔːl/' },
+            { chinese: '高', english: 'tall', pronunciation: '/tɔːl/' },
+            { chinese: '矮', english: 'short', pronunciation: '/ʃɔːt/' },
+            { chinese: '快乐', english: 'happy', pronunciation: '/ˈhæp.i/' },
+            { chinese: '悲伤', english: 'sad', pronunciation: '/sæd/' },
+            { chinese: '好', english: 'good', pronunciation: '/ɡʊd/' },
+            { chinese: '坏', english: 'bad', pronunciation: '/bæd/' },
+            { chinese: '快', english: 'fast', pronunciation: '/fɑːst/' },
+            { chinese: '慢', english: 'slow', pronunciation: '/sləʊ/' },
+            { chinese: '热', english: 'hot', pronunciation: '/hɒt/' },
+            { chinese: '冷', english: 'cold', pronunciation: '/kəʊld/' },
+            { chinese: '新', english: 'new', pronunciation: '/njuː/' },
+            { chinese: '旧', english: 'old', pronunciation: '/əʊld/' }
+        ];
+
+        let interval;
+        let currentWords = [];
+        const wordDisplay = document.getElementById('wordDisplay');
+        const startBtn = document.getElementById('startBtn');
+        const pauseBtn = document.getElementById('pauseBtn');
+        const showWordsBtn = document.getElementById('showWordsBtn');
+        const wordModal = document.getElementById('wordModal');
+        const modalContent = document.getElementById('modalContent');
+        const closeModal = document.getElementById('closeModal');
+
+        startBtn.addEventListener('click', () => {
+            startBtn.disabled = true;
+            pauseBtn.disabled = false;
+            showWordsBtn.disabled = true;
+            interval = setInterval(() => {
+                currentWords = getRandomWords(6);
+                wordDisplay.innerHTML = currentWords.map(word => `<div>${word.chinese}</div>`).join('');
+            }, 100);
+        });
+
+        pauseBtn.addEventListener('click', () => {
+            clearInterval(interval);
+            startBtn.disabled = false;
+            pauseBtn.disabled = true;
+            showWordsBtn.disabled = false;
+        });
+
+        showWordsBtn.addEventListener('click', () => {
+            modalContent.innerHTML = currentWords.map(word => `
+                <div><strong>${word.chinese}</strong>: ${word.english} (${word.pronunciation})</div>
+            `).join('');
+            wordModal.style.display = 'block';
+        });
+
+        closeModal.addEventListener('click', () => {
+            wordModal.style.display = 'none';
+        });
+
+        function getRandomWords(count) {
+            const shuffled = words.sort(() => 0.5 - Math.random());
+            return shuffled.slice(0, count);
+        }
+    </script>
+</body>
+</html>
