@@ -50,6 +50,11 @@
 &lt;p&gt;体验地址：&lt;a class=&#34;link&#34; href=&#34;https://dao24dao.github.io/p/game_2048/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;2048 游戏&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;页面下方有 生成步骤教程+源码，可以自己下载，按步骤试试，你也可以。&lt;/p&gt;
+&lt;h3 id=&#34;6-多图片拼帖大师&#34;&gt;6. 多图片拼帖大师
+&lt;/h3&gt;&lt;p&gt;用DeepSeek 10 分钟完成, @创意来自：自我日常需求.&lt;/p&gt;
+&lt;p&gt;体验地址：&lt;a class=&#34;link&#34; href=&#34;https://dao24dao.github.io/p/picture_reorder/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;多图片拼帖大师&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;页面下方有 生成步骤教程+源码，可以自己下载，按步骤试试，你也可以。&lt;/p&gt;
 &lt;h2 id=&#34;ido老徐的deepseek星球&#34;&gt;IDO老徐的DeepSeek星球
 &lt;/h2&gt;&lt;p&gt;IDO老徐的《用DeepSeek高效实战赚小钱》星球，被知识星球官网和央视报道，绝对高质量星球。&lt;/p&gt;
 &lt;p&gt;当前 68 元/年，我申请了一张 13元 优惠券，直接扫码加入。&lt;/p&gt;
@@ -74,7 +79,7 @@
         <pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate>
         
         <guid>https://dao24dao.github.io/p/pdf_process/</guid>
-        <description>&lt;img src="https://dao24dao.github.io/images/daochuangshuo_logo.png" alt="Featured image of post PDF页面删除工具" /&gt;
+        <description>
 
 
   &lt;!DOCTYPE html&gt;
@@ -421,426 +426,12 @@
 </description>
         </item>
         <item>
-        <title>RGB和十六进制颜色转换查询系统</title>
-        <link>https://dao24dao.github.io/p/color_conv/</link>
-        <pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate>
-        
-        <guid>https://dao24dao.github.io/p/color_conv/</guid>
-        <description>&lt;img src="https://dao24dao.github.io/images/daochuangshuo_logo.png" alt="Featured image of post RGB和十六进制颜色转换查询系统" /&gt;
-
-
-  &lt;!DOCTYPE html&gt;
-&lt;html lang=&#34;zh-CN&#34;&gt;
-&lt;head&gt;
-  &lt;meta charset=&#34;UTF-8&#34;&gt;
-  &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt;
-  &lt;keywords content=&#34;5 分钟用 DeepSeek 生成颜色色值转换查询系统，你也可以去尝试制作，非常强大&#34;&gt;&lt;/keywords&gt;
-  &lt;title&gt;颜色色值转换查询系统&lt;/title&gt;
-
-  &lt;style&gt;
-    /* 基础重置 */
-    body.legacy-html {
-      all: initial;
-      font-family: &#39;Segoe UI&#39;, system-ui, sans-serif;
-      background-color: #e8f5e9;
-      min-height: 100vh;
-      margin: 0;
-      padding: 20px;
-    }
-
-    /* 主容器 */
-    .legacy-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    /* 卡片组件 */
-    .legacy-card {
-      background-color: #c8e6c9;
-      border-radius: 8px;
-      padding: 2rem;
-      margin: 1rem 0;
-      width: 100%;
-      max-width: 800px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    /* 输入组件 */
-    .legacy-input-group {
-      display: flex;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    .legacy-input {
-      flex: 1;
-      min-width: 200px;
-      padding: 0.5rem;
-      border: 2px solid #81c784;
-      border-radius: 4px;
-      background: white;
-    }
-
-    .legacy-btn {
-      background-color: #4caf50;
-      color: white;
-      padding: 0.5rem 1.5rem;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .legacy-btn:hover {
-      background-color: #45a049;
-    }
-
-    /* 数据表格 */
-    .legacy-data-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1.5rem;
-      background: white;
-    }
-
-    .legacy-data-table th {
-      background-color: #a5d6a7;
-      color: #2e7d32;
-      padding: 12px;
-      text-align: left;
-    }
-
-    .legacy-data-table td {
-      padding: 10px;
-      border-bottom: 1px solid #c8e6c9;
-    }
-
-    .color-sample {
-      width: 20px;
-      height: 20px;
-      display: inline-block;
-      border: 1px solid #ddd;
-    }
-
-    /* 页脚样式 */
-    .legacy-footer {
-      text-align: center;
-      font-size: 14px;
-      color: #666;
-      padding: 1rem;
-    }
-
-    .legacy-footer a {
-      color: #4caf50;
-      text-decoration: none;
-    }
-
-    .legacy-footer a:hover {
-      text-decoration: underline;
-    }
-
-    /* 响应式设计 */
-    @media (max-width: 768px) {
-      body.legacy-html {
-        padding: 10px;
-      }
-
-      .legacy-input-group {
-        flex-direction: column;
-      }
-
-      .legacy-input {
-        width: 100%;
-      }
-
-      .legacy-btn {
-        width: 100%;
-      }
-
-      .legacy-data-table {
-        font-size: 14px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .legacy-data-table {
-        font-size: 12px;
-      }
-      
-      .color-sample {
-        width: 18px;
-        height: 18px;
-      }
-    }
-  &lt;/style&gt;
-&lt;/head&gt;
-
-&lt;body class=&#34;legacy-html&#34;&gt;
-  &lt;main class=&#34;legacy-container&#34;&gt;
-    &lt;h1&gt;颜色色值转换查询系统&lt;/h1&gt;
-
-    &lt;!-- 转换器模块 --&gt;
-    &lt;div class=&#34;legacy-card&#34;&gt;
-      &lt;div class=&#34;legacy-input-group&#34;&gt;
-        &lt;input type=&#34;text&#34; 
-               class=&#34;legacy-input&#34;
-               id=&#34;hexInput&#34; 
-               placeholder=&#34;#FFFFFF&#34;&gt;
-        &lt;button class=&#34;legacy-btn&#34; onclick=&#34;convertHexToRgb()&#34;&gt;转RGB格式&lt;/button&gt;
-      &lt;/div&gt;
-
-      &lt;div class=&#34;legacy-input-group&#34;&gt;
-        &lt;input type=&#34;text&#34; 
-               class=&#34;legacy-input&#34;
-               id=&#34;rgbInput&#34; 
-               placeholder=&#34;255,255,255&#34;&gt;
-        &lt;button class=&#34;legacy-btn&#34; onclick=&#34;convertRgbToHex()&#34;&gt;转十六进制&lt;/button&gt;
-      &lt;/div&gt;
-
-      &lt;div class=&#34;legacy-input-group&#34;&gt;
-        &lt;input type=&#34;color&#34; 
-               id=&#34;colorPicker&#34; 
-               style=&#34;height: 40px; width: 60px;&#34;
-               onchange=&#34;updateFromPicker(this.value)&#34;&gt;
-      &lt;/div&gt;
-
-      &lt;div id=&#34;colorPreview&#34; 
-           style=&#34;width:100px;height:100px;border:2px solid #81c784;margin:1rem auto;border-radius:8px&#34;&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;!-- 颜色对照表 --&gt;
-    &lt;div class=&#34;legacy-card&#34;&gt;
-      &lt;table class=&#34;legacy-data-table&#34;&gt;
-        &lt;tr&gt;
-          &lt;th&gt;示例&lt;/th&gt;
-          &lt;th&gt;英文名&lt;/th&gt;
-          &lt;th&gt;中文名&lt;/th&gt;
-          &lt;th&gt;十六进制&lt;/th&gt;
-          &lt;th&gt;RGB&lt;/th&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;&lt;div class=&#34;color-sample&#34; style=&#34;background: #FF0000&#34;&gt;&lt;/div&gt;&lt;/td&gt;
-          &lt;td&gt;Red&lt;/td&gt;
-          &lt;td&gt;红色&lt;/td&gt;
-          &lt;td&gt;#FF0000&lt;/td&gt;
-          &lt;td&gt;255,0,0&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;&lt;div class=&#34;color-sample&#34; style=&#34;background: #00FF00&#34;&gt;&lt;/div&gt;&lt;/td&gt;
-          &lt;td&gt;Lime&lt;/td&gt;
-          &lt;td&gt;亮绿色&lt;/td&gt;
-          &lt;td&gt;#00FF00&lt;/td&gt;
-          &lt;td&gt;0,255,0&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;&lt;div class=&#34;color-sample&#34; style=&#34;background: #0000FF&#34;&gt;&lt;/div&gt;&lt;/td&gt;
-          &lt;td&gt;Blue&lt;/td&gt;
-          &lt;td&gt;蓝色&lt;/td&gt;
-          &lt;td&gt;#0000FF&lt;/td&gt;
-          &lt;td&gt;0,0,255&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;&lt;div class=&#34;color-sample&#34; style=&#34;background: #FFFF00&#34;&gt;&lt;/div&gt;&lt;/td&gt;
-          &lt;td&gt;Yellow&lt;/td&gt;
-          &lt;td&gt;黄色&lt;/td&gt;
-          &lt;td&gt;#FFFF00&lt;/td&gt;
-          &lt;td&gt;255,255,0&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;&lt;div class=&#34;color-sample&#34; style=&#34;background: #FF00FF&#34;&gt;&lt;/div&gt;&lt;/td&gt;
-          &lt;td&gt;Magenta&lt;/td&gt;
-          &lt;td&gt;洋红色&lt;/td&gt;
-          &lt;td&gt;#FF00FF&lt;/td&gt;
-          &lt;td&gt;255,0,255&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;&lt;div class=&#34;color-sample&#34; style=&#34;background: #00FFFF&#34;&gt;&lt;/div&gt;&lt;/td&gt;
-          &lt;td&gt;Cyan&lt;/td&gt;
-          &lt;td&gt;青色&lt;/td&gt;
-          &lt;td&gt;#00FFFF&lt;/td&gt;
-          &lt;td&gt;0,255,255&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;&lt;div class=&#34;color-sample&#34; style=&#34;background: #800080&#34;&gt;&lt;/div&gt;&lt;/td&gt;
-          &lt;td&gt;Purple&lt;/td&gt;
-          &lt;td&gt;紫色&lt;/td&gt;
-          &lt;td&gt;#800080&lt;/td&gt;
-          &lt;td&gt;128,0,128&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;&lt;div class=&#34;color-sample&#34; style=&#34;background: #FFA500&#34;&gt;&lt;/div&gt;&lt;/td&gt;
-          &lt;td&gt;Orange&lt;/td&gt;
-          &lt;td&gt;橙色&lt;/td&gt;
-          &lt;td&gt;#FFA500&lt;/td&gt;
-          &lt;td&gt;255,165,0&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;&lt;div class=&#34;color-sample&#34; style=&#34;background: #A52A2A&#34;&gt;&lt;/div&gt;&lt;/td&gt;
-          &lt;td&gt;Brown&lt;/td&gt;
-          &lt;td&gt;棕色&lt;/td&gt;
-          &lt;td&gt;#A52A2A&lt;/td&gt;
-          &lt;td&gt;165,42,42&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;&lt;div class=&#34;color-sample&#34; style=&#34;background: #808080&#34;&gt;&lt;/div&gt;&lt;/td&gt;
-          &lt;td&gt;Gray&lt;/td&gt;
-          &lt;td&gt;灰色&lt;/td&gt;
-          &lt;td&gt;#808080&lt;/td&gt;
-          &lt;td&gt;128,128,128&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;&lt;div class=&#34;color-sample&#34; style=&#34;background: #008000&#34;&gt;&lt;/div&gt;&lt;/td&gt;
-          &lt;td&gt;Green&lt;/td&gt;
-          &lt;td&gt;绿色&lt;/td&gt;
-          &lt;td&gt;#008000&lt;/td&gt;
-          &lt;td&gt;0,128,0&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;&lt;div class=&#34;color-sample&#34; style=&#34;background: #800000&#34;&gt;&lt;/div&gt;&lt;/td&gt;
-          &lt;td&gt;Maroon&lt;/td&gt;
-          &lt;td&gt;褐红色&lt;/td&gt;
-          &lt;td&gt;#800000&lt;/td&gt;
-          &lt;td&gt;128,0,0&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;&lt;div class=&#34;color-sample&#34; style=&#34;background: #000080&#34;&gt;&lt;/div&gt;&lt;/td&gt;
-          &lt;td&gt;Navy&lt;/td&gt;
-          &lt;td&gt;藏青色&lt;/td&gt;
-          &lt;td&gt;#000080&lt;/td&gt;
-          &lt;td&gt;0,0,128&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;&lt;div class=&#34;color-sample&#34; style=&#34;background: #FFC0CB&#34;&gt;&lt;/div&gt;&lt;/td&gt;
-          &lt;td&gt;Pink&lt;/td&gt;
-          &lt;td&gt;粉红色&lt;/td&gt;
-          &lt;td&gt;#FFC0CB&lt;/td&gt;
-          &lt;td&gt;255,192,203&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;&lt;div class=&#34;color-sample&#34; style=&#34;background: #FFD700&#34;&gt;&lt;/div&gt;&lt;/td&gt;
-          &lt;td&gt;Gold&lt;/td&gt;
-          &lt;td&gt;金色&lt;/td&gt;
-          &lt;td&gt;#FFD700&lt;/td&gt;
-          &lt;td&gt;255,215,0&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;&lt;div class=&#34;color-sample&#34; style=&#34;background: #40E0D0&#34;&gt;&lt;/div&gt;&lt;/td&gt;
-          &lt;td&gt;Turquoise&lt;/td&gt;
-          &lt;td&gt;绿松石色&lt;/td&gt;
-          &lt;td&gt;#40E0D0&lt;/td&gt;
-          &lt;td&gt;64,224,208&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;&lt;div class=&#34;color-sample&#34; style=&#34;background: #EE82EE&#34;&gt;&lt;/div&gt;&lt;/td&gt;
-          &lt;td&gt;Violet&lt;/td&gt;
-          &lt;td&gt;紫罗兰色&lt;/td&gt;
-          &lt;td&gt;#EE82EE&lt;/td&gt;
-          &lt;td&gt;238,130,238&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;&lt;div class=&#34;color-sample&#34; style=&#34;background: #F5F5DC&#34;&gt;&lt;/div&gt;&lt;/td&gt;
-          &lt;td&gt;Beige&lt;/td&gt;
-          &lt;td&gt;米色&lt;/td&gt;
-          &lt;td&gt;#F5F5DC&lt;/td&gt;
-          &lt;td&gt;245,245,220&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;&lt;div class=&#34;color-sample&#34; style=&#34;background: #FA8072&#34;&gt;&lt;/div&gt;&lt;/td&gt;
-          &lt;td&gt;Salmon&lt;/td&gt;
-          &lt;td&gt;鲑鱼色&lt;/td&gt;
-          &lt;td&gt;#FA8072&lt;/td&gt;
-          &lt;td&gt;250,128,114&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr&gt;
-          &lt;td&gt;&lt;div class=&#34;color-sample&#34; style=&#34;background: #7FFFD4&#34;&gt;&lt;/div&gt;&lt;/td&gt;
-          &lt;td&gt;Aquamarine&lt;/td&gt;
-          &lt;td&gt;碧绿色&lt;/td&gt;
-          &lt;td&gt;#7FFFD4&lt;/td&gt;
-          &lt;td&gt;127,255,212&lt;/td&gt;
-        &lt;/tr&gt;
-      &lt;/table&gt;
-    &lt;/div&gt;
-
-    &lt;!-- 页脚 --&gt;
-    &lt;div class=&#34;legacy-card legacy-footer&#34;&gt;
-      &lt;p&gt;
-        &lt;a href=&#34;https://pan.quark.cn/s/6875f7cb475f&#34; target=&#34;_blank&#34;&gt;系统源码地址 + 使用 DeepSeek 的提示词，点这领取，免费&lt;/a&gt;
-      &lt;/p&gt;
-      &lt;p&gt;
-        &lt;a href=&#34;https://mp.weixin.qq.com/s/nVUzTMiuYG-yjJ6nMt4YwA&#34; target=&#34;_blank&#34;&gt;由 @道创说 用 DeepSeek 1 分钟生成，你也可以去尝试制作&lt;/a&gt;
-      &lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/main&gt;
-
-  &lt;script&gt;
-    // 颜色转换功能
-    function convertHexToRgb() {
-      const hex = document.getElementById(&#39;hexInput&#39;).value.trim();
-      const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-      if (result) {
-        const rgb = [
-          parseInt(result[1], 16),
-          parseInt(result[2], 16),
-          parseInt(result[3], 16)
-        ].join(&#39;,&#39;);
-        document.getElementById(&#39;rgbInput&#39;).value = rgb;
-        updateColorPreview(rgb);
-      }
-    }
-
-    function convertRgbToHex() {
-      const rgb = document.getElementById(&#39;rgbInput&#39;).value.match(/\d+/g);
-      if (rgb &amp;&amp; rgb.length === 3) {
-        const hex = &#39;#&#39; + rgb.map(x =&gt; {
-          const parsed = parseInt(x);
-          return Math.max(0, Math.min(255, parsed))
-            .toString(16)
-            .padStart(2, &#39;0&#39;);
-        }).join(&#39;&#39;).toUpperCase();
-        document.getElementById(&#39;hexInput&#39;).value = hex;
-        updateColorPreview(rgb.join(&#39;,&#39;));
-      }
-    }
-
-    function updateFromPicker(color) {
-      const rgb = color.match(/\w{2}/g)
-                    .map(x =&gt; parseInt(x, 16))
-                    .join(&#39;,&#39;);
-      document.getElementById(&#39;hexInput&#39;).value = color.toUpperCase();
-      document.getElementById(&#39;rgbInput&#39;).value = rgb;
-      updateColorPreview(rgb);
-    }
-
-    function updateColorPreview(rgb) {
-      const preview = document.getElementById(&#39;colorPreview&#39;);
-      preview.style.backgroundColor = `rgb(${rgb})`;
-      preview.style.borderColor = parseInt(rgb.split(&#39;,&#39;)[0]) &gt; 200 ? &#39;#333&#39; : &#39;#81c784&#39;;
-    }
-
-    // 初始化事件监听
-    document.addEventListener(&#39;DOMContentLoaded&#39;, () =&gt; {
-      document.getElementById(&#39;colorPicker&#39;).value = &#39;#FFFFFF&#39;;
-      updateColorPreview(&#39;255,255,255&#39;);
-    });
-  &lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-
-</description>
-        </item>
-        <item>
         <title>初中生物理课堂点名积分系统</title>
         <link>https://dao24dao.github.io/p/student_score/</link>
         <pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate>
         
         <guid>https://dao24dao.github.io/p/student_score/</guid>
-        <description>&lt;img src="https://dao24dao.github.io/images/daochuangshuo_logo.png" alt="Featured image of post 初中生物理课堂点名积分系统" /&gt;
+        <description>
 
 
   &lt;!DOCTYPE html&gt;
@@ -1175,7 +766,7 @@
         <pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate>
         
         <guid>https://dao24dao.github.io/p/eng_words/</guid>
-        <description>&lt;img src="https://dao24dao.github.io/images/daochuangshuo_logo.png" alt="Featured image of post 小学生课堂英语单词抽查系统" /&gt;
+        <description>
 
 
   &lt;!DOCTYPE html&gt;
@@ -1396,7 +987,7 @@
         <pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate>
         
         <guid>https://dao24dao.github.io/p/game_2048/</guid>
-        <description>&lt;img src="https://dao24dao.github.io/images/daochuangshuo_logo.png" alt="Featured image of post 用DeepSeek制作的2048小游戏" /&gt;
+        <description>
 
 
   &lt;!DOCTYPE html&gt;

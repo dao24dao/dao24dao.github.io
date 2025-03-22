@@ -7,7 +7,7 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>IDO道 @道创说</copyright>
-        <lastBuildDate>Thu, 20 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://dao24dao.github.io/tags/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 22 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://dao24dao.github.io/tags/%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>DeepSeek 应用工具开发汇总</title>
         <link>https://dao24dao.github.io/p/tools/</link>
         <pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate>
@@ -50,6 +50,11 @@
 &lt;p&gt;体验地址：&lt;a class=&#34;link&#34; href=&#34;https://dao24dao.github.io/p/game_2048/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;2048 游戏&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;页面下方有 生成步骤教程+源码，可以自己下载，按步骤试试，你也可以。&lt;/p&gt;
+&lt;h3 id=&#34;6-多图片拼帖大师&#34;&gt;6. 多图片拼帖大师
+&lt;/h3&gt;&lt;p&gt;用DeepSeek 10 分钟完成, @创意来自：自我日常需求.&lt;/p&gt;
+&lt;p&gt;体验地址：&lt;a class=&#34;link&#34; href=&#34;https://dao24dao.github.io/p/picture_reorder/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;多图片拼帖大师&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;页面下方有 生成步骤教程+源码，可以自己下载，按步骤试试，你也可以。&lt;/p&gt;
 &lt;h2 id=&#34;ido老徐的deepseek星球&#34;&gt;IDO老徐的DeepSeek星球
 &lt;/h2&gt;&lt;p&gt;IDO老徐的《用DeepSeek高效实战赚小钱》星球，被知识星球官网和央视报道，绝对高质量星球。&lt;/p&gt;
 &lt;p&gt;当前 68 元/年，我申请了一张 13元 优惠券，直接扫码加入。&lt;/p&gt;
@@ -69,12 +74,471 @@
 </description>
         </item>
         <item>
+        <title>多图片拼帖大师</title>
+        <link>https://dao24dao.github.io/p/picture_reorder/</link>
+        <pubDate>Sat, 22 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://dao24dao.github.io/p/picture_reorder/</guid>
+        <description>
+
+
+  &lt;!DOCTYPE html&gt;
+&lt;html lang=&#34;zh-CN&#34;&gt;
+&lt;head&gt;
+    &lt;meta charset=&#34;UTF-8&#34;&gt;
+    &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt;
+    &lt;keywors content=&#34;用 DeepSeek 10 分钟制作的多图排版工具 - 图片拼贴大师&#34;&gt;
+    &lt;title&gt;用 DeepSeek 10 分钟制作的多图排版工具 - 图片拼贴大师&lt;/title&gt;
+    &lt;link href=&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css&#34; rel=&#34;stylesheet&#34;&gt;
+    &lt;!-- &lt;link href=&#34;https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&amp;family=Ma+Shan+Zheng&amp;display=swap&#34; rel=&#34;stylesheet&#34;&gt;
+    &lt;link href=&#34;https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap&#34; rel=&#34;stylesheet&#34;&gt; --&gt;
+    &lt;style&gt;
+        /* 使用免费可商用字体 */
+        body {
+/*            font-family: &#39;Ma Shan Zheng&#39;, cursive;*/
+            font-family: &#39;Roboto&#39;, sans-serif, cursive;
+            background-color: #e8f5e9; /* 生机盎然的绿色背景 */
+            padding: 20px;
+            margin: 0;
+        }
+        h1 {
+            font-family: &#39;Roboto&#39;, sans-serif, cursive;
+/*            font-family: &#39;ZCOOL KuaiLe&#39;, cursive;*/
+            font-size: 5.5rem;
+            text-align: center;
+            margin: 20px 0;
+            color: #2e7d32; /* 深绿色 */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            animation: glow 2s infinite alternate;
+        }
+        @keyframes glow {
+            from {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            }
+            to {
+                text-shadow: 0 0 10px #66bb6a, 0 0 20px #66bb6a, 0 0 30px #66bb6a;
+            }
+        }
+        .container {
+            max-width: 1200px; /* 限制容器宽度 */
+            margin: 0 auto; /* 居中 */
+        }
+        .upload-section, .preview-section {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .image-container .image-item {
+            position: relative;
+            display: inline-block;
+        }
+        .image-container img {
+            max-width: 100px;
+            max-height: 100px;
+            cursor: move;
+            border-radius: 5px;
+            border: 2px solid #81c784; /* 绿色边框 */
+        }
+        .image-container .delete-btn {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #ff4444;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+        .preview-container {
+            position: relative;
+            width: 100%;
+            max-width: 1024px; /* 最大宽度 */
+            height: auto;
+            aspect-ratio: 4 / 3; /* 默认宽高比 */
+            border: 2px dashed #81c784; /* 绿色虚线边框 */
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 20px auto; /* 居中 */
+        }
+        .preview-container .grid-line {
+            position: absolute;
+            background-color: rgba(129, 199, 132, 0.5); /* 半透明绿色 */
+        }
+        .preview-container .preview-image {
+            position: absolute;
+            cursor: move;
+        }
+        .btn-custom {
+            background-color: #66bb6a; /* 绿色按钮 */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 20px auto; /* 居中 */
+            display: block;
+        }
+        .btn-custom:hover {
+            background-color: #4caf50; /* 深绿色 */
+        }
+        .file-upload {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+        }
+        .file-upload input[type=&#34;file&#34;] {
+            font-size: 100px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            cursor: pointer;
+        }
+        .file-upload-label {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #66bb6a;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .file-upload-label:hover {
+            background-color: #4caf50;
+        }
+        .button-group {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .size-inputs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .size-inputs input {
+            width: 100px;
+            padding: 5px;
+            border: 1px solid #81c784;
+            border-radius: 5px;
+        }
+        .footer-links {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 1.2rem;
+            color: #2e7d32;
+        }
+        .footer-links a {
+            color: #2e7d32;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&#34;container&#34;&gt;
+        &lt;!-- 大标题 --&gt;
+        &lt;h1&gt;图片拼贴大师&lt;/h1&gt;
+
+        &lt;div class=&#34;upload-section&#34;&gt;
+            &lt;h2&gt;上传图片&lt;/h2&gt;
+            &lt;div class=&#34;file-upload&#34;&gt;
+                &lt;input type=&#34;file&#34; id=&#34;imageUpload&#34; multiple accept=&#34;image/*&#34;&gt;
+                &lt;label for=&#34;imageUpload&#34; class=&#34;file-upload-label&#34;&gt;选择图片&lt;/label&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;image-container&#34; id=&#34;imageContainer&#34;&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;preview-section&#34;&gt;
+            &lt;h2&gt;排版设置&lt;/h2&gt;
+            &lt;div class=&#34;mb-3&#34;&gt;
+                &lt;label for=&#34;sceneSelect&#34; class=&#34;form-label&#34;&gt;选择场景&lt;/label&gt;
+                &lt;select id=&#34;sceneSelect&#34; class=&#34;form-select&#34; onchange=&#34;updateSizeFromScene()&#34;&gt;
+                    &lt;option value=&#34;custom&#34;&gt;自定义&lt;/option&gt;
+                    &lt;option value=&#34;xiaohongshu&#34;&gt;小红书 (1080x1440)&lt;/option&gt;
+                    &lt;option value=&#34;douyin&#34;&gt;抖音 (1080x1920)&lt;/option&gt;
+                    &lt;option value=&#34;xiaolvshu&#34;&gt;小绿书 (1080x1080)&lt;/option&gt;
+                    &lt;option value=&#34;wechat&#34;&gt;公众号 (900x500)&lt;/option&gt;
+                &lt;/select&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;size-inputs&#34;&gt;
+                &lt;input type=&#34;number&#34; id=&#34;widthInput&#34; placeholder=&#34;宽度&#34; onchange=&#34;updatePreviewSize()&#34;&gt;
+                &lt;input type=&#34;number&#34; id=&#34;heightInput&#34; placeholder=&#34;高度&#34; onchange=&#34;updatePreviewSize()&#34;&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;mb-3&#34;&gt;
+                &lt;label for=&#34;horizontalCount&#34; class=&#34;form-label&#34;&gt;横向分隔数量&lt;/label&gt;
+                &lt;input type=&#34;number&#34; id=&#34;horizontalCount&#34; class=&#34;form-control&#34; value=&#34;2&#34; min=&#34;1&#34; onchange=&#34;updatePreview()&#34;&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;mb-3&#34;&gt;
+                &lt;label for=&#34;verticalCount&#34; class=&#34;form-label&#34;&gt;纵向分隔数量&lt;/label&gt;
+                &lt;input type=&#34;number&#34; id=&#34;verticalCount&#34; class=&#34;form-control&#34; value=&#34;1&#34; min=&#34;1&#34; onchange=&#34;updatePreview()&#34;&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;mb-3&#34;&gt;
+                &lt;label for=&#34;objectFit&#34; class=&#34;form-label&#34;&gt;图片填充方式&lt;/label&gt;
+                &lt;select id=&#34;objectFit&#34; class=&#34;form-select&#34; onchange=&#34;updatePreview()&#34;&gt;
+                    &lt;option value=&#34;fill&#34;&gt;fill - 拉伸图片以填满区域，可能变形&lt;/option&gt;
+                    &lt;option value=&#34;contain&#34;&gt;contain - 保持比例，完整显示图片&lt;/option&gt;
+                    &lt;option value=&#34;cover&#34;&gt;cover - 保持比例，覆盖整个区域，可能裁剪&lt;/option&gt;
+                    &lt;option value=&#34;none&#34;&gt;none - 保持原始尺寸，可能溢出&lt;/option&gt;
+                    &lt;option value=&#34;scale-down&#34;&gt;scale-down - 类似 contain，但不会放大图片&lt;/option&gt;
+                &lt;/select&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;button-group&#34;&gt;
+                &lt;button class=&#34;btn-custom&#34; onclick=&#34;updatePreview()&#34;&gt;更新预览&lt;/button&gt;
+            &lt;/div&gt;
+            &lt;h2 class=&#34;mt-3&#34;&gt;排版预览&lt;/h2&gt;
+            &lt;div class=&#34;preview-container&#34; id=&#34;previewContainer&#34;&gt;&lt;/div&gt;
+            &lt;div class=&#34;button-group&#34;&gt;
+                &lt;button class=&#34;btn-custom&#34; onclick=&#34;downloadImage()&#34;&gt;下载排版后的图片&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- 页脚超链接 --&gt;
+        &lt;div class=&#34;footer-links&#34;&gt;
+             &lt;p&gt;&lt;a href=&#34;https://pan.quark.cn/s/672edb01935e&#34;&gt;系统源码地址 + 使用 DeepSeek 的提示词，点这领取，免费&lt;/a&gt;&lt;/p&gt;
+            &lt;p&gt;&lt;a href=&#34;https://mp.weixin.qq.com/s/nVUzTMiuYG-yjJ6nMt4YwA&#34;&gt;由 @道创说 用 DeepSeek 1 分钟生成，你也可以去尝试制作&lt;/a&gt;&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script src=&#34;https://cdn.jsdelivr.net/npm/sortablejs@1.14.0/Sortable.min.js&#34;&gt;&lt;/script&gt;
+    &lt;script&gt;
+        const imageContainer = document.getElementById(&#39;imageContainer&#39;);
+        const previewContainer = document.getElementById(&#39;previewContainer&#39;);
+        const widthInput = document.getElementById(&#39;widthInput&#39;);
+        const heightInput = document.getElementById(&#39;heightInput&#39;);
+        const sceneSelect = document.getElementById(&#39;sceneSelect&#39;);
+        const horizontalCountInput = document.getElementById(&#39;horizontalCount&#39;);
+        const verticalCountInput = document.getElementById(&#39;verticalCount&#39;);
+        const objectFitSelect = document.getElementById(&#39;objectFit&#39;);
+        let images = [];
+
+        // 场景尺寸映射
+        const sceneSizes = {
+            custom: { width: 1024, height: 768 },
+            xiaohongshu: { width: 1080, height: 1440 },
+            douyin: { width: 1080, height: 1920 },
+            xiaolvshu: { width: 1080, height: 1080 },
+            wechat: { width: 900, height: 500 }
+        };
+
+        // 初始化场景尺寸
+        function updateSizeFromScene() {
+            const scene = sceneSelect.value;
+            const size = sceneSizes[scene];
+            widthInput.value = size.width;
+            heightInput.value = size.height;
+            updatePreviewSize();
+        }
+
+        // 更新预览区域大小
+        function updatePreviewSize() {
+            const width = parseInt(widthInput.value);
+            const height = parseInt(heightInput.value);
+            if (width &amp;&amp; height) {
+                previewContainer.style.width = `${width}px`;
+                previewContainer.style.aspectRatio = `${width} / ${height}`;
+                updatePreview();
+            }
+        }
+
+        // 处理图片上传
+        document.getElementById(&#39;imageUpload&#39;).addEventListener(&#39;change&#39;, function(event) {
+            const files = event.target.files;
+            for (let i = 0; i &lt; files.length; i++) {
+                const file = files[i];
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const img = new Image();
+                    img.src = e.target.result;
+                    img.onload = () =&gt; {
+                        images.push(img);
+                        renderImageItem(img);
+                    };
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // 渲染图片项
+        function renderImageItem(img) {
+            const imageItem = document.createElement(&#39;div&#39;);
+            imageItem.className = &#39;image-item&#39;;
+            const thumb = document.createElement(&#39;img&#39;);
+            thumb.src = img.src;
+            const deleteBtn = document.createElement(&#39;button&#39;);
+            deleteBtn.className = &#39;delete-btn&#39;;
+            deleteBtn.innerHTML = &#39;×&#39;;
+            deleteBtn.onclick = () =&gt; {
+                const index = images.indexOf(img);
+                if (index !== -1) {
+                    images.splice(index, 1);
+                    imageItem.remove();
+                    updatePreview();
+                }
+            };
+            imageItem.appendChild(thumb);
+            imageItem.appendChild(deleteBtn);
+            imageContainer.appendChild(imageItem);
+        }
+
+        // 更新预览
+        function updatePreview() {
+            const horizontalCount = parseInt(horizontalCountInput.value);
+            const verticalCount = parseInt(verticalCountInput.value);
+            const objectFit = objectFitSelect.value;
+            const containerWidth = previewContainer.clientWidth;
+            const containerHeight = previewContainer.clientHeight;
+
+            // 清空预览区域
+            previewContainer.innerHTML = &#39;&#39;;
+
+            // 计算分隔线
+            const cellWidth = containerWidth / horizontalCount;
+            const cellHeight = containerHeight / verticalCount;
+
+            // 绘制横向分隔线
+            for (let i = 1; i &lt; horizontalCount; i++) {
+                const line = document.createElement(&#39;div&#39;);
+                line.className = &#39;grid-line&#39;;
+                line.style.width = &#39;2px&#39;;
+                line.style.height = &#39;100%&#39;;
+                line.style.left = `${i * cellWidth}px`;
+                previewContainer.appendChild(line);
+            }
+
+            // 绘制纵向分隔线
+            for (let i = 1; i &lt; verticalCount; i++) {
+                const line = document.createElement(&#39;div&#39;);
+                line.className = &#39;grid-line&#39;;
+                line.style.height = &#39;2px&#39;;
+                line.style.width = &#39;100%&#39;;
+                line.style.top = `${i * cellHeight}px`;
+                previewContainer.appendChild(line);
+            }
+
+            // 填充图片
+            const totalCells = horizontalCount * verticalCount;
+            images.slice(0, totalCells).forEach((img, index) =&gt; {
+                const imgElement = document.createElement(&#39;img&#39;);
+                imgElement.className = &#39;preview-image&#39;;
+                imgElement.src = img.src;
+                imgElement.style.objectFit = objectFit; // 设置图片填充方式
+                imgElement.dataset.index = index; // 记录图片的位置
+
+                const row = Math.floor(index / horizontalCount);
+                const col = index % horizontalCount;
+
+                imgElement.style.width = `${cellWidth - 2}px`; // 缩小 2px
+                imgElement.style.height = `${cellHeight - 2}px`; // 缩小 2px
+                imgElement.style.left = `${col * cellWidth}px`;
+                imgElement.style.top = `${row * cellHeight}px`;
+
+                previewContainer.appendChild(imgElement);
+            });
+
+            // 初始化预览区域的拖拽功能
+            initPreviewDrag();
+        }
+
+        // 初始化预览区域的拖拽功能
+        function initPreviewDrag() {
+            const previewImages = document.querySelectorAll(&#39;.preview-image&#39;);
+            previewImages.forEach(img =&gt; {
+                img.addEventListener(&#39;dragstart&#39;, (e) =&gt; {
+                    e.dataTransfer.setData(&#39;text/plain&#39;, img.dataset.index);
+                });
+                img.addEventListener(&#39;dragover&#39;, (e) =&gt; {
+                    e.preventDefault(); // 允许拖放
+                });
+                img.addEventListener(&#39;drop&#39;, (e) =&gt; {
+                    e.preventDefault();
+                    const fromIndex = parseInt(e.dataTransfer.getData(&#39;text/plain&#39;));
+                    const toIndex = parseInt(img.dataset.index);
+                    swapImages(fromIndex, toIndex);
+                });
+            });
+        }
+
+        // 交换图片位置
+        function swapImages(fromIndex, toIndex) {
+            [images[fromIndex], images[toIndex]] = [images[toIndex], images[fromIndex]];
+            updatePreview();
+        }
+
+        // 下载图片
+        function downloadImage() {
+            const canvas = document.createElement(&#39;canvas&#39;);
+            const ctx = canvas.getContext(&#39;2d&#39;);
+            const containerWidth = previewContainer.clientWidth;
+            const containerHeight = previewContainer.clientHeight;
+            canvas.width = containerWidth;
+            canvas.height = containerHeight;
+
+            // 绘制背景
+            ctx.fillStyle = &#39;#ffffff&#39;;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // 绘制分隔线
+            const horizontalCount = parseInt(horizontalCountInput.value);
+            const verticalCount = parseInt(verticalCountInput.value);
+            const cellWidth = canvas.width / horizontalCount;
+            const cellHeight = canvas.height / verticalCount;
+
+            // 绘制横向分隔线
+            for (let i = 1; i &lt; horizontalCount; i++) {
+                ctx.fillStyle = &#39;rgba(129, 199, 132, 0.5)&#39;;
+                ctx.fillRect(i * cellWidth, 0, 2, canvas.height);
+            }
+
+            // 绘制纵向分隔线
+            for (let i = 1; i &lt; verticalCount; i++) {
+                ctx.fillStyle = &#39;rgba(129, 199, 132, 0.5)&#39;;
+                ctx.fillRect(0, i * cellHeight, canvas.width, 2);
+            }
+
+            // 绘制图片
+            images.slice(0, horizontalCount * verticalCount).forEach((img, index) =&gt; {
+                const row = Math.floor(index / horizontalCount);
+                const col = index % horizontalCount;
+                ctx.drawImage(img, col * cellWidth, row * cellHeight, cellWidth, cellHeight);
+            });
+
+            // 下载
+            const link = document.createElement(&#39;a&#39;);
+            link.download = &#39;排版后的图片.png&#39;;
+            link.href = canvas.toDataURL(&#39;image/png&#39;);
+            link.click();
+        }
+
+        // 初始化
+        updateSizeFromScene();
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+</description>
+        </item>
+        <item>
         <title>PDF页面删除工具</title>
         <link>https://dao24dao.github.io/p/pdf_process/</link>
         <pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate>
         
         <guid>https://dao24dao.github.io/p/pdf_process/</guid>
-        <description>&lt;img src="https://dao24dao.github.io/images/daochuangshuo_logo.png" alt="Featured image of post PDF页面删除工具" /&gt;
+        <description>
 
 
   &lt;!DOCTYPE html&gt;
@@ -426,7 +890,7 @@
         <pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate>
         
         <guid>https://dao24dao.github.io/p/color_conv/</guid>
-        <description>&lt;img src="https://dao24dao.github.io/images/daochuangshuo_logo.png" alt="Featured image of post RGB和十六进制颜色转换查询系统" /&gt;
+        <description>
 
 
   &lt;!DOCTYPE html&gt;
@@ -840,7 +1304,7 @@
         <pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate>
         
         <guid>https://dao24dao.github.io/p/student_score/</guid>
-        <description>&lt;img src="https://dao24dao.github.io/images/daochuangshuo_logo.png" alt="Featured image of post 初中生物理课堂点名积分系统" /&gt;
+        <description>
 
 
   &lt;!DOCTYPE html&gt;
@@ -1175,7 +1639,7 @@
         <pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate>
         
         <guid>https://dao24dao.github.io/p/eng_words/</guid>
-        <description>&lt;img src="https://dao24dao.github.io/images/daochuangshuo_logo.png" alt="Featured image of post 小学生课堂英语单词抽查系统" /&gt;
+        <description>
 
 
   &lt;!DOCTYPE html&gt;
@@ -1396,7 +1860,7 @@
         <pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate>
         
         <guid>https://dao24dao.github.io/p/game_2048/</guid>
-        <description>&lt;img src="https://dao24dao.github.io/images/daochuangshuo_logo.png" alt="Featured image of post 用DeepSeek制作的2048小游戏" /&gt;
+        <description>
 
 
   &lt;!DOCTYPE html&gt;

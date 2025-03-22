@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <keywors content="用 DeepSeek 10 分钟制作的多图排版工具 - 图片拼贴大师">
+    <title>用 DeepSeek 10 分钟制作的多图排版工具 - 图片拼贴大师</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> -->
+    <style>
+        /* 使用免费可商用字体 */
+        body {
+/*            font-family: 'Ma Shan Zheng', cursive;*/
+            font-family: 'Roboto', sans-serif, cursive;
+            background-color: #e8f5e9; /* 生机盎然的绿色背景 */
+            padding: 20px;
+            margin: 0;
+        }
+        h1 {
+            font-family: 'Roboto', sans-serif, cursive;
+/*            font-family: 'ZCOOL KuaiLe', cursive;*/
+            font-size: 5.5rem;
+            text-align: center;
+            margin: 20px 0;
+            color: #2e7d32; /* 深绿色 */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            animation: glow 2s infinite alternate;
+        }
+        @keyframes glow {
+            from {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            }
+            to {
+                text-shadow: 0 0 10px #66bb6a, 0 0 20px #66bb6a, 0 0 30px #66bb6a;
+            }
+        }
+        .container {
+            max-width: 1200px; /* 限制容器宽度 */
+            margin: 0 auto; /* 居中 */
+        }
+        .upload-section, .preview-section {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .image-container .image-item {
+            position: relative;
+            display: inline-block;
+        }
+        .image-container img {
+            max-width: 100px;
+            max-height: 100px;
+            cursor: move;
+            border-radius: 5px;
+            border: 2px solid #81c784; /* 绿色边框 */
+        }
+        .image-container .delete-btn {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #ff4444;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+        .preview-container {
+            position: relative;
+            width: 100%;
+            max-width: 1024px; /* 最大宽度 */
+            height: auto;
+            aspect-ratio: 4 / 3; /* 默认宽高比 */
+            border: 2px dashed #81c784; /* 绿色虚线边框 */
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 20px auto; /* 居中 */
+        }
+        .preview-container .grid-line {
+            position: absolute;
+            background-color: rgba(129, 199, 132, 0.5); /* 半透明绿色 */
+        }
+        .preview-container .preview-image {
+            position: absolute;
+            cursor: move;
+        }
+        .btn-custom {
+            background-color: #66bb6a; /* 绿色按钮 */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 20px auto; /* 居中 */
+            display: block;
+        }
+        .btn-custom:hover {
+            background-color: #4caf50; /* 深绿色 */
+        }
+        .file-upload {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+        }
+        .file-upload input[type="file"] {
+            font-size: 100px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            cursor: pointer;
+        }
+        .file-upload-label {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #66bb6a;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .file-upload-label:hover {
+            background-color: #4caf50;
+        }
+        .button-group {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .size-inputs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .size-inputs input {
+            width: 100px;
+            padding: 5px;
+            border: 1px solid #81c784;
+            border-radius: 5px;
+        }
+        .footer-links {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 1.2rem;
+            color: #2e7d32;
+        }
+        .footer-links a {
+            color: #2e7d32;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 大标题 -->
+        <h1>图片拼贴大师</h1>
+
+        <div class="upload-section">
+            <h2>上传图片</h2>
+            <div class="file-upload">
+                <input type="file" id="imageUpload" multiple accept="image/*">
+                <label for="imageUpload" class="file-upload-label">选择图片</label>
+            </div>
+            <div class="image-container" id="imageContainer"></div>
+        </div>
+        <div class="preview-section">
+            <h2>排版设置</h2>
+            <div class="mb-3">
+                <label for="sceneSelect" class="form-label">选择场景</label>
+                <select id="sceneSelect" class="form-select" onchange="updateSizeFromScene()">
+                    <option value="custom">自定义</option>
+                    <option value="xiaohongshu">小红书 (1080x1440)</option>
+                    <option value="douyin">抖音 (1080x1920)</option>
+                    <option value="xiaolvshu">小绿书 (1080x1080)</option>
+                    <option value="wechat">公众号 (900x500)</option>
+                </select>
+            </div>
+            <div class="size-inputs">
+                <input type="number" id="widthInput" placeholder="宽度" onchange="updatePreviewSize()">
+                <input type="number" id="heightInput" placeholder="高度" onchange="updatePreviewSize()">
+            </div>
+            <div class="mb-3">
+                <label for="horizontalCount" class="form-label">横向分隔数量</label>
+                <input type="number" id="horizontalCount" class="form-control" value="2" min="1" onchange="updatePreview()">
+            </div>
+            <div class="mb-3">
+                <label for="verticalCount" class="form-label">纵向分隔数量</label>
+                <input type="number" id="verticalCount" class="form-control" value="1" min="1" onchange="updatePreview()">
+            </div>
+            <div class="mb-3">
+                <label for="objectFit" class="form-label">图片填充方式</label>
+                <select id="objectFit" class="form-select" onchange="updatePreview()">
+                    <option value="fill">fill - 拉伸图片以填满区域，可能变形</option>
+                    <option value="contain">contain - 保持比例，完整显示图片</option>
+                    <option value="cover">cover - 保持比例，覆盖整个区域，可能裁剪</option>
+                    <option value="none">none - 保持原始尺寸，可能溢出</option>
+                    <option value="scale-down">scale-down - 类似 contain，但不会放大图片</option>
+                </select>
+            </div>
+            <div class="button-group">
+                <button class="btn-custom" onclick="updatePreview()">更新预览</button>
+            </div>
+            <h2 class="mt-3">排版预览</h2>
+            <div class="preview-container" id="previewContainer"></div>
+            <div class="button-group">
+                <button class="btn-custom" onclick="downloadImage()">下载排版后的图片</button>
+            </div>
+        </div>
+
+        <!-- 页脚超链接 -->
+        <div class="footer-links">
+             <p><a href="https://pan.quark.cn/s/672edb01935e">系统源码地址 + 使用 DeepSeek 的提示词，点这领取，免费</a></p>
+            <p><a href="https://mp.weixin.qq.com/s/nVUzTMiuYG-yjJ6nMt4YwA">由 @道创说 用 DeepSeek 1 分钟生成，你也可以去尝试制作</a></p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.14.0/Sortable.min.js"></script>
+    <script>
+        const imageContainer = document.getElementById('imageContainer');
+        const previewContainer = document.getElementById('previewContainer');
+        const widthInput = document.getElementById('widthInput');
+        const heightInput = document.getElementById('heightInput');
+        const sceneSelect = document.getElementById('sceneSelect');
+        const horizontalCountInput = document.getElementById('horizontalCount');
+        const verticalCountInput = document.getElementById('verticalCount');
+        const objectFitSelect = document.getElementById('objectFit');
+        let images = [];
+
+        // 场景尺寸映射
+        const sceneSizes = {
+            custom: { width: 1024, height: 768 },
+            xiaohongshu: { width: 1080, height: 1440 },
+            douyin: { width: 1080, height: 1920 },
+            xiaolvshu: { width: 1080, height: 1080 },
+            wechat: { width: 900, height: 500 }
+        };
+
+        // 初始化场景尺寸
+        function updateSizeFromScene() {
+            const scene = sceneSelect.value;
+            const size = sceneSizes[scene];
+            widthInput.value = size.width;
+            heightInput.value = size.height;
+            updatePreviewSize();
+        }
+
+        // 更新预览区域大小
+        function updatePreviewSize() {
+            const width = parseInt(widthInput.value);
+            const height = parseInt(heightInput.value);
+            if (width && height) {
+                previewContainer.style.width = `${width}px`;
+                previewContainer.style.aspectRatio = `${width} / ${height}`;
+                updatePreview();
+            }
+        }
+
+        // 处理图片上传
+        document.getElementById('imageUpload').addEventListener('change', function(event) {
+            const files = event.target.files;
+            for (let i = 0; i < files.length; i++) {
+                const file = files[i];
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const img = new Image();
+                    img.src = e.target.result;
+                    img.onload = () => {
+                        images.push(img);
+                        renderImageItem(img);
+                    };
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // 渲染图片项
+        function renderImageItem(img) {
+            const imageItem = document.createElement('div');
+            imageItem.className = 'image-item';
+            const thumb = document.createElement('img');
+            thumb.src = img.src;
+            const deleteBtn = document.createElement('button');
+            deleteBtn.className = 'delete-btn';
+            deleteBtn.innerHTML = '×';
+            deleteBtn.onclick = () => {
+                const index = images.indexOf(img);
+                if (index !== -1) {
+                    images.splice(index, 1);
+                    imageItem.remove();
+                    updatePreview();
+                }
+            };
+            imageItem.appendChild(thumb);
+            imageItem.appendChild(deleteBtn);
+            imageContainer.appendChild(imageItem);
+        }
+
+        // 更新预览
+        function updatePreview() {
+            const horizontalCount = parseInt(horizontalCountInput.value);
+            const verticalCount = parseInt(verticalCountInput.value);
+            const objectFit = objectFitSelect.value;
+            const containerWidth = previewContainer.clientWidth;
+            const containerHeight = previewContainer.clientHeight;
+
+            // 清空预览区域
+            previewContainer.innerHTML = '';
+
+            // 计算分隔线
+            const cellWidth = containerWidth / horizontalCount;
+            const cellHeight = containerHeight / verticalCount;
+
+            // 绘制横向分隔线
+            for (let i = 1; i < horizontalCount; i++) {
+                const line = document.createElement('div');
+                line.className = 'grid-line';
+                line.style.width = '2px';
+                line.style.height = '100%';
+                line.style.left = `${i * cellWidth}px`;
+                previewContainer.appendChild(line);
+            }
+
+            // 绘制纵向分隔线
+            for (let i = 1; i < verticalCount; i++) {
+                const line = document.createElement('div');
+                line.className = 'grid-line';
+                line.style.height = '2px';
+                line.style.width = '100%';
+                line.style.top = `${i * cellHeight}px`;
+                previewContainer.appendChild(line);
+            }
+
+            // 填充图片
+            const totalCells = horizontalCount * verticalCount;
+            images.slice(0, totalCells).forEach((img, index) => {
+                const imgElement = document.createElement('img');
+                imgElement.className = 'preview-image';
+                imgElement.src = img.src;
+                imgElement.style.objectFit = objectFit; // 设置图片填充方式
+                imgElement.dataset.index = index; // 记录图片的位置
+
+                const row = Math.floor(index / horizontalCount);
+                const col = index % horizontalCount;
+
+                imgElement.style.width = `${cellWidth - 2}px`; // 缩小 2px
+                imgElement.style.height = `${cellHeight - 2}px`; // 缩小 2px
+                imgElement.style.left = `${col * cellWidth}px`;
+                imgElement.style.top = `${row * cellHeight}px`;
+
+                previewContainer.appendChild(imgElement);
+            });
+
+            // 初始化预览区域的拖拽功能
+            initPreviewDrag();
+        }
+
+        // 初始化预览区域的拖拽功能
+        function initPreviewDrag() {
+            const previewImages = document.querySelectorAll('.preview-image');
+            previewImages.forEach(img => {
+                img.addEventListener('dragstart', (e) => {
+                    e.dataTransfer.setData('text/plain', img.dataset.index);
+                });
+                img.addEventListener('dragover', (e) => {
+                    e.preventDefault(); // 允许拖放
+                });
+                img.addEventListener('drop', (e) => {
+                    e.preventDefault();
+                    const fromIndex = parseInt(e.dataTransfer.getData('text/plain'));
+                    const toIndex = parseInt(img.dataset.index);
+                    swapImages(fromIndex, toIndex);
+                });
+            });
+        }
+
+        // 交换图片位置
+        function swapImages(fromIndex, toIndex) {
+            [images[fromIndex], images[toIndex]] = [images[toIndex], images[fromIndex]];
+            updatePreview();
+        }
+
+        // 下载图片
+        function downloadImage() {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            const containerWidth = previewContainer.clientWidth;
+            const containerHeight = previewContainer.clientHeight;
+            canvas.width = containerWidth;
+            canvas.height = containerHeight;
+
+            // 绘制背景
+            ctx.fillStyle = '#ffffff';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // 绘制分隔线
+            const horizontalCount = parseInt(horizontalCountInput.value);
+            const verticalCount = parseInt(verticalCountInput.value);
+            const cellWidth = canvas.width / horizontalCount;
+            const cellHeight = canvas.height / verticalCount;
+
+            // 绘制横向分隔线
+            for (let i = 1; i < horizontalCount; i++) {
+                ctx.fillStyle = 'rgba(129, 199, 132, 0.5)';
+                ctx.fillRect(i * cellWidth, 0, 2, canvas.height);
+            }
+
+            // 绘制纵向分隔线
+            for (let i = 1; i < verticalCount; i++) {
+                ctx.fillStyle = 'rgba(129, 199, 132, 0.5)';
+                ctx.fillRect(0, i * cellHeight, canvas.width, 2);
+            }
+
+            // 绘制图片
+            images.slice(0, horizontalCount * verticalCount).forEach((img, index) => {
+                const row = Math.floor(index / horizontalCount);
+                const col = index % horizontalCount;
+                ctx.drawImage(img, col * cellWidth, row * cellHeight, cellWidth, cellHeight);
+            });
+
+            // 下载
+            const link = document.createElement('a');
+            link.download = '排版后的图片.png';
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+
+        // 初始化
+        updateSizeFromScene();
+    </script>
+</body>
+</html>
