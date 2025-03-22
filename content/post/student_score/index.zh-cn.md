@@ -4,7 +4,7 @@ layout: custom
 slug: student_score
 date: 2025-03-20
 keywords: ["编程", "开发", "代码", "DeepSeek", "副业避坑", "软件", "游戏"]
-image: /images/daochuangshuo_logo.png
+# image: /images/daochuangshuo_logo.png
 categories:
     - Projects
     - DeepSeek

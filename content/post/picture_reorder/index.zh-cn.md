@@ -1,8 +1,8 @@
 ---
-title: "RGB和十六进制颜色转换查询系统"
+title: "多图片拼帖大师"
 layout: custom
-slug: color_conv
-date: 2025-03-20
+slug: picture_reorder
+date: 2025-03-22
 keywords: ["编程", "开发", "代码", "DeepSeek", "副业避坑", "软件", "游戏"]
 # image: /images/daochuangshuo_logo.png
 categories:
@@ -15,4 +15,5 @@ tags:
     - 应用工具
     - 软件开发
 ---
-{{<include-html "/color_conv/color_conv.html" >}}
+
+{{<include-html "/picture_reorder/picture_reorder.html" >}}

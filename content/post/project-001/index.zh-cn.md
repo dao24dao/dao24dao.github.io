@@ -4,7 +4,7 @@ description: 2025001 / IDO老徐的《老徐陪你副业避坑》星球的《100
 date: 2025-03-17
 slug: 2025xhsbk
 keywords: ["小红书爆款", "DeepSeek", "副业避坑", "IDO老徐"]
-image: /images/daochuangshuo_logo.png
+# image: /images/daochuangshuo_logo.png
 categories:
     - Projects
     - DeepSeek

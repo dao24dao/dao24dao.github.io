@@ -16,7 +16,7 @@ tags:
     - 软件开发
     - 游戏开发
 comments: true
-sticky: true
+# sticky: true
 weight: 1
 ---
 
@@ -78,6 +78,14 @@ DeepSeek 不用学，你学 DeepSeek 的底层逻辑，用了哪些算法？
 用DeepSeek 5 分钟完成, @创意来自：IDO老徐的DeepSeek星球.
 
 体验地址：[2048 游戏](https://dao24dao.github.io/p/game_2048/)
+
+页面下方有 生成步骤教程+源码，可以自己下载，按步骤试试，你也可以。
+
+### 6. 多图片拼帖大师
+
+用DeepSeek 10 分钟完成, @创意来自：自我日常需求.
+
+体验地址：[多图片拼帖大师](https://dao24dao.github.io/p/picture_reorder/)
 
 页面下方有 生成步骤教程+源码，可以自己下载，按步骤试试，你也可以。
 

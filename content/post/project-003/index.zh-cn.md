@@ -4,7 +4,7 @@ description: 2025003 / 深圳大冲的《大冲陪你玩赚副业》星球的实
 date: 2025-03-17
 slug: 2025xywplx
 keywords: ["闲鱼虚拟资料", "小红书虚拟资料", "网盘拉新", "DeepSeek", "副业避坑"]
-image: /images/daochuangshuo_logo.png
+# image: /images/daochuangshuo_logo.png
 categories:
     - Projects
     - DeepSeek
