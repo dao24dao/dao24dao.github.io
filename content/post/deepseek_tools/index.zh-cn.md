@@ -6,7 +6,7 @@ slug: tools
 keywords: ["编程", "开发", "代码", "DeepSeek", "副业避坑", "软件", "游戏"]
 image: /images/daochuangshuo_logo.png
 categories:
-    - Projects
+    - Software
     - DeepSeek
     - Business
 tags:
@@ -89,6 +89,14 @@ DeepSeek 不用学，你学 DeepSeek 的底层逻辑，用了哪些算法？
 
 页面下方有 生成步骤教程+源码，可以自己下载，按步骤试试，你也可以。
 
+### 7. 手机端HTML运行工具
+
+用DeepSeek 1 分钟完成, @创意来自：IDO老徐的DeepSeek星球.
+
+体验地址：[手机端HTML运行工具](https://dao24dao.github.io/p/html_runner/)
+
+页面下方有 生成步骤教程+源码，可以自己下载，按步骤试试，你也可以。
+
 
 ## IDO老徐的DeepSeek星球
 
@@ -96,6 +104,6 @@ IDO老徐的《用DeepSeek高效实战赚小钱》星球，被知识星球官网
 
 当前 68 元/年，我申请了一张 13元 优惠券，直接扫码加入。
 
-**加入后，加微：dao24dao，有福利赠送！！**
+**加入后，加微：dao12321dao，有福利赠送！！**
 
 ![](ido_dkxq_yhq.jpeg)

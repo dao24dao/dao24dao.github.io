@@ -6,7 +6,7 @@ date: 2025-03-22
 keywords: ["编程", "开发", "代码", "DeepSeek", "副业避坑", "软件", "游戏"]
 # image: /images/daochuangshuo_logo.png
 categories:
-    - Projects
+    - Software
     - DeepSeek
     - Business
 tags:
