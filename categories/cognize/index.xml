@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>认知成长 on 道创说</title>
+        <title>认知成长 on 道哥说AI</title>
         <link>https://dao24dao.github.io/categories/cognize/</link>
-        <description>Recent content in 认知成长 on 道创说</description>
+        <description>Recent content in 认知成长 on 道哥说AI</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>IDO道 @道创说</copyright><atom:link href="https://dao24dao.github.io/categories/cognize/index.xml" rel="self" type="application/rss+xml" />
+        <copyright>道哥 @道哥说AI</copyright><atom:link href="https://dao24dao.github.io/categories/cognize/index.xml" rel="self" type="application/rss+xml" />
     </channel>
 </rss>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>副业避坑 on 道创说</title>
+        <title>副业避坑 on 道哥说AI</title>
         <link>https://dao24dao.github.io/tags/%E5%89%AF%E4%B8%9A%E9%81%BF%E5%9D%91/</link>
-        <description>Recent content in 副业避坑 on 道创说</description>
+        <description>Recent content in 副业避坑 on 道哥说AI</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
-        <copyright>IDO道 @道创说</copyright>
-        <lastBuildDate>Sat, 22 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://dao24dao.github.io/tags/%E5%89%AF%E4%B8%9A%E9%81%BF%E5%9D%91/index.xml" rel="self" type="application/rss+xml" /><item>
+        <copyright>道哥 @道哥说AI</copyright>
+        <lastBuildDate>Sun, 30 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://dao24dao.github.io/tags/%E5%89%AF%E4%B8%9A%E9%81%BF%E5%9D%91/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>DeepSeek 应用工具开发汇总</title>
         <link>https://dao24dao.github.io/p/tools/</link>
         <pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate>
@@ -55,10 +55,15 @@
 &lt;p&gt;体验地址：&lt;a class=&#34;link&#34; href=&#34;https://dao24dao.github.io/p/picture_reorder/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;多图片拼帖大师&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;页面下方有 生成步骤教程+源码，可以自己下载，按步骤试试，你也可以。&lt;/p&gt;
+&lt;h3 id=&#34;7-手机端html运行工具&#34;&gt;7. 手机端HTML运行工具
+&lt;/h3&gt;&lt;p&gt;用DeepSeek 1 分钟完成, @创意来自：IDO老徐的DeepSeek星球.&lt;/p&gt;
+&lt;p&gt;体验地址：&lt;a class=&#34;link&#34; href=&#34;https://dao24dao.github.io/p/html_runner/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;手机端HTML运行工具&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;页面下方有 生成步骤教程+源码，可以自己下载，按步骤试试，你也可以。&lt;/p&gt;
 &lt;h2 id=&#34;ido老徐的deepseek星球&#34;&gt;IDO老徐的DeepSeek星球
 &lt;/h2&gt;&lt;p&gt;IDO老徐的《用DeepSeek高效实战赚小钱》星球，被知识星球官网和央视报道，绝对高质量星球。&lt;/p&gt;
 &lt;p&gt;当前 68 元/年，我申请了一张 13元 优惠券，直接扫码加入。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;加入后，加微：dao24dao，有福利赠送！！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;加入后，加微：dao12321dao，有福利赠送！！&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://dao24dao.github.io/p/tools/ido_dkxq_yhq.jpeg&#34;
 	width=&#34;580&#34;
 	height=&#34;873&#34;
@@ -71,6 +76,303 @@
 		data-flex-basis=&#34;159px&#34;
 	
 &gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>手机端HTML代码运行工具</title>
+        <link>https://dao24dao.github.io/p/html_runner/</link>
+        <pubDate>Sun, 30 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://dao24dao.github.io/p/html_runner/</guid>
+        <description>
+
+
+  &lt;!DOCTYPE html&gt;
+&lt;html lang=&#34;zh-CN&#34;&gt;
+&lt;head&gt;
+    &lt;meta charset=&#34;UTF-8&#34;&gt;
+    &lt;meta name=&#34;viewport&#34; content=&#34;width=device-width, initial-scale=1.0&#34;&gt;
+    &lt;title&gt;HTML代码运行工具-移动端&lt;/title&gt;
+    &lt;style&gt;
+        :root {
+            --primary: #5e6ad2;
+            --primary-light: #f0f2ff;
+            --text: #222;
+            --text-light: #6b7280;
+            --bg: #f9fafb;
+            --bg-panel: #fff;
+            --border: #e5e7eb;
+            --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            --radius: 8px;
+            --transition: all 0.2s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, &#39;Segoe UI&#39;, Roboto, Oxygen, Ubuntu, Cantarell, &#39;Open Sans&#39;, &#39;Helvetica Neue&#39;, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: var(--text);
+            text-align: center;
+        }
+
+        .editor-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .code-editor {
+            width: 100%;
+            height: 400px;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .code-input {
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            background-color: var(--bg-panel);
+            color: var(--text);
+            font-family: &#39;Menlo&#39;, &#39;Monaco&#39;, &#39;Courier New&#39;, monospace;
+            font-size: 14px;
+            line-height: 1.6;
+            resize: none;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .code-input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 2px var(--primary-light);
+        }
+
+        .actions {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border-radius: var(--radius);
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            outline: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #4f5bc0;
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background-color: var(--bg-panel);
+            color: var(--text-light);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            background-color: #f3f4f6;
+            transform: translateY(-1px);
+        }
+
+        .preview-container {
+            width: 100%;
+            margin-top: 24px;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            background-color: var(--bg-panel);
+        }
+
+        .preview-title {
+            padding: 12px 20px;
+            background-color: var(--bg-panel);
+            border-bottom: 1px solid var(--border);
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-light);
+            text-align: center;
+        }
+
+        .preview-content {
+            min-height: 300px;
+            width: 100%;
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 12px 24px;
+            border-radius: var(--radius);
+            font-size: 14px;
+            font-weight: 500;
+            color: white;
+            background-color: var(--primary);
+            opacity: 0;
+            transition: var(--transition);
+            z-index: 1000;
+            box-shadow: var(--shadow);
+        }
+
+        .toast.show {
+            opacity: 1;
+            bottom: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .actions {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&#34;container&#34;&gt;
+        &lt;h1&gt;HTML代码运行工具-移动端&lt;/h1&gt;
+        
+        &lt;div class=&#34;editor-container&#34;&gt;
+            &lt;div class=&#34;code-editor&#34;&gt;
+                &lt;textarea id=&#34;htmlInput&#34; class=&#34;code-input&#34; placeholder=&#34;在此输入 HTML 代码（可包含 CSS 和 JavaScript）...&#34; spellcheck=&#34;false&#34;&gt;&lt;/textarea&gt;
+            &lt;/div&gt;
+            
+            &lt;div class=&#34;actions&#34;&gt;
+                &lt;button id=&#34;runBtn&#34; class=&#34;btn btn-primary&#34;&gt;
+                    &lt;svg width=&#34;16&#34; height=&#34;16&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+                        &lt;path d=&#34;M8 5V19L19 12L8 5Z&#34; fill=&#34;currentColor&#34;/&gt;
+                    &lt;/svg&gt;
+                    运行
+                &lt;/button&gt;
+                &lt;button id=&#34;clearBtn&#34; class=&#34;btn btn-secondary&#34;&gt;
+                    &lt;svg width=&#34;16&#34; height=&#34;16&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34;&gt;
+                        &lt;path d=&#34;M19 7H5V5H19V7Z&#34; fill=&#34;currentColor&#34;/&gt;
+                        &lt;path d=&#34;M5 9V19C5 20.1 5.9 21 7 21H17C18.1 21 19 20.1 19 19V9H5ZM16 11L15 17H13L14 11H16ZM10 11L9 17H7L8 11H10Z&#34; fill=&#34;currentColor&#34;/&gt;
+                    &lt;/svg&gt;
+                    清空
+                &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        
+        &lt;div class=&#34;preview-container&#34;&gt;
+            &lt;div class=&#34;preview-title&#34;&gt;预览&lt;/div&gt;
+            &lt;iframe id=&#34;previewFrame&#34; class=&#34;preview-content&#34; frameborder=&#34;0&#34; style=&#34;width: 100%; height: 500px;&#34;&gt;&lt;/iframe&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;div id=&#34;toast&#34; class=&#34;toast&#34;&gt;&lt;/div&gt;
+
+    &lt;script&gt;
+        document.addEventListener(&#39;DOMContentLoaded&#39;, function() {
+            const htmlInput = document.getElementById(&#39;htmlInput&#39;);
+            const runBtn = document.getElementById(&#39;runBtn&#39;);
+            const clearBtn = document.getElementById(&#39;clearBtn&#39;);
+            const previewFrame = document.getElementById(&#39;previewFrame&#39;);
+            const toast = document.getElementById(&#39;toast&#39;);
+            
+            // 显示提示信息
+            function showToast(message) {
+                toast.textContent = message;
+                toast.classList.add(&#39;show&#39;);
+                
+                setTimeout(() =&gt; {
+                    toast.classList.remove(&#39;show&#39;);
+                }, 3000);
+            }
+            
+            // 运行按钮点击事件
+            runBtn.addEventListener(&#39;click&#39;, function() {
+                const code = htmlInput.value;
+                
+                if (!code.trim()) {
+                    showToast(&#39;请输入 HTML 代码&#39;);
+                    return;
+                }
+                
+                try {
+                    const doc = previewFrame.contentDocument || previewFrame.contentWindow.document;
+                    doc.open();
+                    doc.write(code);
+                    doc.close();
+                    showToast(&#39;代码运行成功&#39;);
+                } catch (error) {
+                    showToast(&#39;运行出错: &#39; + error.message);
+                }
+            });
+            
+            // 清空按钮点击事件
+            clearBtn.addEventListener(&#39;click&#39;, function() {
+                htmlInput.value = &#39;&#39;;
+                showToast(&#39;已清空编辑器&#39;);
+                
+                // 清空预览
+                try {
+                    const doc = previewFrame.contentDocument || previewFrame.contentWindow.document;
+                    doc.open();
+                    doc.write(&#39;&#39;);
+                    doc.close();
+                } catch (error) {
+                    console.error(&#39;清空预览出错:&#39;, error);
+                }
+            });
+        });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
 </description>
         </item>
         <item>
@@ -2375,7 +2677,7 @@
   &lt;tbody&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;先体验，&lt;strong&gt;优惠券过期 或 想加入的找我（微信：dao24dao），来拿重磅福利！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;先体验，&lt;strong&gt;优惠券过期 或 想加入的找我（微信：dao12321dao），来拿重磅福利！&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;免费星球，点击加入： &lt;a class=&#34;link&#34; href=&#34;https://t.zsxq.com/QxWxg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://t.zsxq.com/QxWxg&lt;/a&gt;&lt;/p&gt;
 </description>
@@ -2413,7 +2715,7 @@
 &lt;/h3&gt;&lt;p&gt;&lt;strong&gt;/方式1/、&lt;/strong&gt; 加我微信：&lt;strong&gt;dao24dao&lt;/strong&gt;，备注：&lt;strong&gt;DeepSeek 小红书爆款&lt;/strong&gt;, 直接转账 29.9元，我拉你进群。&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;/方式2/、&lt;/strong&gt; 扫下方二维码加入《老徐陪你副业避坑》星球，每年有 100 个实战小项目， 每个 9.9 元即可参与。&lt;/p&gt;
-&lt;p&gt;加入星球后，加我微信：&lt;strong&gt;dao24dao&lt;/strong&gt; 找我，赠送福利：&lt;/p&gt;
+&lt;p&gt;加入星球后，加我微信：&lt;strong&gt;dao12321dao&lt;/strong&gt; 找我，赠送福利：&lt;/p&gt;
 &lt;p&gt;福利1、送老徐的《用DeepSeek高效实战赚小钱星球》，当前价值 65 元；&lt;/p&gt;
 &lt;p&gt;福利2、送我的付费星球《道·一人企业·玩赚副业》和免费社群。&lt;/p&gt;
 &lt;p&gt;免费星球，点击加入： &lt;a class=&#34;link&#34; href=&#34;https://t.zsxq.com/QxWxg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -2486,7 +2788,7 @@
 &lt;/h3&gt;&lt;p&gt;&lt;strong&gt;/方式1/、&lt;/strong&gt; 加我微信：&lt;strong&gt;dao24dao&lt;/strong&gt;，备注：&lt;strong&gt;短视频剪辑入门&lt;/strong&gt;, 直接转账 29.9元，我拉你进群。&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;/方式2/、&lt;/strong&gt; 扫下方二维码加入《老徐陪你副业避坑》星球，每年有 100 个实战小项目， 每个 9.9 元即可参与。&lt;/p&gt;
-&lt;p&gt;加入星球后，加我微信：&lt;strong&gt;dao24dao&lt;/strong&gt; 找我，赠送福利：&lt;/p&gt;
+&lt;p&gt;加入星球后，加我微信：&lt;strong&gt;dao12321dao&lt;/strong&gt; 找我，赠送福利：&lt;/p&gt;
 &lt;p&gt;福利1、送老徐的《用DeepSeek高效实战赚小钱星球》，当前价值 65 元；&lt;/p&gt;
 &lt;p&gt;福利2、送我的付费星球《道·一人企业·玩赚副业》和免费社群。&lt;/p&gt;
 &lt;p&gt;免费星球，点击加入： &lt;a class=&#34;link&#34; href=&#34;https://t.zsxq.com/QxWxg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -2555,7 +2857,7 @@
 &lt;p&gt;3、 项目结束后，会在群里发红包，跟着项目赚钱&lt;/p&gt;
 &lt;h3 id=&#34;参加方式&#34;&gt;参加方式：
 &lt;/h3&gt;&lt;p&gt;扫下方二维码加入《大冲陪你玩赚副业》星球，每年有几十个实战小项目， 免费参加（押金制）。&lt;/p&gt;
-&lt;p&gt;加入星球后，加我微信：&lt;strong&gt;dao24dao&lt;/strong&gt; 找我，赠送福利：&lt;/p&gt;
+&lt;p&gt;加入星球后，加我微信：&lt;strong&gt;dao12321dao&lt;/strong&gt; 找我，赠送福利：&lt;/p&gt;
 &lt;p&gt;福利1、送我的付费星球《道·一人企业·玩赚副业》和免费社群。&lt;/p&gt;
 &lt;p&gt;免费星球，点击加入： &lt;a class=&#34;link&#34; href=&#34;https://t.zsxq.com/QxWxg&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://t.zsxq.com/QxWxg&lt;/a&gt;&lt;/p&gt;
