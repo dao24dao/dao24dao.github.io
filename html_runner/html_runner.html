@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <keywors content="用 DeepSeek 1 分钟制作的HTML代码运行工具-移动端">
     <title>HTML代码运行工具-移动端</title>
     <style>
         :root {
@@ -190,6 +191,21 @@
                 justify-content: center;
             }
         }
+
+        .footer-links {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 1.2rem;
+            color: #2e7d32;
+        }
+        .footer-links a {
+            color: #4285F4;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -222,7 +238,13 @@
             <div class="preview-title">预览</div>
             <iframe id="previewFrame" class="preview-content" frameborder="0" style="width: 100%; height: 500px;"></iframe>
         </div>
+
+        <div class="footer-links">
+            <p><a href="https://pan.quark.cn/s/317cd1ce5b89">系统源码地址 + 使用 DeepSeek 的提示词，点这领取，免费</a></p>
+           <p><a href="https://mp.weixin.qq.com/s/nVUzTMiuYG-yjJ6nMt4YwA">由 @道哥说AI 用 DeepSeek 1 分钟生成，你也可以去尝试制作</a></p>
+       </div>
     </div>
+    
     
     <div id="toast" class="toast"></div>
 
