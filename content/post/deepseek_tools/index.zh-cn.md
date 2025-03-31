@@ -1,10 +1,10 @@
 ---
-title: "DeepSeek 应用工具开发汇总"
+title: "【置顶】DeepSeek 应用工具开发汇总"
 description: "用 DeepSeek 做的应用工具，解决日常小问题，价值 1000+ 元"
 date: 2025-03-20
 slug: tools
 keywords: ["编程", "开发", "代码", "DeepSeek", "副业避坑", "软件", "游戏"]
-image: /images/daochuangshuo_logo.png
+# image: /images/daochuangshuo_logo.png
 categories:
     - Software
     - DeepSeek
