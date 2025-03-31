@@ -7,13 +7,13 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-cn</language>
         <copyright>道哥 @道哥说AI</copyright>
-        <lastBuildDate>Sun, 30 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://dao24dao.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>DeepSeek 应用工具开发汇总</title>
+        <lastBuildDate>Mon, 31 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://dao24dao.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>【置顶】DeepSeek 应用工具开发汇总</title>
         <link>https://dao24dao.github.io/p/tools/</link>
         <pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate>
         
         <guid>https://dao24dao.github.io/p/tools/</guid>
-        <description>&lt;img src="https://dao24dao.github.io/images/daochuangshuo_logo.png" alt="Featured image of post DeepSeek 应用工具开发汇总" /&gt;&lt;p&gt;大家好，我是 &lt;strong&gt;道&lt;/strong&gt;，也可以叫我「&lt;strong&gt;IDO道&lt;/strong&gt;」，AI破局和IDO老徐的资深会员，一人企业，玩赚复利商业化。&lt;/p&gt;
+        <description>&lt;p&gt;大家好，我是 &lt;strong&gt;道&lt;/strong&gt;，也可以叫我「&lt;strong&gt;IDO道&lt;/strong&gt;」，AI破局和IDO老徐的资深会员，一人企业，玩赚复利商业化。&lt;/p&gt;
 &lt;p&gt;第一次听说我的，看这里：&lt;a class=&#34;link&#34; href=&#34;https://dao24dao.github.io/me/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;我是谁&lt;/a&gt;， 交个朋友&lt;/p&gt;
 &lt;h2 id=&#34;deepseek-如何学&#34;&gt;DeepSeek 如何学？
@@ -76,6 +76,105 @@
 		data-flex-basis=&#34;159px&#34;
 	
 &gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>HTML代码手机无法运行？用 DeepSeek 5 分钟开发的小工具(手把手教程，建议收藏）</title>
+        <link>https://dao24dao.github.io/p/20250331/</link>
+        <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://dao24dao.github.io/p/20250331/</guid>
+        <description>&lt;p&gt;&lt;strong&gt;你好啊，我是 道哥，欢迎一起成长赚钱！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;这是【道哥】[龙蛇之变计划] 日更 365 天的是第 40 天。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;用过 DeepSeek 的人都知道，用 DeepSeek 生成的HTML代码，在电脑上是可以直接运行的（不需要额外操作）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dao24dao.github.io/p/20250331/image1.png&#34;
+	width=&#34;1080&#34;
+	height=&#34;874&#34;
+	srcset=&#34;https://dao24dao.github.io/p/20250331/image1_hu_d1d1b48ae625cd78.png 480w, https://dao24dao.github.io/p/20250331/image1_hu_a8e233c799b81651.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;123&#34;
+		data-flex-basis=&#34;296px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;但是手机上却无法运行。&lt;/p&gt;
+&lt;p&gt;这就导致如果手边没有电脑，在手机上写代码调试效果是没法实现的，很不方便。&lt;/p&gt;
+&lt;p&gt;针对此，我 DeepSeek 写了一个小工具，5 分钟开发完成，可以直接在手机上运行HTML代码，使用超级简单，直接浏览器打开即可。&lt;/p&gt;
+&lt;p&gt;体验地址： &lt;a class=&#34;link&#34; href=&#34;https://dao24dao.github.io/p/html_runner/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://dao24dao.github.io/p/html_runner/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;当然，你也可以把这个小工具部署在自己的服务器上，随时随地可以访问！！&lt;/p&gt;
+&lt;h2 id=&#34;开发步骤&#34;&gt;开发步骤
+&lt;/h2&gt;&lt;h3 id=&#34;1-输入提示词&#34;&gt;1、 输入提示词
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;帮我写一个 html 的页面，要完整代码。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;功能：
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;1. 一个不限长度的输入框，输入框中可以输入 html 代码（包含 css和 js 代码）
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;2. 输入框下面有两个按钮，分别是“运行”和“清空”;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;点击运行，则以浏览器的形式运行输入框中的代码，展示效果；
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;点击清空，则把输入框中的内容清空。 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;3. 整体风格参考 linear app 的风格来做，每个元素都要 有样式。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;生成之后，可直接点击“在线运行”，看生成的效果。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dao24dao.github.io/p/20250331/image.png&#34;
+	width=&#34;1080&#34;
+	height=&#34;1578&#34;
+	srcset=&#34;https://dao24dao.github.io/p/20250331/image_hu_c801ecfa1658ebf0.png 480w, https://dao24dao.github.io/p/20250331/image_hu_4fb3490dec98e2c4.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;68&#34;
+		data-flex-basis=&#34;164px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;/ 如果有问题，则继续问 DeepSeek，让它帮你解决！&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;比如： 点击运行按钮没有反应。 那你就输入：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;点击“运行按钮”没反应，帮我重新生成。 要完整的代码。
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;DeepSeek 会帮你生成完整的最新代码，继续&amp;hellip;&lt;/p&gt;
+&lt;h3 id=&#34;2其实没有第-2-步已经搞定了&#34;&gt;2、其实没有第 2 步，已经搞定了。
+&lt;/h3&gt;&lt;h2 id=&#34;部署&#34;&gt;部署
+&lt;/h2&gt;&lt;p&gt;体验地址： &lt;a class=&#34;link&#34; href=&#34;https://dao24dao.github.io/p/html_runner/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://pan.quark.cn/s/317cd1ce5b89&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;体验地址页面的最下方有链接，可点击下载；&lt;/p&gt;
+&lt;p&gt;或直接访问：&lt;a class=&#34;link&#34; href=&#34;https://pan.quark.cn/s/317cd1ce5b89&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://pan.quark.cn/s/317cd1ce5b89&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;把其中的 .html 结尾的文件，放到自己的服务器上，并配置访问路径即可。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://dao24dao.github.io/p/20250331/image2.png&#34;
+	width=&#34;1080&#34;
+	height=&#34;1391&#34;
+	srcset=&#34;https://dao24dao.github.io/p/20250331/image2_hu_45788888f03c72f1.png 480w, https://dao24dao.github.io/p/20250331/image2_hu_b3d726bd25bceb79.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;77&#34;
+		data-flex-basis=&#34;186px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;end&#34;&gt;End.
+&lt;/h3&gt;&lt;p&gt;一个人走的快，但一群人走的远。&lt;/p&gt;
+&lt;p&gt;欢迎加入我的社群，一起成长赚钱！&lt;/p&gt;
+&lt;p&gt;微信 dao12321dao ，找我，加入社群有优惠券哦！&lt;/p&gt;
 </description>
         </item>
         <item>
