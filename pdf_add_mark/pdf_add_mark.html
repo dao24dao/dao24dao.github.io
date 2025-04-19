@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF加水印工具，本地部署</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <style>
+        :root {
+            --primary: #5e6ad2;
+            --primary-hover: #4a56b8;
+            --background: #f9fafb;
+            --surface: #ffffff;
+            --border: #e5e7eb;
+            --text-primary: #111827;
+            --text-secondary: #6b7280;
+            --success: #22c55e;
+            --error: #ef4444;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --radius-sm: 4px;
+            --radius-md: 6px;
+            --radius-lg: 8px;
+            --space-xs: 4px;
+            --space-sm: 8px;
+            --space-md: 16px;
+            --space-lg: 24px;
+            --space-xl: 32px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text-primary);
+            line-height: 1.5;
+            padding: var(--space-md);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: var(--space-lg);
+            color: var(--text-primary);
+        }
+
+        .card {
+            background-color: var(--surface);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+            padding: var(--space-lg);
+            margin-bottom: var(--space-lg);
+        }
+
+        .card-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: var(--space-md);
+            color: var(--text-primary);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--space-lg);
+        }
+
+        @media (min-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .form-group {
+            margin-bottom: var(--space-md);
+        }
+
+        label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: var(--space-xs);
+            color: var(--text-secondary);
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="range"],
+        select {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            font-size: 14px;
+            transition: border-color 0.2s;
+        }
+
+        input[type="text"]:focus,
+        input[type="number"]:focus,
+        input[type="range"]:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        input[type="range"] {
+            padding: 0;
+            height: 24px;
+        }
+
+        .file-upload {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .file-upload input {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        .file-upload-label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px;
+            border: 1px dashed var(--border);
+            border-radius: var(--radius-sm);
+            background-color: var(--background);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .file-upload-label:hover {
+            border-color: var(--primary);
+            background-color: rgba(94, 106, 210, 0.05);
+        }
+
+        .file-upload-label i {
+            margin-right: var(--space-xs);
+            color: var(--text-secondary);
+        }
+
+        .radio-group {
+            display: flex;
+            gap: var(--space-md);
+            margin-top: var(--space-xs);
+            flex-wrap: wrap;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+        }
+
+        .radio-option input {
+            margin-right: var(--space-xs);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 8px 16px;
+            border-radius: var(--radius-sm);
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+        }
+
+        .btn-secondary {
+            background-color: var(--surface);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--background);
+        }
+
+        .btn-icon {
+            margin-right: var(--space-xs);
+        }
+
+        .tabs {
+            display: flex;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: var(--space-md);
+        }
+
+        .tab {
+            padding: var(--space-sm) var(--space-md);
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .tab.active {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .preview-container {
+            position: relative;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            height: 400px;
+        }
+
+        @media (min-width: 768px) {
+            .preview-container {
+                height: 500px;
+            }
+        }
+
+        #pdf-preview {
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: #f5f5f5;
+            position: relative;
+        }
+
+        #pdf-canvas {
+            max-width: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .color-picker {
+            display: flex;
+            align-items: center;
+        }
+
+        .color-picker input[type="color"] {
+            width: 30px;
+            height: 30px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            margin-right: var(--space-sm);
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: var(--space-sm);
+            margin-top: var(--space-md);
+            flex-wrap: wrap;
+        }
+
+        .loading {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            display: none;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(94, 106, 210, 0.2);
+            border-top-color: var(--primary);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .watermark-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 5;
+        }
+
+        .page-info {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-top: var(--space-sm);
+            text-align: center;
+        }
+
+        .range-value {
+            display: inline-block;
+            min-width: 30px;
+            text-align: right;
+        }
+
+        .footer-links {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 1.2rem;
+            color: #2e7d32;
+        }
+        .footer-links a {
+            color: #4285F4;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>PDF水印添加工具</h1>
+        
+        <div class="grid">
+            <div>
+                <div class="card">
+                    <h2 class="card-title">上传 PDF 文件</h2>
+                    <div class="form-group">
+                        <label for="pdf-upload">选择 PDF 文件</label>
+                        <div class="file-upload">
+                            <input type="file" id="pdf-upload" accept=".pdf">
+                            <label for="pdf-upload" class="file-upload-label">
+                                <i class="btn-icon">📄</i>
+                                <span>点击上传 PDF 文件</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2 class="card-title">水印设置</h2>
+                    
+                    <div class="tabs">
+                        <div class="tab active" data-tab="text">文字水印</div>
+                        <div class="tab" data-tab="image">图片水印</div>
+                    </div>
+                    
+                    <div class="tab-content active" id="text-tab">
+                        <div class="form-group">
+                            <label for="watermark-text">水印文字</label>
+                            <input type="text" id="watermark-text" placeholder="输入水印文字" value="机密文件">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>文字样式</label>
+                            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: var(--space-md);">
+                                <div>
+                                    <label for="text-color">颜色</label>
+                                    <div class="color-picker">
+                                        <input type="color" id="text-color" value="#000000">
+                                        <span id="color-value">#000000</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="text-size">大小 (px)</label>
+                                    <input type="number" id="text-size" min="10" max="100" value="32">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="image-tab">
+                        <div class="form-group">
+                            <label for="image-upload">上传水印图片</label>
+                            <div class="file-upload">
+                                <input type="file" id="image-upload" accept="image/*">
+                                <label for="image-upload" class="file-upload-label">
+                                    <i class="btn-icon">🖼️</i>
+                                    <span>点击上传图片</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="watermark-opacity">透明度 <span id="opacity-value" class="range-value">45%</span></label>
+                        <input type="range" id="watermark-opacity" min="0" max="100" value="45">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>方向</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="rotate-45" name="rotation" value="45" checked>
+                                <label for="rotate-45">45°</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="rotate--45" name="rotation" value="-45">
+                                <label for="rotate--45">-45°</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="rotate-0" name="rotation" value="0">
+                                <label for="rotate-0">不旋转</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>排列方式</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="layout-tile" name="layout" value="tile" checked>
+                                <label for="layout-tile">平铺</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="layout-center" name="layout" value="center">
+                                <label for="layout-center">居中</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="actions">
+                    <button id="reset-btn" class="btn btn-secondary">
+                        <i class="btn-icon">🔄</i>
+                        <span>重置</span>
+                    </button>
+                    <button id="download-btn" class="btn btn-primary">
+                        <i class="btn-icon">💾</i>
+                        <span>下载 PDF</span>
+                    </button>
+                </div>
+            </div>
+            
+            <div>
+                <div class="card">
+                    <h2 class="card-title">预览</h2>
+                    <div class="preview-container">
+                        <div class="loading">
+                            <div class="spinner"></div>
+                        </div>
+                        <div id="pdf-preview">
+                            <canvas id="pdf-canvas"></canvas>
+                            <div id="watermark-layer" class="watermark-layer"></div>
+                        </div>
+                    </div>
+                    <div class="page-info">
+                        <span id="page-num">第 1 页</span> / <span id="page-count">共 0 页</span>
+                    </div>
+                    <div class="actions" style="justify-content: center;">
+                        <button id="prev-page" class="btn btn-secondary">
+                            <i class="btn-icon">⬅️</i>
+                            <span>上一页</span>
+                        </button>
+                        <button id="next-page" class="btn btn-secondary">
+                            <i class="btn-icon">➡️</i>
+                            <span>下一页</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-links">
+            <p><a href="https://pan.quark.cn/s/ab31efe5acf2">系统源码地址 + 使用 DeepSeek 的提示词，点这领取，免费</a></p>
+           <p><a href="https://mp.weixin.qq.com/s/nVUzTMiuYG-yjJ6nMt4YwA">由 @道哥说AI PDF添加水印工具(html代码) - 用DeepSeek 5 分钟开发的工具 ，你也可以去尝试制作</a></p>
+       </div>
+    </div>
+
+    <script>
+        // 设置PDF.js worker路径
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.worker.min.js';
+        
+        // 全局变量
+        let pdfDoc = null;
+        let pageNum = 1;
+        let pageRendering = false;
+        let pageNumPending = null;
+        let pdfCanvas = document.getElementById('pdf-canvas');
+        let pdfCtx = pdfCanvas.getContext('2d');
+        let scale = 1.0;
+        let watermarkImage = null;
+        let currentTab = 'text';
+        
+        // DOM元素
+        const pdfUpload = document.getElementById('pdf-upload');
+        const pdfPreview = document.getElementById('pdf-preview');
+        const watermarkLayer = document.getElementById('watermark-layer');
+        const prevPageBtn = document.getElementById('prev-page');
+        const nextPageBtn = document.getElementById('next-page');
+        const pageNumEl = document.getElementById('page-num');
+        const pageCountEl = document.getElementById('page-count');
+        const downloadBtn = document.getElementById('download-btn');
+        const resetBtn = document.getElementById('reset-btn');
+        const loadingEl = document.querySelector('.loading');
+        
+        // 水印设置元素
+        const tabs = document.querySelectorAll('.tab');
+        const textTab = document.getElementById('text-tab');
+        const imageTab = document.getElementById('image-tab');
+        const watermarkText = document.getElementById('watermark-text');
+        const textColor = document.getElementById('text-color');
+        const colorValue = document.getElementById('color-value');
+        const textSize = document.getElementById('text-size');
+        const imageUpload = document.getElementById('image-upload');
+        const watermarkOpacity = document.getElementById('watermark-opacity');
+        const opacityValue = document.getElementById('opacity-value');
+        const rotationRadios = document.querySelectorAll('input[name="rotation"]');
+        const layoutRadios = document.querySelectorAll('input[name="layout"]');
+        
+        // 初始化
+        function init() {
+            // 设置事件监听器
+            pdfUpload.addEventListener('change', handlePDFUpload);
+            prevPageBtn.addEventListener('click', onPrevPage);
+            nextPageBtn.addEventListener('click', onNextPage);
+            downloadBtn.addEventListener('click', downloadPDF);
+            resetBtn.addEventListener('click', resetForm);
+            
+            // 水印设置事件
+            tabs.forEach(tab => {
+                tab.addEventListener('click', switchTab);
+            });
+            
+            watermarkText.addEventListener('input', updateWatermark);
+            textColor.addEventListener('input', updateTextColor);
+            textSize.addEventListener('input', updateWatermark);
+            imageUpload.addEventListener('change', handleImageUpload);
+            watermarkOpacity.addEventListener('input', updateOpacityValue);
+            
+            rotationRadios.forEach(radio => {
+                radio.addEventListener('change', updateWatermark);
+            });
+            
+            layoutRadios.forEach(radio => {
+                radio.addEventListener('change', updateWatermark);
+            });
+            
+            // 初始化水印预览
+            updateWatermark();
+            
+            // 调整canvas大小
+            window.addEventListener('resize', debounce(() => {
+                if (pdfDoc) {
+                    renderPage(pageNum);
+                }
+            }, 200));
+        }
+        
+        // 切换标签页
+        function switchTab(e) {
+            const tab = e.target;
+            const tabId = tab.getAttribute('data-tab');
+            
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+            
+            textTab.classList.remove('active');
+            imageTab.classList.remove('active');
+            
+            if (tabId === 'text') {
+                textTab.classList.add('active');
+                currentTab = 'text';
+            } else {
+                imageTab.classList.add('active');
+                currentTab = 'image';
+            }
+            
+            updateWatermark();
+        }
+        
+        // 更新文本颜色显示值
+        function updateTextColor() {
+            colorValue.textContent = textColor.value;
+            updateWatermark();
+        }
+        
+        // 更新透明度显示值
+        function updateOpacityValue() {
+            opacityValue.textContent = `${watermarkOpacity.value}%`;
+            watermarkLayer.style.opacity = watermarkOpacity.value / 100;
+        }
+        
+        // 防抖函数
+        function debounce(func, wait) {
+            let timeout;
+            return function() {
+                const context = this, args = arguments;
+                clearTimeout(timeout);
+                timeout = setTimeout(() => {
+                    func.apply(context, args);
+                }, wait);
+            };
+        }
+        
+        // 处理PDF上传
+        function handlePDFUpload(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+            
+            const fileReader = new FileReader();
+            
+            fileReader.onload = function() {
+                const typedarray = new Uint8Array(this.result);
+                
+                loadingEl.style.display = 'flex';
+                
+                // 使用PDF.js加载PDF
+                pdfjsLib.getDocument(typedarray).promise.then(function(pdf) {
+                    pdfDoc = pdf;
+                    pageCountEl.textContent = `共 ${pdf.numPages} 页`;
+                    
+                    // 重置页码
+                    pageNum = 1;
+                    pageNumEl.textContent = `第 ${pageNum} 页`;
+                    
+                    // 渲染第一页
+                    renderPage(pageNum);
+                    
+                    loadingEl.style.display = 'none';
+                }).catch(function(error) {
+                    console.error('PDF加载错误:', error);
+                    loadingEl.style.display = 'none';
+                    alert('PDF加载失败，请检查文件格式是否正确。');
+                });
+            };
+            
+            fileReader.readAsArrayBuffer(file);
+        }
+        
+        // 渲染PDF页面
+        function renderPage(num) {
+            pageRendering = true;
+            loadingEl.style.display = 'flex';
+            
+            // 根据容器大小计算缩放比例
+            const containerWidth = pdfPreview.clientWidth - 40; // 减去一些边距
+            scale = containerWidth / 612; // 假设标准PDF宽度为612
+            
+            pdfDoc.getPage(num).then(function(page) {
+                const viewport = page.getViewport({ scale: scale });
+                pdfCanvas.height = viewport.height;
+                pdfCanvas.width = viewport.width;
+                
+                // 调整水印层大小
+                watermarkLayer.style.width = `${viewport.width}px`;
+                watermarkLayer.style.height = `${viewport.height}px`;
+                
+                const renderContext = {
+                    canvasContext: pdfCtx,
+                    viewport: viewport
+                };
+                
+                const renderTask = page.render(renderContext);
+                
+                renderTask.promise.then(function() {
+                    pageRendering = false;
+                    if (pageNumPending !== null) {
+                        renderPage(pageNumPending);
+                        pageNumPending = null;
+                    }
+                    
+                    // 更新水印
+                    updateWatermark();
+                    loadingEl.style.display = 'none';
+                });
+            });
+            
+            pageNumEl.textContent = `第 ${num} 页`;
+        }
+        
+        // 上一页
+        function onPrevPage() {
+            if (pageNum <= 1 || pageRendering) return;
+            pageNum--;
+            queueRenderPage(pageNum);
+        }
+        
+        // 下一页
+        function onNextPage() {
+            if (pageNum >= pdfDoc.numPages || pageRendering) return;
+            pageNum++;
+            queueRenderPage(pageNum);
+        }
+        
+        // 排队渲染页面
+        function queueRenderPage(num) {
+            if (pageRendering) {
+                pageNumPending = num;
+            } else {
+                renderPage(num);
+            }
+        }
+        
+        // 处理图片上传
+        function handleImageUpload(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+            
+            const reader = new FileReader();
+            
+            reader.onload = function(event) {
+                watermarkImage = new Image();
+                watermarkImage.onload = function() {
+                    updateWatermark();
+                };
+                watermarkImage.src = event.target.result;
+            };
+            
+            reader.readAsDataURL(file);
+        }
+        
+        // 更新水印
+        function updateWatermark() {
+            if (!pdfDoc) return;
+            
+            const opacity = parseInt(watermarkOpacity.value) / 100;
+            const rotation = document.querySelector('input[name="rotation"]:checked').value;
+            const layout = document.querySelector('input[name="layout"]:checked').value;
+            
+            watermarkLayer.innerHTML = '';
+            watermarkLayer.style.opacity = opacity;
+            
+            const width = pdfCanvas.width;
+            const height = pdfCanvas.height;
+            
+            if (currentTab === 'text') {
+                const text = watermarkText.value || '水印文字';
+                const color = textColor.value;
+                const size = parseInt(textSize.value);
+                
+                if (layout === 'tile') {
+                    createTiledTextWatermark(text, color, size, rotation, width, height);
+                } else {
+                    createCenteredTextWatermark(text, color, size, rotation, width, height);
+                }
+            } else {
+                if (watermarkImage) {
+                    if (layout === 'tile') {
+                        createTiledImageWatermark(watermarkImage, rotation, width, height);
+                    } else {
+                        createCenteredImageWatermark(watermarkImage, rotation, width, height);
+                    }
+                }
+            }
+        }
+        
+        // 创建平铺文字水印
+        function createTiledTextWatermark(text, color, size, rotation, width, height) {
+            const tempCanvas = document.createElement('canvas');
+            tempCanvas.width = width;
+            tempCanvas.height = height;
+            const tempCtx = tempCanvas.getContext('2d');
+            
+            // 设置文字样式
+            tempCtx.font = `${size}px Arial`;
+            tempCtx.fillStyle = color;
+            tempCtx.textAlign = 'center';
+            tempCtx.textBaseline = 'middle';
+            
+            // 测量文字宽度
+            const textWidth = tempCtx.measureText(text).width;
+            const spacing = textWidth * 1.5;
+            
+            // 旋转画布
+            tempCtx.translate(width / 2, height / 2);
+            tempCtx.rotate(parseInt(rotation) * Math.PI / 180);
+            tempCtx.translate(-width / 2, -height / 2);
+            
+            // 绘制平铺水印
+            for (let x = -width; x < width * 2; x += spacing) {
+                for (let y = -height; y < height * 2; y += spacing * 2) {
+                    tempCtx.fillText(text, x, y);
+                }
+            }
+            
+            watermarkLayer.appendChild(tempCanvas);
+        }
+        
+        // 创建居中文字水印
+        function createCenteredTextWatermark(text, color, size, rotation, width, height) {
+            const tempCanvas = document.createElement('canvas');
+            tempCanvas.width = width;
+            tempCanvas.height = height;
+            const tempCtx = tempCanvas.getContext('2d');
+            
+            // 设置文字样式
+            tempCtx.font = `${size}px Arial`;
+            tempCtx.fillStyle = color;
+            tempCtx.textAlign = 'center';
+            tempCtx.textBaseline = 'middle';
+            
+            // 旋转画布
+            tempCtx.translate(width / 2, height / 2);
+            tempCtx.rotate(parseInt(rotation) * Math.PI / 180);
+            tempCtx.translate(-width / 2, -height / 2);
+            
+            // 绘制居中水印
+            tempCtx.fillText(text, width / 2, height / 2);
+            
+            watermarkLayer.appendChild(tempCanvas);
+        }
+        
+        // 创建平铺图片水印
+        function createTiledImageWatermark(image, rotation, width, height) {
+            // 根据PDF尺寸调整图片大小
+            const imgScale = Math.min(width, height) / Math.max(image.width, image.height) * 0.3;
+            const imgWidth = image.width * imgScale;
+            const imgHeight = image.height * imgScale;
+            const spacing = imgWidth * 1.5;
+            
+            const tempCanvas = document.createElement('canvas');
+            tempCanvas.width = width;
+            tempCanvas.height = height;
+            const tempCtx = tempCanvas.getContext('2d');
+            
+            // 旋转画布
+            tempCtx.translate(width / 2, height / 2);
+            tempCtx.rotate(parseInt(rotation) * Math.PI / 180);
+            tempCtx.translate(-width / 2, -height / 2);
+            
+            // 绘制平铺水印
+            for (let x = -width; x < width * 2; x += spacing) {
+                for (let y = -height; y < height * 2; y += spacing * 2) {
+                    tempCtx.drawImage(image, x - imgWidth / 2, y - imgHeight / 2, imgWidth, imgHeight);
+                }
+            }
+            
+            watermarkLayer.appendChild(tempCanvas);
+        }
+        
+        // 创建居中图片水印
+        function createCenteredImageWatermark(image, rotation, width, height) {
+            // 根据PDF尺寸调整图片大小
+            const imgScale = Math.min(width, height) / Math.max(image.width, image.height) * 0.5;
+            const imgWidth = image.width * imgScale;
+            const imgHeight = image.height * imgScale;
+            
+            const tempCanvas = document.createElement('canvas');
+            tempCanvas.width = width;
+            tempCanvas.height = height;
+            const tempCtx = tempCanvas.getContext('2d');
+            
+            // 旋转画布
+            tempCtx.translate(width / 2, height / 2);
+            tempCtx.rotate(parseInt(rotation) * Math.PI / 180);
+            tempCtx.translate(-width / 2, -height / 2);
+            
+            // 绘制居中水印
+            tempCtx.drawImage(
+                image, 
+                width / 2 - imgWidth / 2, 
+                height / 2 - imgHeight / 2, 
+                imgWidth, 
+                imgHeight
+            );
+            
+            watermarkLayer.appendChild(tempCanvas);
+        }
+        
+        // 下载带水印的PDF
+        async function downloadPDF() {
+            if (!pdfDoc) {
+                alert('请先上传PDF文件');
+                return;
+            }
+            
+            loadingEl.style.display = 'flex';
+            
+            try {
+                const { jsPDF } = window.jspdf;
+                
+                // 获取所有水印设置
+                const opacity = parseInt(watermarkOpacity.value) / 100;
+                const rotation = parseInt(document.querySelector('input[name="rotation"]:checked').value);
+                const layout = document.querySelector('input[name="layout"]:checked').value;
+                let watermarkType, watermarkData;
+                
+                if (currentTab === 'text') {
+                    watermarkType = 'text';
+                    watermarkData = {
+                        text: watermarkText.value || '水印文字',
+                        color: textColor.value,
+                        size: parseInt(textSize.value)
+                    };
+                } else {
+                    if (!watermarkImage) {
+                        alert('请上传水印图片');
+                        loadingEl.style.display = 'none';
+                        return;
+                    }
+                    watermarkType = 'image';
+                    watermarkData = {
+                        image: watermarkImage
+                    };
+                }
+                
+                // 创建一个新的PDF文档
+                const pdf = new jsPDF({
+                    unit: 'pt',
+                    format: 'a4'
+                });
+                
+                // 处理每一页
+                for (let i = 1; i <= pdfDoc.numPages; i++) {
+                    if (i > 1) pdf.addPage();
+                    
+                    const page = await pdfDoc.getPage(i);
+                    const viewport = page.getViewport({ scale: 1.0 });
+                    
+                    // 创建画布渲染PDF页面
+                    const tempCanvas = document.createElement('canvas');
+                    tempCanvas.width = viewport.width;
+                    tempCanvas.height = viewport.height;
+                    const tempCtx = tempCanvas.getContext('2d');
+                    
+                    await page.render({
+                        canvasContext: tempCtx,
+                        viewport: viewport
+                    }).promise;
+                    
+                    // 创建水印画布
+                    const watermarkCanvas = document.createElement('canvas');
+                    watermarkCanvas.width = viewport.width;
+                    watermarkCanvas.height = viewport.height;
+                    const watermarkCtx = watermarkCanvas.getContext('2d');
+                    
+                    if (watermarkType === 'text') {
+                        if (layout === 'tile') {
+                            drawTiledTextWatermark(
+                                watermarkCtx, 
+                                viewport.width, 
+                                viewport.height, 
+                                watermarkData.text, 
+                                watermarkData.color, 
+                                watermarkData.size, 
+                                rotation, 
+                                opacity
+                            );
+                        } else {
+                            drawCenteredTextWatermark(
+                                watermarkCtx, 
+                                viewport.width, 
+                                viewport.height, 
+                                watermarkData.text, 
+                                watermarkData.color, 
+                                watermarkData.size, 
+                                rotation, 
+                                opacity
+                            );
+                        }
+                    } else {
+                        if (layout === 'tile') {
+                            drawTiledImageWatermark(
+                                watermarkCtx, 
+                                viewport.width, 
+                                viewport.height, 
+                                watermarkData.image, 
+                                rotation, 
+                                opacity
+                            );
+                        } else {
+                            drawCenteredImageWatermark(
+                                watermarkCtx, 
+                                viewport.width, 
+                                viewport.height, 
+                                watermarkData.image, 
+                                rotation, 
+                                opacity
+                            );
+                        }
+                    }
+                    
+                    // 合并PDF和水印
+                    tempCtx.globalAlpha = opacity;
+                    tempCtx.drawImage(watermarkCanvas, 0, 0);
+                    tempCtx.globalAlpha = 1.0;
+                    
+                    // 将画布转换为图像并添加到PDF
+                    const imgData = tempCanvas.toDataURL('image/jpeg', 0.8);
+                    pdf.addImage(
+                        imgData, 
+                        'JPEG', 
+                        0, 
+                        0, 
+                        viewport.width, 
+                        viewport.height,
+                        undefined,
+                        'FAST'
+                    );
+                }
+                
+                // 下载PDF
+                pdf.save('watermarked.pdf');
+            } catch (error) {
+                console.error('生成PDF错误:', error);
+                alert('生成PDF时出错，请重试。');
+            } finally {
+                loadingEl.style.display = 'none';
+            }
+        }
+        
+        // 绘制平铺文字水印到PDF
+        function drawTiledTextWatermark(ctx, width, height, text, color, size, rotation, opacity) {
+            ctx.globalAlpha = opacity;
+            ctx.font = `${size}px Arial`;
+            ctx.fillStyle = color;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            
+            // 旋转画布
+            ctx.translate(width / 2, height / 2);
+            ctx.rotate(rotation * Math.PI / 180);
+            ctx.translate(-width / 2, -height / 2);
+            
+            // 测量文字宽度
+            const textWidth = ctx.measureText(text).width;
+            const spacing = textWidth * 1.5;
+            
+            // 绘制平铺水印
+            for (let x = -width; x < width * 2; x += spacing) {
+                for (let y = -height; y < height * 2; y += spacing * 2) {
+                    ctx.fillText(text, x, y);
+                }
+            }
+            
+            ctx.globalAlpha = 1.0;
+        }
+        
+        // 绘制居中文字水印到PDF
+        function drawCenteredTextWatermark(ctx, width, height, text, color, size, rotation, opacity) {
+            ctx.globalAlpha = opacity;
+            ctx.font = `${size}px Arial`;
+            ctx.fillStyle = color;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            
+            // 旋转画布
+            ctx.translate(width / 2, height / 2);
+            ctx.rotate(rotation * Math.PI / 180);
+            ctx.translate(-width / 2, -height / 2);
+            
+            // 绘制居中水印
+            ctx.fillText(text, width / 2, height / 2);
+            
+            ctx.globalAlpha = 1.0;
+        }
+        
+        // 绘制平铺图片水印到PDF
+        function drawTiledImageWatermark(ctx, width, height, image, rotation, opacity) {
+            ctx.globalAlpha = opacity;
+            
+            // 根据PDF尺寸调整图片大小
+            const imgScale = Math.min(width, height) / Math.max(image.width, image.height) * 0.3;
+            const imgWidth = image.width * imgScale;
+            const imgHeight = image.height * imgScale;
+            const spacing = imgWidth * 1.5;
+            
+            // 旋转画布
+            ctx.translate(width / 2, height / 2);
+            ctx.rotate(rotation * Math.PI / 180);
+            ctx.translate(-width / 2, -height / 2);
+            
+            // 绘制平铺水印
+            for (let x = -width; x < width * 2; x += spacing) {
+                for (let y = -height; y < height * 2; y += spacing * 2) {
+                    ctx.drawImage(image, x - imgWidth / 2, y - imgHeight / 2, imgWidth, imgHeight);
+                }
+            }
+            
+            ctx.globalAlpha = 1.0;
+        }
+        
+        // 绘制居中图片水印到PDF
+        function drawCenteredImageWatermark(ctx, width, height, image, rotation, opacity) {
+            ctx.globalAlpha = opacity;
+            
+            // 根据PDF尺寸调整图片大小
+            const imgScale = Math.min(width, height) / Math.max(image.width, image.height) * 0.5;
+            const imgWidth = image.width * imgScale;
+            const imgHeight = image.height * imgScale;
+            
+            // 旋转画布
+            ctx.translate(width / 2, height / 2);
+            ctx.rotate(rotation * Math.PI / 180);
+            ctx.translate(-width / 2, -height / 2);
+            
+            // 绘制居中水印
+            ctx.drawImage(
+                image, 
+                width / 2 - imgWidth / 2, 
+                height / 2 - imgHeight / 2, 
+                imgWidth, 
+                imgHeight
+            );
+            
+            ctx.globalAlpha = 1.0;
+        }
+        
+        // 重置表单
+        function resetForm() {
+            pdfUpload.value = '';
+            watermarkText.value = '机密文件';
+            textColor.value = '#000000';
+            colorValue.textContent = '#000000';
+            textSize.value = '32';
+            imageUpload.value = '';
+            watermarkImage = null;
+            watermarkOpacity.value = '45';
+            opacityValue.textContent = '45%';
+            document.getElementById('rotate-45').checked = true;
+            document.getElementById('layout-tile').checked = true;
+            
+            // 清除预览
+            if (pdfDoc) {
+                pdfDoc.destroy();
+                pdfDoc = null;
+            }
+            
+            pdfCtx.clearRect(0, 0, pdfCanvas.width, pdfCanvas.height);
+            watermarkLayer.innerHTML = '';
+            pageCountEl.textContent = '共 0 页';
+            pageNumEl.textContent = '第 1 页';
+            
+            // 重置标签页
+            tabs[0].click();
+        }
+        
+        // 初始化应用
+        init();
+    </script>
+</body>
+</html>
